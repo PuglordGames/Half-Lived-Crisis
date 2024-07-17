@@ -1,35 +1,11 @@
 
 package net.mcreator.halflivedcrisis.block;
 
-import org.checkerframework.checker.units.qual.s;
-
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.level.storage.loot.LootParams;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.halflivedcrisis.procedures.LightStalkEntityCollidesInTheBlockProcedure;
-import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModBlockEntities;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import net.minecraft.world.level.material.Material;
 
 import javax.annotation.Nullable;
-
-import java.util.List;
-import java.util.Collections;
 
 public class LightStalkBlock extends BaseEntityBlock implements EntityBlock {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 2);
@@ -45,6 +21,7 @@ public class LightStalkBlock extends BaseEntityBlock implements EntityBlock {
 				return 0;
 			}
 		}.getLightLevel())).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+
 	}
 
 	@Override
@@ -86,6 +63,7 @@ public class LightStalkBlock extends BaseEntityBlock implements EntityBlock {
 
 	@Override
 	public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
+
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
@@ -97,4 +75,5 @@ public class LightStalkBlock extends BaseEntityBlock implements EntityBlock {
 		super.entityInside(blockstate, world, pos, entity);
 		LightStalkEntityCollidesInTheBlockProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
+
 }

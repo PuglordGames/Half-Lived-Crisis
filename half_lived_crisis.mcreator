@@ -1343,15 +1343,15 @@
       }
     },
     {
-      "name": "NihilanthsLairBlockAdded",
+      "name": "LightStalkEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 64,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "nihilanths_lair_block_added",
+      "registry_name": "light_stalk_entity_collides_in_the_block",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/halflivedcrisis/procedures/NihilanthsLairBlockAddedProcedure.java"
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/LightStalkEntityCollidesInTheBlockProcedure.java"
         ],
         "dependencies": [
           {
@@ -1398,6 +1398,56 @@
       }
     },
     {
+      "name": "HEVSuitVariableSet",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hev_suit_variable_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/HEVSuitVariableSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NihilanthsLairBlockAdded",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nihilanths_lair_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/NihilanthsLairBlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
       "name": "LightStalkOnTickUpdate",
       "type": "procedure",
       "sortid": 66,
@@ -1429,33 +1479,17 @@
       }
     },
     {
-      "name": "LightStalkEntityCollidesInTheBlock",
-      "type": "procedure",
-      "sortid": 67,
+      "name": "LightStalkFeature",
+      "type": "feature",
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "light_stalk_entity_collides_in_the_block",
+      "registry_name": "light_stalk_feature",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/halflivedcrisis/procedures/LightStalkEntityCollidesInTheBlockProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
+          "src/main/resources/data/half_lived_crisis/forge/biome_modifier/light_stalk_feature_biome_modifier.json",
+          "src/main/resources/data/half_lived_crisis/worldgen/placed_feature/light_stalk_feature.json",
+          "src/main/resources/data/half_lived_crisis/worldgen/configured_feature/light_stalk_feature.json"
         ]
       }
     },
@@ -1495,36 +1529,44 @@
       }
     },
     {
-      "name": "HEVSuitVariableSet",
+      "name": "HEVsuitSlot21ContentChange",
       "type": "procedure",
-      "sortid": 69,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "hev_suit_variable_set",
+      "registry_name": "he_vsuit_slot_21_content_change",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/halflivedcrisis/procedures/HEVSuitVariableSetProcedure.java"
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/HEVsuitSlot21ContentChangeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HEVSuitGUIWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hev_suit_gui_while_this_gui_is_open_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/HEVSuitGUIWhileThisGUIIsOpenTickProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
           }
-        ]
-      }
-    },
-    {
-      "name": "LightStalkFeature",
-      "type": "feature",
-      "sortid": 70,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "light_stalk_feature",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/half_lived_crisis/forge/biome_modifier/light_stalk_feature_biome_modifier.json",
-          "src/main/resources/data/half_lived_crisis/worldgen/placed_feature/light_stalk_feature.json",
-          "src/main/resources/data/half_lived_crisis/worldgen/configured_feature/light_stalk_feature.json"
         ]
       }
     }
@@ -1719,7 +1761,6 @@
       "block.half_lived_crisis.pistol_ammo": "Pistol Ammo",
       "key.half_lived_crisis.reload": "Reload",
       "block.half_lived_crisis.smg_ammo": "SMG Ammo",
-      "block.half_lived_crisis.light_stalk": "Light Stalk",
       "block.half_lived_crisis.xenmoss": "Xenmoss",
       "block.half_lived_crisis.magnum_ammo": ".357 Magnum Ammo",
       "biome.half_lived_crisis.xen_plains": "Xen Plains",

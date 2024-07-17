@@ -1,11 +1,5 @@
 package net.mcreator.halflivedcrisis.block.model;
 
-import software.bernie.geckolib.model.GeoModel;
-
-import net.minecraft.resources.ResourceLocation;
-
-import net.mcreator.halflivedcrisis.block.entity.LightStalkTileEntity;
-
 public class LightStalkBlockModel extends GeoModel<LightStalkTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(LightStalkTileEntity animatable) {
