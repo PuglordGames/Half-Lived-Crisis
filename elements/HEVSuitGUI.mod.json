@@ -357,11 +357,17 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "HEVsuitSlot21ContentChange"
+          },
           "x": 138,
           "y": 47
         }
       }
     ],
+    "onTick": {
+      "name": "HEVSuitGUIWhileThisGUIIsOpenTick"
+    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,

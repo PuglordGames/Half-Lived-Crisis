@@ -332,6 +332,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/halflivedcrisis/world/inventory/HEVSuitGUIMenu.java",
+          "src/main/java/net/mcreator/halflivedcrisis/network/HEVSuitGUISlotMessage.java",
           "src/main/java/net/mcreator/halflivedcrisis/client/gui/HEVSuitGUIScreen.java"
         ]
       }
@@ -1333,6 +1334,48 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/halflivedcrisis/procedures/XenPortalEntityCollidesInTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HEVsuitSlot21ContentChange",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "he_vsuit_slot_21_content_change",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/HEVsuitSlot21ContentChangeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HEVSuitGUIWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hev_suit_gui_while_this_gui_is_open_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/HEVSuitGUIWhileThisGUIIsOpenTickProcedure.java"
         ],
         "dependencies": [
           {
