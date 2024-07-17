@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.nihilanths_lair",
+				"texture_width": 512,
+				"texture_height": 512,
+				"visible_bounds_width": 14,
+				"visible_bounds_height": 12,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-27, -11, -11], "size": [38, 38, 38], "uv": [153, 0]},
+						{"origin": [-27, -11, -11], "size": [38, 38, 38], "inflate": 7, "uv": [115, 116]},
+						{"origin": [-27, -11, -11], "size": [38, 38, 38], "inflate": 19, "uv": [0, 77]},
+						{"origin": [-27, -11, -11], "size": [38, 38, 38], "inflate": 73, "uv": [0, 0]},
+						{"origin": [-27, -11, -11], "size": [38, 38, 38], "inflate": 35, "uv": [0, 155]}
+					]
+				}
+			]
+		}
+	]
+}

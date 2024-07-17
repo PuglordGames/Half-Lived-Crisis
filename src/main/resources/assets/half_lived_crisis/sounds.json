@@ -1,0 +1,98 @@
+{
+  "pistol_shoot": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:pistol_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "pistol_reload": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:pistol_reload",
+        "stream": false
+      }
+    ]
+  },
+  "smg_reload": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:smg_reload",
+        "stream": false
+      }
+    ]
+  },
+  "magnum_shoot": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:magnum_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "magnum_reload": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:magnum_reload",
+        "stream": false
+      }
+    ]
+  },
+  "smg_shoot": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:smg_shoot",
+        "stream": false
+      },
+      {
+        "name": "half_lived_crisis:smg_shoot_02",
+        "stream": false
+      },
+      {
+        "name": "half_lived_crisis:smg_shoot_03",
+        "stream": false
+      }
+    ]
+  },
+  "smg_grenade_shoot": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:smg_grenade_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "gauss_shoot": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:gauss_shoot_1",
+        "stream": false
+      },
+      {
+        "name": "half_lived_crisis:gauss_shoot_2",
+        "stream": false
+      },
+      {
+        "name": "half_lived_crisis:gauss_shoot_3",
+        "stream": false
+      }
+    ]
+  },
+  "transcendent": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:transcendent",
+        "stream": false
+      }
+    ]
+  },
+  "hev_suit_startup": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:hev_suit_startup",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+
+{
+  "parent": "half_lived_crisis:displaysettings/nihilanths_lair.item",
+  "textures": {
+    "particle": "half_lived_crisis:block/nihilanths_lair"
+  }
+}

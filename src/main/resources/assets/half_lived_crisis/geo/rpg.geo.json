@@ -1,0 +1,54 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.rpg",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 8,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 1, 12],
+					"cubes": [
+						{"origin": [-2, 8, -19], "size": [4, 5, 70], "uv": [0, 0]},
+						{"origin": [-1, 4, -20], "size": [2, 5, 11], "uv": [0, 0]},
+						{"origin": [-0.5, 4, -36.75], "size": [1, 1, 17], "inflate": -0.25, "uv": [9, 84]},
+						{"origin": [-1, 0, -10], "size": [2, 8, 4], "uv": [52, 0]},
+						{"origin": [-1.5, 0, -10], "size": [3, 8, 4], "inflate": 0.475, "uv": [13, 43]},
+						{"origin": [-1.5, 2, 0], "size": [3, 6, 3], "uv": [27, 14]},
+						{"origin": [-3, 7, -19], "size": [6, 7, 67], "uv": [0, 76]},
+						{"origin": [-3, 7, -24], "size": [6, 7, 5], "uv": [0, 56]},
+						{"origin": [-5, 5, -26], "size": [10, 11, 2], "uv": [27, 0]},
+						{"origin": [-4, 7, -24], "size": [8, 7, 5], "inflate": 0.5, "uv": [0, 17]},
+						{"origin": [-3, 7, 50], "size": [6, 7, 2], "uv": [49, 31]}
+					]
+				},
+				{
+					"name": "leftarm",
+					"parent": "bone",
+					"pivot": [-3, 3, 22],
+					"rotation": [52.5, 22.5, 0],
+					"cubes": [
+						{"origin": [-5, -7, 20], "size": [4, 12, 4], "pivot": [-3, 3, 22], "rotation": [180, 0, 0], "uv": [40, 14]},
+						{"origin": [-5, -7, 20], "size": [4, 12, 4], "inflate": 0.25, "pivot": [-3, 3, 22], "rotation": [180, 0, 0], "uv": [36, 39]}
+					]
+				},
+				{
+					"name": "RightArm",
+					"parent": "bone",
+					"pivot": [3, 1, 9],
+					"rotation": [67.5, 15, 0],
+					"cubes": [
+						{"origin": [1, -9, 7], "size": [4, 12, 4], "pivot": [3, 1, 9], "rotation": [180, 0, 0], "uv": [0, 30]},
+						{"origin": [1, -9, 7], "size": [4, 12, 4], "inflate": 0.25, "pivot": [3, 1, 9], "rotation": [180, 0, 0], "uv": [23, 26]}
+					]
+				}
+			]
+		}
+	]
+}

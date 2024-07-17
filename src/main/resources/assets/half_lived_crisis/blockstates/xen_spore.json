@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "half_lived_crisis:custom/xen_spore_particle"
+    }
+  }
+}

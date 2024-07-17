@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "half_lived_crisis:item/xen_crystals"
+  },
+  "render_type": "translucent"
+}

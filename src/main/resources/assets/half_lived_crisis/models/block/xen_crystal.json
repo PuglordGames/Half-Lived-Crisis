@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "half_lived_crisis:block/xen_crystals",
+    "particle": "half_lived_crisis:block/xen_crystals"
+  },
+  "render_type": "cutout_mipped"
+}

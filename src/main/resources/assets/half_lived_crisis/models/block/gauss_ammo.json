@@ -1,0 +1,9 @@
+{
+  "parent": "half_lived_crisis:custom/gauss_ammo",
+  "textures": {
+    "all": "half_lived_crisis:block/gauss_ammo",
+    "particle": "half_lived_crisis:block/gauss_ammo",
+    "0": "half_lived_crisis:block/gauss_ammo"
+  },
+  "render_type": "translucent"
+}

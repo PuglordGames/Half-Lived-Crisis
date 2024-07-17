@@ -1,0 +1,26 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.xen_spore",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 2.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-11, 34, -11], "size": [22, 25, 22], "uv": [99, 98]},
+						{"origin": [-30, 0, 0], "size": [60, 59, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 60]},
+						{"origin": [-30, 0, 0], "size": [60, 59, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

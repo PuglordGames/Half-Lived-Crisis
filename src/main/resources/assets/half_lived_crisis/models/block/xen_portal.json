@@ -1,0 +1,9 @@
+{
+  "parent": "half_lived_crisis:custom/xen_portal",
+  "textures": {
+    "all": "half_lived_crisis:block/xen_portal_exit",
+    "particle": "half_lived_crisis:block/xen_portal_exit",
+    "0": "half_lived_crisis:block/xen_portal_exit"
+  },
+  "render_type": "translucent"
+}

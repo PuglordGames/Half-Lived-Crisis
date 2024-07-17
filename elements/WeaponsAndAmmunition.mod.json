@@ -1,0 +1,11 @@
+{
+  "_fv": 60,
+  "_type": "tab",
+  "definition": {
+    "name": "Weapons And Ammunition",
+    "icon": {
+      "value": "CUSTOM:Crowbar"
+    },
+    "showSearch": false
+  }
+}

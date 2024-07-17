@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "half_lived_crisis:block/pistol_ammo"
+    },
+    "facing=east": {
+      "model": "half_lived_crisis:block/pistol_ammo",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "half_lived_crisis:block/pistol_ammo",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "half_lived_crisis:block/pistol_ammo",
+      "y": 270
+    }
+  }
+}

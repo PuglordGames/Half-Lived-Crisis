@@ -1,0 +1,6 @@
+{
+  "parent": "half_lived_crisis:displaysettings/crowbar.item",
+  "textures": {
+    "layer0": "half_lived_crisis:item/crowbar"
+  }
+}

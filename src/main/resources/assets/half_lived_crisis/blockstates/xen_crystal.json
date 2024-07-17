@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "half_lived_crisis:block/xen_crystal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "half_lived_crisis:block/xen_crystal"
+    },
+    "axis=z": {
+      "model": "half_lived_crisis:block/xen_crystal",
+      "x": 90
+    }
+  }
+}

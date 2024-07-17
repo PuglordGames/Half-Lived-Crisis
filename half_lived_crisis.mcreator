@@ -1,0 +1,1578 @@
+{
+  "mod_elements": [
+    {
+      "name": "HEVSuit",
+      "type": "armor",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hev_suit",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/models/item/hev_suit_leggings.json",
+          "src/main/java/net/mcreator/halflivedcrisis/item/HEVSuitItem.java",
+          "src/main/resources/assets/half_lived_crisis/models/item/hev_suit_chestplate.json"
+        ]
+      }
+    },
+    {
+      "name": "Crowbar",
+      "type": "animateditem",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crowbar",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/models/item/crowbar.json",
+          "src/main/java/net/mcreator/halflivedcrisis/item/model/CrowbarItemModel.java",
+          "src/main/java/net/mcreator/halflivedcrisis/item/renderer/CrowbarItemRenderer.java",
+          "src/main/java/net/mcreator/halflivedcrisis/item/CrowbarItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Pistol",
+      "type": "animateditem",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pistol",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/item/PistolItem.java",
+          "src/main/java/net/mcreator/halflivedcrisis/item/model/PistolItemModel.java",
+          "src/main/java/net/mcreator/halflivedcrisis/item/renderer/PistolItemRenderer.java",
+          "src/main/resources/assets/half_lived_crisis/models/item/pistol.json"
+        ]
+      }
+    },
+    {
+      "name": "PistolProjectile",
+      "type": "projectile",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pistol_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/entity/PistolProjectileEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "PistolRightclicked",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pistol_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/PistolRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SMG",
+      "type": "animateditem",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smg",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/item/model/SMGItemModel.java",
+          "src/main/java/net/mcreator/halflivedcrisis/item/SMGItem.java",
+          "src/main/java/net/mcreator/halflivedcrisis/item/renderer/SMGItemRenderer.java",
+          "src/main/resources/assets/half_lived_crisis/models/item/smg.json"
+        ]
+      }
+    },
+    {
+      "name": "SMGProjectile",
+      "type": "projectile",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smg_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/entity/SMGProjectileEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "SMGRightclicked",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smg_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/SMGRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Magnum",
+      "type": "animateditem",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnum",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/item/renderer/MagnumItemRenderer.java",
+          "src/main/java/net/mcreator/halflivedcrisis/item/MagnumItem.java",
+          "src/main/resources/assets/half_lived_crisis/models/item/magnum.json",
+          "src/main/java/net/mcreator/halflivedcrisis/item/model/MagnumItemModel.java"
+        ]
+      }
+    },
+    {
+      "name": "MagnumProjectile",
+      "type": "projectile",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnum_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/entity/MagnumProjectileEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "MagnumRightclicked",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnum_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/MagnumRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PistolAmmo",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pistol_ammo",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/models/item/pistol_ammo.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/PistolAmmoBlock.java",
+          "src/main/resources/assets/half_lived_crisis/models/block/pistol_ammo.json",
+          "src/main/resources/data/half_lived_crisis/loot_tables/blocks/pistol_ammo.json",
+          "src/main/resources/assets/half_lived_crisis/blockstates/pistol_ammo.json"
+        ]
+      }
+    },
+    {
+      "name": "PistolAmmoOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pistol_ammo_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/PistolAmmoOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PistolAmmoEntityCollidesInTheBlock",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pistol_ammo_entity_collides_in_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/PistolAmmoEntityCollidesInTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HEVSuitGUI",
+      "type": "gui",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hev_suit_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/world/inventory/HEVSuitGUIMenu.java",
+          "src/main/java/net/mcreator/halflivedcrisis/client/gui/HEVSuitGUIScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "Reload",
+      "type": "keybind",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reload",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/network/ReloadMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "ReloadOnKeyPressed",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reload_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/ReloadOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SMGammo",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smg_ammo",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/models/item/smg_ammo.json",
+          "src/main/resources/assets/half_lived_crisis/models/block/smg_ammo.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/SMGammoBlock.java",
+          "src/main/resources/assets/half_lived_crisis/blockstates/smg_ammo.json",
+          "src/main/resources/data/half_lived_crisis/loot_tables/blocks/smg_ammo.json"
+        ]
+      }
+    },
+    {
+      "name": "SMGammoEntityCollidesInTheBlock",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sm_gammo_entity_collides_in_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/SMGammoEntityCollidesInTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SMGammoOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sm_gammo_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/SMGammoOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MagnumAmmo",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnum_ammo",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/models/block/magnum_ammo.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/MagnumAmmoBlock.java",
+          "src/main/resources/data/half_lived_crisis/loot_tables/blocks/magnum_ammo.json",
+          "src/main/resources/assets/half_lived_crisis/models/item/magnum_ammo.json",
+          "src/main/resources/assets/half_lived_crisis/blockstates/magnum_ammo.json"
+        ]
+      }
+    },
+    {
+      "name": "MagnumAmmoOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnum_ammo_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/MagnumAmmoOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MagnumAmmoEntityCollidesInTheBlock",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnum_ammo_entity_collides_in_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/MagnumAmmoEntityCollidesInTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SMGGrenadeProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smg_grenade_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/SMGGrenadeProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SMGGrenadeProjectile",
+      "type": "projectile",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smg_grenade_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/client/renderer/SMGGrenadeProjectileRenderer.java",
+          "src/main/java/net/mcreator/halflivedcrisis/entity/SMGGrenadeProjectileEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "SMGGrenade",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smg_grenade",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/models/item/smg_grenade.json",
+          "src/main/resources/assets/half_lived_crisis/models/block/smg_grenade.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/SMGGrenadeBlock.java",
+          "src/main/resources/assets/half_lived_crisis/blockstates/smg_grenade.json",
+          "src/main/resources/data/half_lived_crisis/loot_tables/blocks/smg_grenade.json"
+        ]
+      }
+    },
+    {
+      "name": "SMGGrenadeEntityCollidesInTheBlock",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smg_grenade_entity_collides_in_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/SMGGrenadeEntityCollidesInTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SMGGrenadeOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smg_grenade_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/SMGGrenadeOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BulletBreakGlass",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bullet_break_glass",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/BulletBreakGlassProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GaussGun",
+      "type": "animateditem",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gauss_gun",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/models/item/gauss_gun.json",
+          "src/main/java/net/mcreator/halflivedcrisis/item/GaussGunItem.java",
+          "src/main/java/net/mcreator/halflivedcrisis/item/model/GaussGunItemModel.java",
+          "src/main/java/net/mcreator/halflivedcrisis/item/renderer/GaussGunItemRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "GaussProjectile",
+      "type": "projectile",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gauss_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/entity/GaussProjectileEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "GaussImpactProjectile",
+      "type": "particle",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gauss_impact_projectile",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/particles/gauss_impact_projectile.json",
+          "src/main/java/net/mcreator/halflivedcrisis/client/particle/GaussImpactProjectileParticle.java"
+        ]
+      }
+    },
+    {
+      "name": "GaussProjectileProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gauss_projectile_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/GaussProjectileProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GaussGunRightclicked",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gauss_gun_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/GaussGunRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GaussAmmo",
+      "type": "block",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gauss_ammo",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/blockstates/gauss_ammo.json",
+          "src/main/resources/assets/half_lived_crisis/models/item/gauss_ammo.json",
+          "src/main/resources/data/half_lived_crisis/loot_tables/blocks/gauss_ammo.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/GaussAmmoBlock.java",
+          "src/main/resources/assets/half_lived_crisis/models/block/gauss_ammo.json"
+        ]
+      }
+    },
+    {
+      "name": "GaussAmmoOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gauss_ammo_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/GaussAmmoOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GaussAmmoEntityCollidesInTheBlock",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gauss_ammo_entity_collides_in_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/GaussAmmoEntityCollidesInTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Xenstone",
+      "type": "block",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xenstone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/models/item/xenstone.json",
+          "src/main/resources/assets/half_lived_crisis/models/block/xenstone.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/XenstoneBlock.java",
+          "src/main/resources/data/half_lived_crisis/loot_tables/blocks/xenstone.json",
+          "src/main/resources/assets/half_lived_crisis/blockstates/xenstone.json"
+        ]
+      }
+    },
+    {
+      "name": "XenPlains",
+      "type": "biome",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xen_plains",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/half_lived_crisis/worldgen/biome/xen_plains.json"
+        ]
+      }
+    },
+    {
+      "name": "XenDimensionSetup",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xen_dimension_setup",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/XenDimensionSetupProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "XenCustomSkybox",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xen_custom_skybox",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/XenCustomSkyboxProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Xen",
+      "type": "dimension",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/world/dimension/XenDimension.java",
+          "src/main/resources/data/half_lived_crisis/dimension/xen.json",
+          "src/main/resources/data/half_lived_crisis/dimension_type/xen.json"
+        ]
+      }
+    },
+    {
+      "name": "Xenmoss",
+      "type": "plant",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xenmoss",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/half_lived_crisis/worldgen/configured_feature/xenmoss.json",
+          "src/main/resources/data/half_lived_crisis/loot_tables/blocks/xenmoss.json",
+          "src/main/resources/data/half_lived_crisis/worldgen/placed_feature/xenmoss.json",
+          "src/main/resources/assets/half_lived_crisis/models/item/xenmoss.json",
+          "src/main/resources/assets/half_lived_crisis/blockstates/xenmoss.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/XenmossBlock.java",
+          "src/main/resources/data/half_lived_crisis/forge/biome_modifier/xenmoss_biome_modifier.json",
+          "src/main/resources/assets/half_lived_crisis/models/block/xenmoss.json"
+        ]
+      }
+    },
+    {
+      "name": "XenPlayerEntersDimension",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xen_player_enters_dimension",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/XenPlayerEntersDimensionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NihilanthLairParticle",
+      "type": "particle",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nihilanth_lair_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/particles/nihilanth_lair_particle.json",
+          "src/main/java/net/mcreator/halflivedcrisis/client/particle/NihilanthLairParticleParticle.java"
+        ]
+      }
+    },
+    {
+      "name": "NihilanthLairBlockAdded",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nihilanth_lair_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/NihilanthLairBlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NihilanthLairParticleAdditionalParticleExpiryCondition",
+      "type": "procedure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nihilanth_lair_particle_additional_particle_expiry_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/NihilanthLairParticleAdditionalParticleExpiryConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "XenPortal",
+      "type": "block",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xen_portal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/block/XenPortalBlock.java",
+          "src/main/resources/data/half_lived_crisis/loot_tables/blocks/xen_portal.json",
+          "src/main/resources/assets/half_lived_crisis/models/block/xen_portal.json",
+          "src/main/resources/assets/half_lived_crisis/models/item/xen_portal.json",
+          "src/main/resources/assets/half_lived_crisis/blockstates/xen_portal.json"
+        ]
+      }
+    },
+    {
+      "name": "XenSpore",
+      "type": "animatedblock",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xen_spore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/models/item/xen_spore.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/renderer/XenSporeTileRenderer.java",
+          "src/main/resources/assets/half_lived_crisis/models/custom/xen_spore_particle.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/model/XenSporeDisplayModel.java",
+          "src/main/java/net/mcreator/halflivedcrisis/block/XenSporeBlock.java",
+          "src/main/java/net/mcreator/halflivedcrisis/block/display/XenSporeDisplayItem.java",
+          "src/main/java/net/mcreator/halflivedcrisis/block/entity/XenSporeTileEntity.java",
+          "src/main/java/net/mcreator/halflivedcrisis/block/renderer/XenSporeDisplayItemRenderer.java",
+          "src/main/resources/assets/half_lived_crisis/blockstates/xen_spore.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/model/XenSporeBlockModel.java"
+        ]
+      }
+    },
+    {
+      "name": "XenPortalParticleAdditionalParticleExpiryCondition",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xen_portal_particle_additional_particle_expiry_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/XenPortalParticleAdditionalParticleExpiryConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NihilanthsLair",
+      "type": "animatedblock",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nihilanths_lair",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/block/renderer/NihilanthsLairTileRenderer.java",
+          "src/main/java/net/mcreator/halflivedcrisis/block/display/NihilanthsLairDisplayItem.java",
+          "src/main/java/net/mcreator/halflivedcrisis/block/model/NihilanthsLairBlockModel.java",
+          "src/main/java/net/mcreator/halflivedcrisis/block/model/NihilanthsLairDisplayModel.java",
+          "src/main/resources/assets/half_lived_crisis/models/custom/nihilanths_lair_particle.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/entity/NihilanthsLairTileEntity.java",
+          "src/main/resources/assets/half_lived_crisis/blockstates/nihilanths_lair.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/NihilanthsLairBlock.java",
+          "src/main/resources/assets/half_lived_crisis/models/item/nihilanths_lair.json",
+          "src/main/java/net/mcreator/halflivedcrisis/block/renderer/NihilanthsLairDisplayItemRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "XenCrystal",
+      "type": "block",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xen_crystal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/block/XenCrystalBlock.java",
+          "src/main/resources/assets/half_lived_crisis/models/block/xen_crystal.json",
+          "src/main/resources/assets/half_lived_crisis/models/item/xen_crystal.json",
+          "src/main/resources/assets/half_lived_crisis/blockstates/xen_crystal.json",
+          "src/main/resources/data/half_lived_crisis/loot_tables/blocks/xen_crystal.json"
+        ]
+      }
+    },
+    {
+      "name": "WeaponsAndAmmunition",
+      "type": "tab",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "weapons_and_ammunition",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "HEVSuitOpenGUI",
+      "type": "keybind",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hev_suit_open_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/network/HEVSuitOpenGUIMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "HEVSuitOpenGUIOnKeyPressed",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hev_suit_open_gui_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/HEVSuitOpenGUIOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LongJumpModule",
+      "type": "item",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "long_jump_module",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/half_lived_crisis/models/item/long_jump_module.json",
+          "src/main/java/net/mcreator/halflivedcrisis/item/LongJumpModuleItem.java"
+        ]
+      }
+    },
+    {
+      "name": "HEVSuitRelated",
+      "type": "tab",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hev_suit_related",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "XenSporeFeature",
+      "type": "feature",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xen_spore_feature",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/half_lived_crisis/forge/biome_modifier/xen_spore_feature_biome_modifier.json",
+          "src/main/resources/data/half_lived_crisis/worldgen/configured_feature/xen_spore_feature.json",
+          "src/main/resources/data/half_lived_crisis/worldgen/placed_feature/xen_spore_feature.json"
+        ]
+      }
+    },
+    {
+      "name": "XenPortalEntityCollidesInTheBlock",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xen_portal_entity_collides_in_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/XenPortalEntityCollidesInTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "pistol_ammo",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "smg_ammo",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "magnum_ammo",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "gauss_ammo",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "has_long_jump_module",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "has_hev_suit",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "pistol_shoot",
+      "files": [
+        "pistol_shoot"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "pistol_reload",
+      "files": [
+        "pistol_reload"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "smg_reload",
+      "files": [
+        "smg_reload"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "magnum_shoot",
+      "files": [
+        "magnum_shoot"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "magnum_reload",
+      "files": [
+        "magnum_reload"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "smg_shoot",
+      "files": [
+        "smg_shoot",
+        "smg_shoot_02",
+        "smg_shoot_03"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "smg_grenade_shoot",
+      "files": [
+        "smg_grenade_shoot"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "gauss_shoot",
+      "files": [
+        "gauss_shoot_1",
+        "gauss_shoot_2",
+        "gauss_shoot_3"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "transcendent",
+      "files": [
+        "transcendent"
+      ],
+      "category": "ambient",
+      "subtitle": ""
+    },
+    {
+      "name": "hev_suit_startup",
+      "files": [
+        "hev_suit_startup"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
+  "tag_elements": {
+    "BLOCKS:half_lived_crisis:glass": [
+      "Blocks.GLASS",
+      "Blocks.TINTED_GLASS",
+      "Blocks.STAINED_GLASS#0",
+      "Blocks.STAINED_GLASS#1",
+      "Blocks.STAINED_GLASS#2",
+      "Blocks.STAINED_GLASS#3",
+      "Blocks.STAINED_GLASS#4",
+      "Blocks.STAINED_GLASS#5",
+      "Blocks.STAINED_GLASS#6",
+      "Blocks.STAINED_GLASS#7",
+      "Blocks.STAINED_GLASS#8",
+      "Blocks.STAINED_GLASS#9",
+      "Blocks.STAINED_GLASS#10",
+      "Blocks.STAINED_GLASS#11",
+      "Blocks.STAINED_GLASS#12",
+      "Blocks.STAINED_GLASS#13",
+      "Blocks.STAINED_GLASS#14",
+      "Blocks.STAINED_GLASS#15",
+      "Blocks.GLASS_PANE",
+      "Blocks.STAINED_GLASS_PANE#0",
+      "Blocks.STAINED_GLASS_PANE#1",
+      "Blocks.STAINED_GLASS_PANE#2",
+      "Blocks.STAINED_GLASS_PANE#3",
+      "Blocks.STAINED_GLASS_PANE#4",
+      "Blocks.STAINED_GLASS_PANE#5",
+      "Blocks.STAINED_GLASS_PANE#6",
+      "Blocks.STAINED_GLASS_PANE#7",
+      "Blocks.STAINED_GLASS_PANE#8",
+      "Blocks.STAINED_GLASS_PANE#9",
+      "Blocks.STAINED_GLASS_PANE#10",
+      "Blocks.STAINED_GLASS_PANE#11",
+      "Blocks.STAINED_GLASS_PANE#12",
+      "Blocks.STAINED_GLASS_PANE#13",
+      "Blocks.STAINED_GLASS_PANE#14",
+      "Blocks.STAINED_GLASS_PANE#15",
+      "Blocks.ICE",
+      "Blocks.PACKED_ICE",
+      "Blocks.FROSTED_ICE",
+      "Blocks.BLUE_ICE"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~CUSTOM:Xenstone"
+    ]
+  },
+  "language_map": {
+    "en_us": {
+      "subtitles.smg_reload": "",
+      "block.half_lived_crisis.nihilanths_lair": "Nihilanths Lair",
+      "subtitles.hev_startup": "",
+      "block.half_lived_crisis.xen_crystal": "Xen Crystal",
+      "subtitles.magnum_reload": "",
+      "item.half_lived_crisis.magnum": ".357 Magnum",
+      "subtitles.transcendent": "",
+      "subtitles.smg_grenade_shoot": "",
+      "item.half_lived_crisis.hev_suit_chestplate": "HEV Suit Chestplate",
+      "block.half_lived_crisis.xen_portal": "Xen Portal",
+      "item.half_lived_crisis.long_jump_module": "Long Jump Module",
+      "item.half_lived_crisis.hev_suit_leggings": "HEV Suit Leggings",
+      "subtitles.smg_shoot": "",
+      "item.half_lived_crisis.gauss_gun": "Tau Cannon",
+      "block.half_lived_crisis.pistol_ammo": "Pistol Ammo",
+      "key.half_lived_crisis.reload": "Reload",
+      "block.half_lived_crisis.smg_ammo": "SMG Ammo",
+      "block.half_lived_crisis.xenmoss": "Xenmoss",
+      "block.half_lived_crisis.magnum_ammo": ".357 Magnum Ammo",
+      "biome.half_lived_crisis.xen_plains": "Xen Plains",
+      "subtitles.magnum_shoot": "",
+      "block.half_lived_crisis.smg_grenade": "SMG Grenade",
+      "subtitles.pistol_shoot": "",
+      "block.half_lived_crisis.xen_spore": "Xen Spore",
+      "item_group.half_lived_crisis.hev_suit_related": "HEV Suit Related",
+      "subtitles.pistol_reload": "",
+      "block.half_lived_crisis.gauss_ammo": "Gauss Ammo",
+      "key.half_lived_crisis.hev_suit_open_gui": "HEV Suit Open GUI",
+      "item.half_lived_crisis.pistol": "9mm Pistol",
+      "item.half_lived_crisis.crowbar": "Crowbar",
+      "subtitles.gauss_shoot": "",
+      "item.half_lived_crisis.smg": "SMG",
+      "item_group.half_lived_crisis.weapons_and_ammunition": "Weapons And Ammunition",
+      "subtitles.hev_suit_startup": "",
+      "block.half_lived_crisis.xenstone": "Xenstone"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "half_lived_crisis",
+    "modName": "Half Lived Crisis",
+    "version": "1.0.0",
+    "author": "Puglord, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.halflivedcrisis"
+  },
+  "mcreatorVersion": 202400118518
+}

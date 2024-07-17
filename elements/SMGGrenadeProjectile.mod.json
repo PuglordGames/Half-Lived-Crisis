@@ -1,0 +1,25 @@
+{
+  "_fv": 60,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.AIR"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelsmg_grenade",
+    "customModelTexture": "smg_grenade.png",
+    "onHitsBlock": {
+      "name": "SMGGrenadeProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "SMGGrenadeProjectileHitsBlock"
+    }
+  }
+}

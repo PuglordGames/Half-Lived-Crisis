@@ -1,0 +1,6 @@
+{
+  "parent": "half_lived_crisis:displaysettings/.357_magnum.item",
+  "textures": {
+    "layer0": "half_lived_crisis:item/.357_magnum"
+  }
+}

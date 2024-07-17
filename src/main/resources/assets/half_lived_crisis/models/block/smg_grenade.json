@@ -1,0 +1,9 @@
+{
+  "parent": "half_lived_crisis:custom/smg_grenade",
+  "textures": {
+    "all": "half_lived_crisis:block/smg_grenade",
+    "particle": "half_lived_crisis:block/smg_grenade",
+    "0": "half_lived_crisis:block/smg_grenade"
+  },
+  "render_type": "solid"
+}

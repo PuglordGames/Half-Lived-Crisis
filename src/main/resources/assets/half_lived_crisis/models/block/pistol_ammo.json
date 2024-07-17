@@ -1,0 +1,9 @@
+{
+  "parent": "half_lived_crisis:custom/pistol_ammo",
+  "textures": {
+    "all": "half_lived_crisis:block/pistol_ammo",
+    "particle": "half_lived_crisis:block/pistol_ammo",
+    "1": "half_lived_crisis:block/pistol_ammo"
+  },
+  "render_type": "translucent"
+}
