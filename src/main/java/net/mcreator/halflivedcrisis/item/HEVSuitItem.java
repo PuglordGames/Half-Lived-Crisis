@@ -5,11 +5,13 @@ import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
@@ -19,11 +21,14 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.halflivedcrisis.procedures.HEVSuitChestplateTickEventProcedure;
 import net.mcreator.halflivedcrisis.client.model.Modelhev_suit;
 
 import java.util.function.Consumer;
 import java.util.Map;
 import java.util.Collections;
+
+import com.google.common.collect.Iterables;
 
 public abstract class HEVSuitItem extends ArmorItem {
 	public HEVSuitItem(ArmorItem.Type type, Item.Properties properties) {
@@ -96,6 +101,14 @@ public abstract class HEVSuitItem extends ArmorItem {
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "half_lived_crisis:textures/entities/hev_suit.png";
+		}
+
+		@Override
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				HEVSuitChestplateTickEventProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+			}
 		}
 	}
 

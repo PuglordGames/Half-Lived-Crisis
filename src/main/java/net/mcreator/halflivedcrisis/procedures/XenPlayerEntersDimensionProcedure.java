@@ -24,33 +24,33 @@ public class XenPlayerEntersDimensionProcedure {
 		if (world instanceof ServerLevel _serverworld) {
 			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("half_lived_crisis", "starting_cave"));
 			if (template != null) {
-				template.placeInWorld(_serverworld, new BlockPos(-5, 104, 31), new BlockPos(-5, 104, 31), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+				template.placeInWorld(_serverworld, new BlockPos(-5, 95, 31), new BlockPos(-5, 95, 31), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 			}
 		}
 		if (world instanceof ServerLevel _serverworld) {
 			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("half_lived_crisis", "nihilanths_lair"));
 			if (template != null) {
-				template.placeInWorld(_serverworld, new BlockPos(-8, 77, -22), new BlockPos(-8, 77, -22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+				template.placeInWorld(_serverworld, new BlockPos(-8, 68, -22), new BlockPos(-8, 68, -22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 			}
 		}
 		if (world instanceof ServerLevel _serverworld) {
 			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("half_lived_crisis", "nihilanths_lair_top"));
 			if (template != null) {
-				template.placeInWorld(_serverworld, new BlockPos(-8, 120, -22), new BlockPos(-8, 120, -22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+				template.placeInWorld(_serverworld, new BlockPos(-8, 111, -22), new BlockPos(-8, 111, -22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 			}
 		}
 		{
 			Entity _ent = entity;
-			_ent.teleportTo(14.5, 108.5, 47.5);
+			_ent.teleportTo(14.5, 99.5, 47.5);
 			if (_ent instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.connection.teleport(14.5, 108.5, 47.5, _ent.getYRot(), _ent.getXRot());
+				_serverPlayer.connection.teleport(14.5, 99.5, 47.5, _ent.getYRot(), _ent.getXRot());
 		}
 		HalfLivedCrisisMod.queueServerWork(120, () -> {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(14.5, 108.5, 47.5), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:transcendent")), SoundSource.AMBIENT, 1, 1);
+					_level.playSound(null, BlockPos.containing(14.5, 99.5, 47.5), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:transcendent")), SoundSource.AMBIENT, 1, 1);
 				} else {
-					_level.playLocalSound(14.5, 108.5, 47.5, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:transcendent")), SoundSource.AMBIENT, 1, 1, false);
+					_level.playLocalSound(14.5, 99.5, 47.5, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:transcendent")), SoundSource.AMBIENT, 1, 1, false);
 				}
 			}
 		});

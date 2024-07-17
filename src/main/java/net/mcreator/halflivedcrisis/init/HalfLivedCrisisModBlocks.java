@@ -20,6 +20,7 @@ import net.mcreator.halflivedcrisis.block.SMGGrenadeBlock;
 import net.mcreator.halflivedcrisis.block.PistolAmmoBlock;
 import net.mcreator.halflivedcrisis.block.NihilanthsLairBlock;
 import net.mcreator.halflivedcrisis.block.MagnumAmmoBlock;
+import net.mcreator.halflivedcrisis.block.LightStalkBlock;
 import net.mcreator.halflivedcrisis.block.GaussAmmoBlock;
 import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
@@ -36,6 +37,7 @@ public class HalfLivedCrisisModBlocks {
 	public static final RegistryObject<Block> XEN_SPORE = REGISTRY.register("xen_spore", () -> new XenSporeBlock());
 	public static final RegistryObject<Block> NIHILANTHS_LAIR = REGISTRY.register("nihilanths_lair", () -> new NihilanthsLairBlock());
 	public static final RegistryObject<Block> XEN_CRYSTAL = REGISTRY.register("xen_crystal", () -> new XenCrystalBlock());
+	public static final RegistryObject<Block> LIGHT_STALK = REGISTRY.register("light_stalk", () -> new LightStalkBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

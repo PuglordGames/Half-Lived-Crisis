@@ -1,0 +1,6 @@
+{
+  "parent": "half_lived_crisis:custom/light_stalk_particle",
+  "textures": {
+    "particle": "half_lived_crisis:block/light_stalk"
+  }
+}

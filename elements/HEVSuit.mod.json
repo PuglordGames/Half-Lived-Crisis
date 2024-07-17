@@ -10,6 +10,9 @@
     "textureLeggings": "hev_suit_leggins",
     "enableBoots": false,
     "textureBoots": "",
+    "onBodyTick": {
+      "name": "HEVSuitChestplateTickEvent"
+    },
     "creativeTab": {
       "value": "CUSTOM:HEVSuitRelated"
     },

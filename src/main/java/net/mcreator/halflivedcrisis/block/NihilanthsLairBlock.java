@@ -14,11 +14,13 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.halflivedcrisis.procedures.NihilanthsLairBlockAddedProcedure;
 import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModBlockEntities;
 
 import javax.annotation.Nullable;
@@ -76,5 +78,11 @@ public class NihilanthsLairBlock extends BaseEntityBlock implements EntityBlock 
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
 		return Collections.singletonList(new ItemStack(this, 1));
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		NihilanthsLairBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 }

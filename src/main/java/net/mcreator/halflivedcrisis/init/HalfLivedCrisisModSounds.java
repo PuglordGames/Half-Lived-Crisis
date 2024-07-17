@@ -24,5 +24,5 @@ public class HalfLivedCrisisModSounds {
 	public static final RegistryObject<SoundEvent> SMG_GRENADE_SHOOT = REGISTRY.register("smg_grenade_shoot", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "smg_grenade_shoot")));
 	public static final RegistryObject<SoundEvent> GAUSS_SHOOT = REGISTRY.register("gauss_shoot", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "gauss_shoot")));
 	public static final RegistryObject<SoundEvent> TRANSCENDENT = REGISTRY.register("transcendent", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "transcendent")));
-	public static final RegistryObject<SoundEvent> HEV_SUIT_STARTUP = REGISTRY.register("hev_suit_startup", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "hev_suit_startup")));
+	public static final RegistryObject<SoundEvent> HEV_SUIT_START_UP = REGISTRY.register("hev_suit_start_up", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "hev_suit_start_up")));
 }

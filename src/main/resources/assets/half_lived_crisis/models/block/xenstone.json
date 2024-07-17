@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "half_lived_crisis:block/xenstone",
-    "up": "half_lived_crisis:block/xenstone",
+    "down": "half_lived_crisis:block/xenstone_top",
+    "up": "half_lived_crisis:block/xenstone_top",
     "north": "half_lived_crisis:block/xenstone",
     "east": "half_lived_crisis:block/xenstone",
     "south": "half_lived_crisis:block/xenstone",
     "west": "half_lived_crisis:block/xenstone",
-    "particle": "half_lived_crisis:block/xenstone"
+    "particle": "half_lived_crisis:block/xenstone_top"
   },
   "render_type": "solid"
 }

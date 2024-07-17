@@ -2,8 +2,8 @@
   "_fv": 60,
   "_type": "block",
   "definition": {
-    "texture": "xenstone",
-    "textureTop": "xenstone",
+    "texture": "xenstone_top",
+    "textureTop": "xenstone_top",
     "textureLeft": "xenstone",
     "textureFront": "xenstone",
     "textureRight": "xenstone",

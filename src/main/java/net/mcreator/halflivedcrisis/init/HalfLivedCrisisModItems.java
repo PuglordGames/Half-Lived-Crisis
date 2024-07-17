@@ -21,6 +21,7 @@ import net.mcreator.halflivedcrisis.item.GaussGunItem;
 import net.mcreator.halflivedcrisis.item.CrowbarItem;
 import net.mcreator.halflivedcrisis.block.display.XenSporeDisplayItem;
 import net.mcreator.halflivedcrisis.block.display.NihilanthsLairDisplayItem;
+import net.mcreator.halflivedcrisis.block.display.LightStalkDisplayItem;
 import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
 public class HalfLivedCrisisModItems {
@@ -44,6 +45,7 @@ public class HalfLivedCrisisModItems {
 	public static final RegistryObject<Item> NIHILANTHS_LAIR = REGISTRY.register(HalfLivedCrisisModBlocks.NIHILANTHS_LAIR.getId().getPath(), () -> new NihilanthsLairDisplayItem(HalfLivedCrisisModBlocks.NIHILANTHS_LAIR.get(), new Item.Properties()));
 	public static final RegistryObject<Item> XEN_CRYSTAL = block(HalfLivedCrisisModBlocks.XEN_CRYSTAL);
 	public static final RegistryObject<Item> LONG_JUMP_MODULE = REGISTRY.register("long_jump_module", () -> new LongJumpModuleItem());
+	public static final RegistryObject<Item> LIGHT_STALK = REGISTRY.register(HalfLivedCrisisModBlocks.LIGHT_STALK.getId().getPath(), () -> new LightStalkDisplayItem(HalfLivedCrisisModBlocks.LIGHT_STALK.get(), new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

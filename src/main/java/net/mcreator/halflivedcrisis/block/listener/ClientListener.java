@@ -9,6 +9,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModBlockEntities;
 import net.mcreator.halflivedcrisis.block.renderer.XenSporeTileRenderer;
 import net.mcreator.halflivedcrisis.block.renderer.NihilanthsLairTileRenderer;
+import net.mcreator.halflivedcrisis.block.renderer.LightStalkTileRenderer;
 import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
 @Mod.EventBusSubscriber(modid = HalfLivedCrisisMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -18,5 +19,6 @@ public class ClientListener {
 	public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerBlockEntityRenderer(HalfLivedCrisisModBlockEntities.XEN_SPORE.get(), context -> new XenSporeTileRenderer());
 		event.registerBlockEntityRenderer(HalfLivedCrisisModBlockEntities.NIHILANTHS_LAIR.get(), context -> new NihilanthsLairTileRenderer());
+		event.registerBlockEntityRenderer(HalfLivedCrisisModBlockEntities.LIGHT_STALK.get(), context -> new LightStalkTileRenderer());
 	}
 }

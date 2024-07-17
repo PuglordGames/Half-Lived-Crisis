@@ -33,6 +33,7 @@ public class HalfLivedCrisisModTabs {
 				tabData.accept(HalfLivedCrisisModBlocks.MAGNUM_AMMO.get().asItem());
 				tabData.accept(HalfLivedCrisisModBlocks.SMG_GRENADE.get().asItem());
 				tabData.accept(HalfLivedCrisisModBlocks.GAUSS_AMMO.get().asItem());
+				tabData.accept(HalfLivedCrisisModBlocks.LIGHT_STALK.get().asItem());
 			})
 
 					.build());

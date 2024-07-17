@@ -87,7 +87,7 @@
       }
     ]
   },
-  "hev_suit_startup": {
+  "hev_suit_start_up": {
     "sounds": [
       {
         "name": "half_lived_crisis:hev_suit_startup",
