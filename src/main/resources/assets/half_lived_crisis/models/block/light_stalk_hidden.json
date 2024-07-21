@@ -1,0 +1,9 @@
+{
+  "parent": "half_lived_crisis:custom/light_stalk_hidden",
+  "textures": {
+    "all": "half_lived_crisis:block/light_stalk",
+    "particle": "half_lived_crisis:block/light_stalk",
+    "0": "half_lived_crisis:block/light_stalk"
+  },
+  "render_type": "solid"
+}

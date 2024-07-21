@@ -54,9 +54,9 @@ public class MagnumItem extends Item implements GeoItem {
 				if (arm == HumanoidArm.LEFT) {
 				} else {
 					model.rightArm.xRot = model.rightArm.xRot + -1.3F + model.head.xRot;
-					model.rightArm.yRot = 0F;
-					model.leftArm.xRot = -1.3F;
-					model.leftArm.yRot = 0.5F;
+					model.rightArm.yRot = model.rightArm.yRot + 0F + model.head.yRot;
+					model.leftArm.xRot = model.leftArm.xRot + -1.3F + model.head.xRot;
+					model.leftArm.yRot = model.leftArm.yRot + 0.5F + model.head.yRot;
 				}
 			});
 

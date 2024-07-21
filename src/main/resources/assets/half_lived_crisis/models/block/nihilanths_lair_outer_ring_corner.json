@@ -1,0 +1,9 @@
+{
+  "parent": "half_lived_crisis:custom/nihilanths_lair_outer_ring_corner",
+  "textures": {
+    "all": "half_lived_crisis:block/nihilanths_lair_outer_ring_corner",
+    "particle": "half_lived_crisis:block/nihilanths_lair_outer_ring_corner",
+    "0": "half_lived_crisis:block/nihilanths_lair_outer_ring_corner"
+  },
+  "render_type": "solid"
+}

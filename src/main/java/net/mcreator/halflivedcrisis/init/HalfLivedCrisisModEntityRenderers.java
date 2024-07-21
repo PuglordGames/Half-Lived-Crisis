@@ -22,5 +22,7 @@ public class HalfLivedCrisisModEntityRenderers {
 		event.registerEntityRenderer(HalfLivedCrisisModEntities.MAGNUM_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(HalfLivedCrisisModEntities.SMG_GRENADE_PROJECTILE.get(), SMGGrenadeProjectileRenderer::new);
 		event.registerEntityRenderer(HalfLivedCrisisModEntities.GAUSS_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(HalfLivedCrisisModEntities.SHOTGUN_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(HalfLivedCrisisModEntities.AR_2_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

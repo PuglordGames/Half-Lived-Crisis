@@ -6,9 +6,9 @@
 				"identifier": "geometry.shotgun",
 				"texture_width": 64,
 				"texture_height": 64,
-				"visible_bounds_width": 4,
-				"visible_bounds_height": 1.5,
-				"visible_bounds_offset": [0, 0.25, 0]
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
 			},
 			"bones": [
 				{
@@ -29,10 +29,10 @@
 					"name": "LeftArm",
 					"parent": "bone",
 					"pivot": [0, 1, 16.25],
-					"rotation": [-90, 0, 0],
+					"rotation": [90, 0, 0],
 					"cubes": [
-						{"origin": [-2, -9, 14.25], "size": [4, 12, 4], "uv": [34, 35]},
-						{"origin": [-2, -9, 14.25], "size": [4, 12, 4], "inflate": 0.25, "uv": [17, 35]}
+						{"origin": [-2, -9, 14.25], "size": [4, 12, 4], "pivot": [0, 1, 16.25], "rotation": [180, 0, 0], "uv": [34, 35]},
+						{"origin": [-2, -9, 14.25], "size": [4, 12, 4], "inflate": 0.25, "pivot": [0, 1, 16.25], "rotation": [180, 0, 0], "uv": [17, 35]}
 					]
 				},
 				{
@@ -47,10 +47,18 @@
 					"name": "RightArm",
 					"parent": "bone1",
 					"pivot": [5.86003, 0.30086, 3.90535],
-					"rotation": [-100, 20, -17.5],
+					"rotation": [80, 20, -17.5],
 					"cubes": [
-						{"origin": [3.86003, -9.69914, 1.90535], "size": [4, 12, 4], "uv": [0, 31]},
-						{"origin": [3.86003, -9.69914, 1.90535], "size": [4, 12, 4], "inflate": 0.25, "uv": [23, 18]}
+						{"origin": [3.86003, -9.69914, 1.90535], "size": [4, 12, 4], "pivot": [5.86003, 0.30086, 3.90535], "rotation": [180, 0, 0], "uv": [0, 31]},
+						{"origin": [3.86003, -9.69914, 1.90535], "size": [4, 12, 4], "inflate": 0.25, "pivot": [5.86003, 0.30086, 3.90535], "rotation": [180, 0, 0], "uv": [23, 18]}
+					]
+				},
+				{
+					"name": "bone2",
+					"parent": "bone",
+					"pivot": [0, 4, 0],
+					"cubes": [
+						{"origin": [0, 2, -6], "size": [0, 4, 6], "uv": [0, 54]}
 					]
 				}
 			]

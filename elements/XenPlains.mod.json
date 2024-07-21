@@ -4,13 +4,21 @@
   "definition": {
     "name": "Xen Plains",
     "groundBlock": {
-      "value": "CUSTOM:Xenstone"
+      "value": "Blocks.AIR"
     },
     "undergroundBlock": {
-      "value": "CUSTOM:Xenstone"
+      "value": "Blocks.AIR"
     },
     "underwaterBlock": {
-      "value": "CUSTOM:Xenstone"
+      "value": "Blocks.AIR"
+    },
+    "airColor": {
+      "value": -14934487,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -16724839,
+      "falpha": 0.0
     },
     "ambientSound": {
       "value": ""
@@ -71,11 +79,7 @@
     "treeFruits": {
       "value": "Blocks.AIR"
     },
-    "defaultFeatures": [
-      "Caves",
-      "Ores",
-      "FrozenTopLayer"
-    ],
+    "defaultFeatures": [],
     "spawnStronghold": false,
     "spawnMineshaft": false,
     "spawnMineshaftMesa": false,

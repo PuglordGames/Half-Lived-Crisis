@@ -4,58 +4,22 @@ package net.mcreator.halflivedcrisis.block;
 import org.checkerframework.checker.units.qual.s;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.level.storage.loot.LootParams;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.halflivedcrisis.procedures.LightStalkEntityCollidesInTheBlockProcedure;
-import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModBlockEntities;
 
-import javax.annotation.Nullable;
-
-import java.util.List;
-import java.util.Collections;
-
-public class LightStalkBlock extends BaseEntityBlock implements EntityBlock {
-	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 2);
-	public static final IntegerProperty ANIMATION = IntegerProperty.create("animation", 0, (int) 4);
-
+public class LightStalkBlock extends Block {
 	public LightStalkBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GRAVEL).strength(1f, 10f).lightLevel(s -> (new Object() {
-			public int getLightLevel() {
-				if (s.getValue(BLOCKSTATE) == 1)
-					return 10;
-				if (s.getValue(BLOCKSTATE) == 2)
-					return 0;
-				return 0;
-			}
-		}.getLightLevel())).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
-	}
-
-	@Override
-	public RenderShape getRenderShape(BlockState state) {
-		return RenderShape.ENTITYBLOCK_ANIMATED;
-	}
-
-	@Nullable
-	@Override
-	public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
-		return HalfLivedCrisisModBlockEntities.LIGHT_STALK.get().create(blockPos, blockState);
+		super(BlockBehaviour.Properties.of().sound(SoundType.GRASS).strength(1f, 10f).lightLevel(s -> 7).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
@@ -69,27 +33,13 @@ public class LightStalkBlock extends BaseEntityBlock implements EntityBlock {
 	}
 
 	@Override
+	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return Shapes.empty();
+	}
+
+	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-
-		return box(7, 0, 7, 9, 12, 9);
-	}
-
-	@Override
-	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(ANIMATION, BLOCKSTATE);
-	}
-
-	@Override
-	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return this.defaultBlockState();
-	}
-
-	@Override
-	public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
+		return Shapes.or(box(7, 0, 7, 9, 4, 9), box(7.5, 4, 7.5, 8.5, 8, 8.5), box(7.5, 8, 7.5, 8.5, 12, 8.5), box(7.25, 11.75, 7.25, 8.75, 14.25, 8.75));
 	}
 
 	@Override

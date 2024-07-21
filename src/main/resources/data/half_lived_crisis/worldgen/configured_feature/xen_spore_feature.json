@@ -1,11 +1,7 @@
 {
-  "type": "minecraft:simple_block",
+  "type": "half_lived_crisis:structure_feature",
   "config": {
-    "to_place": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "half_lived_crisis:xen_spore"
-      }
-    }
+    "structure": "half_lived_crisis:xen_spore",
+    "ignored_blocks": "minecraft:air"
   }
 }

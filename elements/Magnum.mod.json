@@ -64,24 +64,24 @@
         "arm": "RIGHT",
         "angle": "Y",
         "rotation": 0.0,
-        "swings": false,
-        "followsHead": false
+        "swings": true,
+        "followsHead": true
       },
       {
         "armHeld": "RIGHT",
         "arm": "LEFT",
         "angle": "X",
         "rotation": -1.3,
-        "swings": false,
-        "followsHead": false
+        "swings": true,
+        "followsHead": true
       },
       {
         "armHeld": "RIGHT",
         "arm": "LEFT",
         "angle": "Y",
         "rotation": 0.5,
-        "swings": false,
-        "followsHead": false
+        "swings": true,
+        "followsHead": true
       }
     ],
     "disableSwing": false

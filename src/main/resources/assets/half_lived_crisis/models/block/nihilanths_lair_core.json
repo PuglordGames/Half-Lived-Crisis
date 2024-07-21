@@ -1,0 +1,9 @@
+{
+  "parent": "half_lived_crisis:custom/nihilaths_lair_core",
+  "textures": {
+    "all": "half_lived_crisis:block/nihilanths_lair_core",
+    "particle": "half_lived_crisis:block/nihilanths_lair_core",
+    "0": "half_lived_crisis:block/nihilanths_lair_core"
+  },
+  "render_type": "translucent"
+}

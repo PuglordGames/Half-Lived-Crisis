@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "half_lived_crisis:block/xen_pillar_top",
+    "up": "half_lived_crisis:block/xen_pillar_top",
+    "north": "half_lived_crisis:block/xen_pillar",
+    "east": "half_lived_crisis:block/xen_pillar",
+    "south": "half_lived_crisis:block/xen_pillar",
+    "west": "half_lived_crisis:block/xen_pillar",
+    "particle": "half_lived_crisis:block/xen_pillar_top"
+  },
+  "render_type": "solid"
+}

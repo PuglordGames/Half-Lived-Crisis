@@ -18,8 +18,8 @@
     },
     "armorTextureFile": "hev_suit_",
     "helmetName": "HEV Suit Helmet",
-    "bodyName": "HEV Suit Chestplate",
-    "leggingsName": "HEV Suit Leggings",
+    "bodyName": "H.E.V. Suit Chestplate",
+    "leggingsName": "H.E.V. Suit Leggings",
     "bootsName": "HEV Suit Boots",
     "helmetSpecialInformation": {
       "fixedValue": []

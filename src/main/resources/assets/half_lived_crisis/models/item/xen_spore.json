@@ -1,3 +1,7 @@
 {
-  "parent": "half_lived_crisis:displaysettings/xen_spore.item"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "half_lived_crisis:item/xen_spore_item"
+  },
+  "render_type": "translucent"
 }

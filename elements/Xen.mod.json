@@ -9,7 +9,7 @@
     ],
     "worldGenType": "End like gen",
     "mainFillerBlock": {
-      "value": "CUSTOM:Xenstone"
+      "value": "Blocks.AIR"
     },
     "fluidBlock": {
       "value": "Blocks.WATER"
@@ -23,7 +23,7 @@
     "isDark": false,
     "doesWaterVaporize": false,
     "sleepResult": "ALLOW",
-    "hasSkyLight": false,
+    "hasSkyLight": true,
     "imitateOverworldBehaviour": false,
     "onPlayerEntersDimension": {
       "name": "XenPlayerEntersDimension"

@@ -76,8 +76,6 @@ public class SMGRightclickedProcedure {
 						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:smg_shoot")), SoundSource.NEUTRAL, 1, 1, false);
 					}
 				}
-				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown(itemstack.getItem(), 3);
 				{
 					Entity _shootFrom = entity;
 					Level projectileLevel = _shootFrom.level();

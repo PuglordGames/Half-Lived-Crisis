@@ -73,6 +73,9 @@ public class HalfLivedCrisisModVariables {
 				clone.gauss_ammo = original.gauss_ammo;
 				clone.has_long_jump_module = original.has_long_jump_module;
 				clone.has_hev_suit = original.has_hev_suit;
+				clone.jump_var = original.jump_var;
+				clone.shotgun_ammo = original.shotgun_ammo;
+				clone.pusle_rifle_ammo = original.pusle_rifle_ammo;
 			}
 		}
 	}
@@ -114,6 +117,9 @@ public class HalfLivedCrisisModVariables {
 		public double gauss_ammo = 0;
 		public boolean has_long_jump_module = false;
 		public boolean has_hev_suit = false;
+		public boolean jump_var = false;
+		public double shotgun_ammo = 0;
+		public double pusle_rifle_ammo = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -128,6 +134,9 @@ public class HalfLivedCrisisModVariables {
 			nbt.putDouble("gauss_ammo", gauss_ammo);
 			nbt.putBoolean("has_long_jump_module", has_long_jump_module);
 			nbt.putBoolean("has_hev_suit", has_hev_suit);
+			nbt.putBoolean("jump_var", jump_var);
+			nbt.putDouble("shotgun_ammo", shotgun_ammo);
+			nbt.putDouble("pusle_rifle_ammo", pusle_rifle_ammo);
 			return nbt;
 		}
 
@@ -139,6 +148,9 @@ public class HalfLivedCrisisModVariables {
 			gauss_ammo = nbt.getDouble("gauss_ammo");
 			has_long_jump_module = nbt.getBoolean("has_long_jump_module");
 			has_hev_suit = nbt.getBoolean("has_hev_suit");
+			jump_var = nbt.getBoolean("jump_var");
+			shotgun_ammo = nbt.getDouble("shotgun_ammo");
+			pusle_rifle_ammo = nbt.getDouble("pusle_rifle_ammo");
 		}
 	}
 
@@ -169,6 +181,9 @@ public class HalfLivedCrisisModVariables {
 					variables.gauss_ammo = message.data.gauss_ammo;
 					variables.has_long_jump_module = message.data.has_long_jump_module;
 					variables.has_hev_suit = message.data.has_hev_suit;
+					variables.jump_var = message.data.jump_var;
+					variables.shotgun_ammo = message.data.shotgun_ammo;
+					variables.pusle_rifle_ammo = message.data.pusle_rifle_ammo;
 				}
 			});
 			context.setPacketHandled(true);

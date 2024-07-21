@@ -16,7 +16,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
 import net.mcreator.halflivedcrisis.network.ReloadMessage;
-import net.mcreator.halflivedcrisis.network.HEVSuitOpenGUIMessage;
+import net.mcreator.halflivedcrisis.network.JumpKeybindMessage;
 import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -34,15 +34,15 @@ public class HalfLivedCrisisModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping HEV_SUIT_OPEN_GUI = new KeyMapping("key.half_lived_crisis.hev_suit_open_gui", GLFW.GLFW_KEY_Z, "key.categories.gameplay") {
+	public static final KeyMapping JUMP_KEYBIND = new KeyMapping("key.half_lived_crisis.jump_keybind", GLFW.GLFW_KEY_SPACE, "key.categories.movement") {
 		private boolean isDownOld = false;
 
 		@Override
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				HalfLivedCrisisMod.PACKET_HANDLER.sendToServer(new HEVSuitOpenGUIMessage(0, 0));
-				HEVSuitOpenGUIMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+				HalfLivedCrisisMod.PACKET_HANDLER.sendToServer(new JumpKeybindMessage(0, 0));
+				JumpKeybindMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
 		}
@@ -51,7 +51,7 @@ public class HalfLivedCrisisModKeyMappings {
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(RELOAD);
-		event.register(HEV_SUIT_OPEN_GUI);
+		event.register(JUMP_KEYBIND);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -60,7 +60,7 @@ public class HalfLivedCrisisModKeyMappings {
 		public static void onClientTick(TickEvent.ClientTickEvent event) {
 			if (Minecraft.getInstance().screen == null) {
 				RELOAD.consumeClick();
-				HEV_SUIT_OPEN_GUI.consumeClick();
+				JUMP_KEYBIND.consumeClick();
 			}
 		}
 	}

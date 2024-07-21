@@ -17,14 +17,13 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.halflivedcrisis.world.features.StructureFeature;
 import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModTabs;
 import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModSounds;
 import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModParticleTypes;
-import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModMenus;
 import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModItems;
 import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModEntities;
 import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModBlocks;
-import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -47,15 +46,16 @@ public class HalfLivedCrisisMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		HalfLivedCrisisModSounds.REGISTRY.register(bus);
 		HalfLivedCrisisModBlocks.REGISTRY.register(bus);
-		HalfLivedCrisisModBlockEntities.REGISTRY.register(bus);
+
 		HalfLivedCrisisModItems.REGISTRY.register(bus);
 		HalfLivedCrisisModEntities.REGISTRY.register(bus);
 
 		HalfLivedCrisisModTabs.REGISTRY.register(bus);
 
+		StructureFeature.REGISTRY.register(bus);
+
 		HalfLivedCrisisModParticleTypes.REGISTRY.register(bus);
 
-		HalfLivedCrisisModMenus.REGISTRY.register(bus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

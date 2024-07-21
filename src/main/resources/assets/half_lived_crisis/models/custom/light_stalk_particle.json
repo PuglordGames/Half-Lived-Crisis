@@ -1,7 +1,0 @@
-
-{
-  "parent": "half_lived_crisis:displaysettings/light_stalk.item",
-  "textures": {
-    "particle": "half_lived_crisis:block/light_stalk"
-  }
-}

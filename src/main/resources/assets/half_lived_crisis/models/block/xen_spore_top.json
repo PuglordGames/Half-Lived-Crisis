@@ -1,0 +1,9 @@
+{
+  "parent": "half_lived_crisis:custom/xen_spore_top",
+  "textures": {
+    "all": "half_lived_crisis:block/xen_spore",
+    "particle": "half_lived_crisis:block/xen_spore",
+    "0": "half_lived_crisis:block/xen_spore"
+  },
+  "render_type": "solid"
+}

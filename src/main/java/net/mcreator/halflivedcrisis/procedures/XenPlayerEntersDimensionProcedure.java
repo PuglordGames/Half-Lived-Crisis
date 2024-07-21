@@ -30,13 +30,13 @@ public class XenPlayerEntersDimensionProcedure {
 		if (world instanceof ServerLevel _serverworld) {
 			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("half_lived_crisis", "nihilanths_lair"));
 			if (template != null) {
-				template.placeInWorld(_serverworld, new BlockPos(-8, 68, -22), new BlockPos(-8, 68, -22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+				template.placeInWorld(_serverworld, new BlockPos(-8, 109, -61), new BlockPos(-8, 109, -61), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 			}
 		}
 		if (world instanceof ServerLevel _serverworld) {
 			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("half_lived_crisis", "nihilanths_lair_top"));
 			if (template != null) {
-				template.placeInWorld(_serverworld, new BlockPos(-8, 111, -22), new BlockPos(-8, 111, -22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+				template.placeInWorld(_serverworld, new BlockPos(-8, 152, -61), new BlockPos(-8, 152, -61), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 			}
 		}
 		{

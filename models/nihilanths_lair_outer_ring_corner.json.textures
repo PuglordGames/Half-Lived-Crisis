@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "nihilanths_lair_outer_ring_corner"
+      },
+      "name": "default"
+    }
+  }
+}

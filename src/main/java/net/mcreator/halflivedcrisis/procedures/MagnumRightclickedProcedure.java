@@ -19,6 +19,7 @@ import net.mcreator.halflivedcrisis.network.HalfLivedCrisisModVariables;
 import net.mcreator.halflivedcrisis.item.MagnumItem;
 import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModEntities;
 import net.mcreator.halflivedcrisis.entity.MagnumProjectileEntity;
+import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
 public class MagnumRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -60,6 +61,23 @@ public class MagnumRightclickedProcedure {
 				entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.magnum_ammo = _setval;
 					capability.syncPlayerVariables(entity);
+				});
+			}
+			for (int index0 = 0; index0 < 14; index0++) {
+				HalfLivedCrisisMod.queueServerWork(1, () -> {
+					{
+						Entity _ent = entity;
+						_ent.setYRot(entity.getYRot());
+						_ent.setXRot((float) (entity.getXRot() - 1));
+						_ent.setYBodyRot(_ent.getYRot());
+						_ent.setYHeadRot(_ent.getYRot());
+						_ent.yRotO = _ent.getYRot();
+						_ent.xRotO = _ent.getXRot();
+						if (_ent instanceof LivingEntity _entity) {
+							_entity.yBodyRotO = _entity.getYRot();
+							_entity.yHeadRotO = _entity.getYRot();
+						}
+					}
 				});
 			}
 		} else {

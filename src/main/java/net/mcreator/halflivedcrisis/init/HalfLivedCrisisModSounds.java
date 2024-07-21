@@ -25,4 +25,15 @@ public class HalfLivedCrisisModSounds {
 	public static final RegistryObject<SoundEvent> GAUSS_SHOOT = REGISTRY.register("gauss_shoot", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "gauss_shoot")));
 	public static final RegistryObject<SoundEvent> TRANSCENDENT = REGISTRY.register("transcendent", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "transcendent")));
 	public static final RegistryObject<SoundEvent> HEV_SUIT_START_UP = REGISTRY.register("hev_suit_start_up", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "hev_suit_start_up")));
+	public static final RegistryObject<SoundEvent> LONG_JUMP_MODULE_USED = REGISTRY.register("long_jump_module_used", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "long_jump_module_used")));
+	public static final RegistryObject<SoundEvent> SHOTGUN_RELOAD_01 = REGISTRY.register("shotgun_reload_01", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "shotgun_reload_01")));
+	public static final RegistryObject<SoundEvent> SHOTGUN_RELOAD_02 = REGISTRY.register("shotgun_reload_02", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "shotgun_reload_02")));
+	public static final RegistryObject<SoundEvent> SHOTGUN_RELOAD_03 = REGISTRY.register("shotgun_reload_03", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "shotgun_reload_03")));
+	public static final RegistryObject<SoundEvent> SHOTGUN_RELOAD_04 = REGISTRY.register("shotgun_reload_04", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "shotgun_reload_04")));
+	public static final RegistryObject<SoundEvent> SHOTGUN_RELOAD_05 = REGISTRY.register("shotgun_reload_05", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "shotgun_reload_05")));
+	public static final RegistryObject<SoundEvent> SHOTGUN_RELOAD_06 = REGISTRY.register("shotgun_reload_06", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "shotgun_reload_06")));
+	public static final RegistryObject<SoundEvent> SHOTGUN_SHOOT = REGISTRY.register("shotgun_shoot", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "shotgun_shoot")));
+	public static final RegistryObject<SoundEvent> SHOTGUN_DOUBLE_SHOT = REGISTRY.register("shotgun_double_shot", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "shotgun_double_shot")));
+	public static final RegistryObject<SoundEvent> PULSE_RIFLE_SHOOT = REGISTRY.register("pulse_rifle_shoot", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "pulse_rifle_shoot")));
+	public static final RegistryObject<SoundEvent> PULSE_RIFLE_RELOAD = REGISTRY.register("pulse_rifle_reload", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("half_lived_crisis", "pulse_rifle_reload")));
 }

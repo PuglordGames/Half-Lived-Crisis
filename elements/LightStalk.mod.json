@@ -1,6 +1,6 @@
 {
   "_fv": 60,
-  "_type": "animatedblock",
+  "_type": "block",
   "definition": {
     "texture": "light_stalk",
     "textureTop": "",
@@ -8,7 +8,8 @@
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 0,
+    "renderType": 2,
+    "customModelName": "light_stalk:default",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -27,8 +28,35 @@
         "my": 0.0,
         "mz": 7.0,
         "Mx": 9.0,
-        "My": 12.0,
+        "My": 4.0,
         "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 7.5,
+        "my": 4.0,
+        "mz": 7.5,
+        "Mx": 8.5,
+        "My": 8.0,
+        "Mz": 8.5,
+        "subtract": false
+      },
+      {
+        "mx": 7.5,
+        "my": 8.0,
+        "mz": 7.5,
+        "Mx": 8.5,
+        "My": 12.0,
+        "Mz": 8.5,
+        "subtract": false
+      },
+      {
+        "mx": 7.25,
+        "my": 11.75,
+        "mz": 7.25,
+        "Mx": 8.75,
+        "My": 14.25,
+        "Mz": 8.75,
         "subtract": false
       }
     ],
@@ -41,7 +69,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:WeaponsAndAmmunition"
+      "value": "CUSTOM:XenBlocksAndCreatures"
     },
     "destroyTool": "Not specified",
     "customDrop": {
@@ -55,9 +83,9 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "ROCK"
+      "value": "PLANTS"
     },
-    "tickRate": 20,
+    "tickRate": 0,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -76,7 +104,6 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "animationCount": 4.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "isCustomSoundType": false,
@@ -98,9 +125,10 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 0,
+    "luminance": 7,
     "unbreakable": false,
     "breakHarvestLevel": 1,
+    "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
@@ -108,7 +136,6 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
-    "generateFeature": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -122,6 +149,7 @@
     "onEntityCollides": {
       "name": "LightStalkEntityCollidesInTheBlock"
     },
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
@@ -132,26 +160,6 @@
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 64,
-    "normal": "light_stalk.geo.json",
-    "displaySettings": "light_stalk.item.json",
-    "blockstateList": [
-      {
-        "texture": "light_stalk",
-        "particleTexture": "light_stalk",
-        "renderType": 0,
-        "customModelName": "light_stalk.geo.json",
-        "luminance": 10,
-        "boundingBoxes": []
-      },
-      {
-        "texture": "light_stalk",
-        "particleTexture": "light_stalk",
-        "renderType": 0,
-        "customModelName": "light_stalk_hidden.geo.json",
-        "luminance": 0,
-        "boundingBoxes": []
-      }
-    ]
+    "maxGenerateHeight": 64
   }
 }

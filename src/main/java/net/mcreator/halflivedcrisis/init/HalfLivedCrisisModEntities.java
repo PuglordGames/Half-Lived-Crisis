@@ -16,11 +16,13 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.halflivedcrisis.entity.ShotgunProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.SMGProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.SMGGrenadeProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.PistolProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.MagnumProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.GaussProjectileEntity;
+import net.mcreator.halflivedcrisis.entity.AR2ProjectileEntity;
 import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -36,6 +38,10 @@ public class HalfLivedCrisisModEntities {
 			.setCustomClientFactory(SMGGrenadeProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<GaussProjectileEntity>> GAUSS_PROJECTILE = register("gauss_projectile", EntityType.Builder.<GaussProjectileEntity>of(GaussProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(GaussProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<ShotgunProjectileEntity>> SHOTGUN_PROJECTILE = register("shotgun_projectile", EntityType.Builder.<ShotgunProjectileEntity>of(ShotgunProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(ShotgunProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<AR2ProjectileEntity>> AR_2_PROJECTILE = register("ar_2_projectile",
+			EntityType.Builder.<AR2ProjectileEntity>of(AR2ProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(AR2ProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

@@ -1,7 +1,0 @@
-
-{
-  "parent": "half_lived_crisis:displaysettings/xen_spore.item",
-  "textures": {
-    "particle": "half_lived_crisis:block/xen_spore"
-  }
-}

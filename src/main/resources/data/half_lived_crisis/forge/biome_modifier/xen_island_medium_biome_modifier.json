@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "half_lived_crisis:xen_plains",
+  "features": "half_lived_crisis:xen_island_medium",
+  "step": "surface_structures"
+}

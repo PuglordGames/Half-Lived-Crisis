@@ -94,5 +94,93 @@
         "stream": false
       }
     ]
+  },
+  "long_jump_module_used": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:long_jump_module_used",
+        "stream": false
+      }
+    ]
+  },
+  "shotgun_reload_01": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:shotgun_reload_01",
+        "stream": false
+      }
+    ]
+  },
+  "shotgun_reload_02": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:shotgun_reload_02",
+        "stream": false
+      }
+    ]
+  },
+  "shotgun_reload_03": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:shotgun_reload_03",
+        "stream": false
+      }
+    ]
+  },
+  "shotgun_reload_04": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:shotgun_reload_04",
+        "stream": false
+      }
+    ]
+  },
+  "shotgun_reload_05": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:shotgun_reload_05",
+        "stream": false
+      }
+    ]
+  },
+  "shotgun_reload_06": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:shotgun_reload_06",
+        "stream": false
+      }
+    ]
+  },
+  "shotgun_shoot": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:shotgun_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "shotgun_double_shot": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:shotgun_double_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "pulse_rifle_shoot": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:pulse_rifle_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "pulse_rifle_reload": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:pulse_rifle_reload",
+        "stream": false
+      }
+    ]
   }
 }

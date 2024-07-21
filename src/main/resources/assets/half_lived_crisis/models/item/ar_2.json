@@ -1,0 +1,6 @@
+{
+  "parent": "half_lived_crisis:displaysettings/ar2.item",
+  "textures": {
+    "layer0": "half_lived_crisis:item/ar2"
+  }
+}

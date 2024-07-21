@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "half_lived_crisis:xen_plains",
+  "features": "half_lived_crisis:xen_pillar_large_feature",
+  "step": "surface_structures"
+}

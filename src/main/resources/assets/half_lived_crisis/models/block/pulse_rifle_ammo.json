@@ -1,0 +1,9 @@
+{
+  "parent": "half_lived_crisis:custom/ar2_ammo",
+  "textures": {
+    "all": "half_lived_crisis:block/ar2",
+    "particle": "half_lived_crisis:block/ar2",
+    "0": "half_lived_crisis:block/ar2"
+  },
+  "render_type": "cutout_mipped"
+}

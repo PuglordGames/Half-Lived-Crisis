@@ -6,19 +6,14 @@ package net.mcreator.halflivedcrisis.init;
 
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
 import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class HalfLivedCrisisModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, HalfLivedCrisisMod.MODID);
 	public static final RegistryObject<CreativeModeTab> WEAPONS_AND_AMMUNITION = REGISTRY.register("weapons_and_ammunition",
@@ -33,7 +28,10 @@ public class HalfLivedCrisisModTabs {
 				tabData.accept(HalfLivedCrisisModBlocks.MAGNUM_AMMO.get().asItem());
 				tabData.accept(HalfLivedCrisisModBlocks.SMG_GRENADE.get().asItem());
 				tabData.accept(HalfLivedCrisisModBlocks.GAUSS_AMMO.get().asItem());
-				tabData.accept(HalfLivedCrisisModBlocks.LIGHT_STALK.get().asItem());
+				tabData.accept(HalfLivedCrisisModItems.SHOTGUN.get());
+				tabData.accept(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get().asItem());
+				tabData.accept(HalfLivedCrisisModItems.AR_2.get());
+				tabData.accept(HalfLivedCrisisModBlocks.PULSE_RIFLE_AMMO.get().asItem());
 			})
 
 					.build());
@@ -45,12 +43,18 @@ public class HalfLivedCrisisModTabs {
 			})
 
 					.build());
+	public static final RegistryObject<CreativeModeTab> XEN_BLOCKS_AND_CREATURES = REGISTRY.register("xen_blocks_and_creatures",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.half_lived_crisis.xen_blocks_and_creatures")).icon(() -> new ItemStack(HalfLivedCrisisModBlocks.XENSTONE.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(HalfLivedCrisisModBlocks.XENSTONE.get().asItem());
+				tabData.accept(HalfLivedCrisisModBlocks.XEN_PILLAR.get().asItem());
+				tabData.accept(HalfLivedCrisisModBlocks.XENMOSS.get().asItem());
+				tabData.accept(HalfLivedCrisisModBlocks.XEN_CRYSTAL.get().asItem());
+				tabData.accept(HalfLivedCrisisModBlocks.XEN_PORTAL.get().asItem());
+				tabData.accept(HalfLivedCrisisModBlocks.XEN_SPORE.get().asItem());
+				tabData.accept(HalfLivedCrisisModBlocks.LIGHT_STALK.get().asItem());
+				tabData.accept(HalfLivedCrisisModBlocks.LIGHT_STALK_HIDDEN.get().asItem());
+				tabData.accept(HalfLivedCrisisModBlocks.NIHILANTHS_LAIR_CORE.get().asItem());
+			})
 
-	@SubscribeEvent
-	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
-		if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-			tabData.accept(HalfLivedCrisisModBlocks.XENMOSS.get().asItem());
-			tabData.accept(HalfLivedCrisisModBlocks.XEN_CRYSTAL.get().asItem());
-		}
-	}
+					.build());
 }

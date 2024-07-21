@@ -1,0 +1,8 @@
+{
+  "type": "half_lived_crisis:structure_feature",
+  "config": {
+    "structure": "half_lived_crisis:xen_pillar_medium",
+    "random_rotation": true,
+    "ignored_blocks": "minecraft:air"
+  }
+}

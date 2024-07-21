@@ -27,7 +27,7 @@
       "aquifers_enabled": false,
       "ore_veins_enabled": false,
       "default_block": {
-        "Name": "half_lived_crisis:xenstone"
+        "Name": "minecraft:air"
       },
       "default_fluid": {
         "Name": "minecraft:water",
@@ -196,14 +196,14 @@
                         "then_run": {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "half_lived_crisis:xenstone"
+                            "Name": "minecraft:air"
                           }
                         }
                       },
                       {
                         "type": "minecraft:block",
                         "result_state": {
-                          "Name": "half_lived_crisis:xenstone"
+                          "Name": "minecraft:air"
                         }
                       }
                     ]
@@ -221,7 +221,7 @@
                   "then_run": {
                     "type": "minecraft:block",
                     "result_state": {
-                      "Name": "half_lived_crisis:xenstone"
+                      "Name": "minecraft:air"
                     }
                   }
                 }
