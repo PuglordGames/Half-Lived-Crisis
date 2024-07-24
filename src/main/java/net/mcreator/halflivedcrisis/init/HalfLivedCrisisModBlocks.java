@@ -17,6 +17,7 @@ import net.mcreator.halflivedcrisis.block.XenSporeBlock;
 import net.mcreator.halflivedcrisis.block.XenPortalBlock;
 import net.mcreator.halflivedcrisis.block.XenPillarBlock;
 import net.mcreator.halflivedcrisis.block.XenCrystalBlock;
+import net.mcreator.halflivedcrisis.block.SuitBatteryBlock;
 import net.mcreator.halflivedcrisis.block.ShotgunAmmoBlock;
 import net.mcreator.halflivedcrisis.block.SMGammoBlock;
 import net.mcreator.halflivedcrisis.block.SMGGrenadeBlock;
@@ -26,6 +27,7 @@ import net.mcreator.halflivedcrisis.block.NihilanthsLairOuterRingVerticalBlock;
 import net.mcreator.halflivedcrisis.block.NihilanthsLairOuterRingCornerBlock;
 import net.mcreator.halflivedcrisis.block.NihilanthsLairOuterRingBlock;
 import net.mcreator.halflivedcrisis.block.NihilanthsLairCoreBlock;
+import net.mcreator.halflivedcrisis.block.MedkitBlock;
 import net.mcreator.halflivedcrisis.block.MagnumAmmoBlock;
 import net.mcreator.halflivedcrisis.block.LightStalkHiddenBlock;
 import net.mcreator.halflivedcrisis.block.LightStalkBlock;
@@ -54,6 +56,8 @@ public class HalfLivedCrisisModBlocks {
 	public static final RegistryObject<Block> NIHILANTHS_LAIR_OUTER_RING_VERTICAL = REGISTRY.register("nihilanths_lair_outer_ring_vertical", () -> new NihilanthsLairOuterRingVerticalBlock());
 	public static final RegistryObject<Block> SHOTGUN_AMMO = REGISTRY.register("shotgun_ammo", () -> new ShotgunAmmoBlock());
 	public static final RegistryObject<Block> PULSE_RIFLE_AMMO = REGISTRY.register("pulse_rifle_ammo", () -> new PulseRifleAmmoBlock());
+	public static final RegistryObject<Block> SUIT_BATTERY = REGISTRY.register("suit_battery", () -> new SuitBatteryBlock());
+	public static final RegistryObject<Block> MEDKIT = REGISTRY.register("medkit", () -> new MedkitBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

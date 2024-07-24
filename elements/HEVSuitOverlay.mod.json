@@ -1,0 +1,271 @@
+{
+  "_fv": 60,
+  "_type": "overlay",
+  "definition": {
+    "priority": "HIGHEST",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "crowbar_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "CrowbarCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pistol_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PistolCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smg_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "SMGCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grenade_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "GrenadeCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "magnum_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "MagnumCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gauss_gun_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "GaussGunCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "shotgun_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ShotgunCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "shotgun_double_shot_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ShotgunDoubleShotCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ar2_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PulseRifleCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ar2_energy_ball_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AR2EnergyBallCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "health_overlay.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "AmmoDisplayLogic"
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 370,
+          "y": 216
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ammo",
+          "text": {
+            "fixedValue": "ammo",
+            "name": "AmmoDisplay"
+          },
+          "color": {
+            "value": -13312,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "AmmoDisplayLogic"
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 386,
+          "y": 224
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smg_ammo.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AmmoDisplayLogic"
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 372,
+          "y": 227
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "health_overlay.png",
+          "use1Xscale": true,
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 6,
+          "y": 216
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_health",
+          "text": {
+            "fixedValue": "100",
+            "name": "HealthDisplay"
+          },
+          "color": {
+            "value": -13312,
+            "falpha": 0.0
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 20,
+          "y": 224
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "health.png",
+          "use1Xscale": true,
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 7,
+          "y": 216
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "health_overlay.png",
+          "use1Xscale": true,
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 46,
+          "y": 216
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "suit.png",
+          "use1Xscale": true,
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 47,
+          "y": 216
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_suit",
+          "text": {
+            "fixedValue": "100",
+            "name": "SuitBatteryDisplay"
+          },
+          "color": {
+            "value": -13312,
+            "falpha": 0.0
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 60,
+          "y": 224
+        }
+      }
+    ],
+    "baseTexture": "hev_suit_overlay.png",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "HEVSuitOverlayDisplayOverlayIngame"
+    },
+    "gridSettings": {
+      "sx": 26,
+      "sy": 26,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

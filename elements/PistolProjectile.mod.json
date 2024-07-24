@@ -13,7 +13,7 @@
     "power": 30.0,
     "damage": 0.2,
     "knockback": 0,
-    "entityModel": "Default",
+    "entityModel": "Modelbullet",
     "customModelTexture": "bullet.png",
     "onHitsBlock": {
       "name": "BulletBreakGlass"

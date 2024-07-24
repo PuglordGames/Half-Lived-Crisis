@@ -496,7 +496,6 @@ public class XenCustomSkyboxProcedure {
 	}
 
 	private static void execute(@Nullable Event event) {
-		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, new ResourceLocation(("half_lived_crisis" + ":textures/" + "xen_skybox_large" + ".png")));
 		renderSkybox(0, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255, true);
 	}

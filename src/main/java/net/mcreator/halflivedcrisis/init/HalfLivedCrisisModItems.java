@@ -55,6 +55,8 @@ public class HalfLivedCrisisModItems {
 	public static final RegistryObject<Item> SHOTGUN_AMMO = block(HalfLivedCrisisModBlocks.SHOTGUN_AMMO);
 	public static final RegistryObject<Item> AR_2 = REGISTRY.register("ar_2", () -> new AR2Item());
 	public static final RegistryObject<Item> PULSE_RIFLE_AMMO = block(HalfLivedCrisisModBlocks.PULSE_RIFLE_AMMO);
+	public static final RegistryObject<Item> SUIT_BATTERY = block(HalfLivedCrisisModBlocks.SUIT_BATTERY);
+	public static final RegistryObject<Item> MEDKIT = block(HalfLivedCrisisModBlocks.MEDKIT);
 
 	// Start of user code block custom items
 	// End of user code block custom items

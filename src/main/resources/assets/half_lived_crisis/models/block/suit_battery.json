@@ -1,0 +1,9 @@
+{
+  "parent": "half_lived_crisis:custom/battery",
+  "textures": {
+    "all": "half_lived_crisis:block/battery",
+    "particle": "half_lived_crisis:block/battery",
+    "0": "half_lived_crisis:block/battery"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "half_lived_crisis:custom/medkit",
+  "textures": {
+    "all": "half_lived_crisis:block/medkit",
+    "particle": "half_lived_crisis:block/medkit",
+    "0": "half_lived_crisis:block/medkit"
+  },
+  "render_type": "cutout_mipped"
+}

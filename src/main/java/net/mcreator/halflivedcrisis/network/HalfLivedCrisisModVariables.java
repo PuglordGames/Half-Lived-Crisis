@@ -76,6 +76,11 @@ public class HalfLivedCrisisModVariables {
 				clone.jump_var = original.jump_var;
 				clone.shotgun_ammo = original.shotgun_ammo;
 				clone.pusle_rifle_ammo = original.pusle_rifle_ammo;
+				clone.ammo_display = original.ammo_display;
+				clone.health = original.health;
+				clone.health_display = original.health_display;
+				clone.suit_battery = original.suit_battery;
+				clone.suit_battery_display = original.suit_battery_display;
 			}
 		}
 	}
@@ -120,6 +125,11 @@ public class HalfLivedCrisisModVariables {
 		public boolean jump_var = false;
 		public double shotgun_ammo = 0;
 		public double pusle_rifle_ammo = 0;
+		public String ammo_display = "\"\"";
+		public double health = 100.0;
+		public String health_display = "\"\"";
+		public double suit_battery = 100.0;
+		public String suit_battery_display = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -137,6 +147,11 @@ public class HalfLivedCrisisModVariables {
 			nbt.putBoolean("jump_var", jump_var);
 			nbt.putDouble("shotgun_ammo", shotgun_ammo);
 			nbt.putDouble("pusle_rifle_ammo", pusle_rifle_ammo);
+			nbt.putString("ammo_display", ammo_display);
+			nbt.putDouble("health", health);
+			nbt.putString("health_display", health_display);
+			nbt.putDouble("suit_battery", suit_battery);
+			nbt.putString("suit_battery_display", suit_battery_display);
 			return nbt;
 		}
 
@@ -151,6 +166,11 @@ public class HalfLivedCrisisModVariables {
 			jump_var = nbt.getBoolean("jump_var");
 			shotgun_ammo = nbt.getDouble("shotgun_ammo");
 			pusle_rifle_ammo = nbt.getDouble("pusle_rifle_ammo");
+			ammo_display = nbt.getString("ammo_display");
+			health = nbt.getDouble("health");
+			health_display = nbt.getString("health_display");
+			suit_battery = nbt.getDouble("suit_battery");
+			suit_battery_display = nbt.getString("suit_battery_display");
 		}
 	}
 
@@ -184,6 +204,11 @@ public class HalfLivedCrisisModVariables {
 					variables.jump_var = message.data.jump_var;
 					variables.shotgun_ammo = message.data.shotgun_ammo;
 					variables.pusle_rifle_ammo = message.data.pusle_rifle_ammo;
+					variables.ammo_display = message.data.ammo_display;
+					variables.health = message.data.health;
+					variables.health_display = message.data.health_display;
+					variables.suit_battery = message.data.suit_battery;
+					variables.suit_battery_display = message.data.suit_battery_display;
 				}
 			});
 			context.setPacketHandled(true);

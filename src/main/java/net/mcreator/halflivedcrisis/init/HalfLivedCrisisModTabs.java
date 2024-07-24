@@ -40,6 +40,8 @@ public class HalfLivedCrisisModTabs {
 				tabData.accept(HalfLivedCrisisModItems.HEV_SUIT_CHESTPLATE.get());
 				tabData.accept(HalfLivedCrisisModItems.HEV_SUIT_LEGGINGS.get());
 				tabData.accept(HalfLivedCrisisModItems.LONG_JUMP_MODULE.get());
+				tabData.accept(HalfLivedCrisisModBlocks.SUIT_BATTERY.get().asItem());
+				tabData.accept(HalfLivedCrisisModBlocks.MEDKIT.get().asItem());
 			})
 
 					.build());

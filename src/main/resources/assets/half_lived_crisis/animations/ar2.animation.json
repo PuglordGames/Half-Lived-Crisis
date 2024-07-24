@@ -65,6 +65,21 @@
 							"easing": "linear"
 						}
 					}
+				},
+				"bone6": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.04": {
+							"vector": [1, 0.5, -24],
+							"easing": "easeInBack",
+							"easingArgs": [-3]
+						},
+						"0.08": {
+							"vector": [0, 0, 0]
+						}
+					}
 				}
 			}
 		},
@@ -162,7 +177,6 @@
 			}
 		},
 		"idle": {
-			"loop": true,
 			"animation_length": 0.04,
 			"bones": {
 				"bone3": {

@@ -6,69 +6,39 @@
 			"bones": {
 				"LeftArm": {
 					"rotation": {
-						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
-						},
-						"0.04": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
-						}
+						"vector": [0, 0, 0]
 					},
 					"position": {
-						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
-						},
-						"0.04": {
-							"vector": [0, 0.99619, -1.08716],
-							"easing": "linear"
-						}
+						"vector": [0, 0.99619, -1.08716]
 					}
 				},
 				"RightArm": {
 					"rotation": {
-						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
-						},
-						"0.04": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
-						}
-					},
-					"position": {
-						"vector": [0, 0, 0],
-						"easing": "linear"
+						"vector": [0, 0, 0]
 					}
 				},
 				"bone": {
 					"rotation": {
 						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						},
 						"0.04": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						}
 					},
 					"position": {
 						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, -1]
 						},
 						"0.04": {
-							"vector": [0, 0, 4],
-							"easing": "linear"
+							"vector": [0, 0, 1]
 						}
 					}
 				},
 				"bone2": {
 					"position": {
 						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						},
 						"0.04": {
 							"vector": [0, 1, -20],
@@ -78,8 +48,7 @@
 					},
 					"scale": {
 						"0.0": {
-							"vector": [1, 1, 1],
-							"easing": "linear"
+							"vector": [1, 1, 1]
 						},
 						"0.04": {
 							"vector": [1, 1, 1.4],
@@ -91,18 +60,15 @@
 			}
 		},
 		"idle": {
-			"loop": true,
 			"animation_length": 0.04,
 			"bones": {
 				"bone": {
 					"position": {
 						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						},
 						"0.04": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						}
 					}
 				}
@@ -114,96 +80,75 @@
 				"LeftArm": {
 					"rotation": {
 						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						},
 						"0.92": {
-							"vector": [15, 0, 0],
-							"easing": "easeInBack",
-							"easingArgs": []
+							"vector": [15, 0, 0]
 						},
 						"1.2": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						}
 					},
 					"position": {
 						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						},
 						"0.92": {
-							"vector": [0, 2, 0],
-							"easing": "easeInBack",
-							"easingArgs": []
+							"vector": [0, 2, 0]
 						},
 						"1.2": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						}
 					}
 				},
 				"RightArm": {
 					"position": {
 						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						},
 						"0.32": {
-							"vector": [0, -7, 19],
-							"easing": "linear"
+							"vector": [0, -7, 19]
 						},
 						"0.76": {
-							"vector": [0, -7, 19],
-							"easing": "linear"
+							"vector": [0, -7, 19]
 						},
 						"0.88": {
-							"vector": [0, -4, 11],
-							"easing": "linear"
+							"vector": [0, -4, 11]
 						},
 						"1.12": {
-							"vector": [0, -4, 11],
-							"easing": "linear"
+							"vector": [0, -4, 11]
 						},
 						"1.2": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						}
 					}
 				},
 				"bone": {
 					"rotation": {
 						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						},
 						"0.48": {
-							"vector": [-10, -15, -7.5],
-							"easing": "linear"
+							"vector": [-10, -15, -7.5]
 						},
 						"0.92": {
 							"vector": [-25, -15, -7.5],
-							"easing": "easeInBack",
-							"easingArgs": []
+							"easing": "easeInQuart"
 						},
 						"1.2": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						}
 					},
 					"position": {
 						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						},
 						"0.92": {
 							"vector": [0, -2, 0],
-							"easing": "easeInBack",
-							"easingArgs": []
+							"easing": "easeInQuart"
 						},
 						"1.2": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
+							"vector": [0, 0, 0]
 						}
 					}
 				}

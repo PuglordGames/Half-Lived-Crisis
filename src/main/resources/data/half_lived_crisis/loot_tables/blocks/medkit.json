@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "half_lived_crisis:blocks/medkit",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "half_lived_crisis:medkit"
+        }
+      ]
+    }
+  ]
+}
