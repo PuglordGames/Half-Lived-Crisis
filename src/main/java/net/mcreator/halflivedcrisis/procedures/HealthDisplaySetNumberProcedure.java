@@ -34,5 +34,23 @@ public class HealthDisplaySetNumberProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		if ((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).health > 100) {
+			{
+				double _setval = 100;
+				entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.health = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
+		if ((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).suit_battery > 100) {
+			{
+				double _setval = 100;
+				entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.suit_battery = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
 	}
 }

@@ -146,6 +146,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "SuitBatteryOnBlockRightClicked"
+    },
+    "onEntityCollides": {
+      "name": "SuitBatteryEntityCollidesInTheBlock"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

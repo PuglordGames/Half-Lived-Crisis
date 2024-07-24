@@ -146,6 +146,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "MedkitOnBlockRightClicked"
+    },
+    "onEntityCollides": {
+      "name": "MedkitEntityCollidesInTheBlock"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
