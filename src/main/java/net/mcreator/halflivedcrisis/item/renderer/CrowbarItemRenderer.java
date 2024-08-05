@@ -71,7 +71,7 @@ public class CrowbarItemRenderer extends GeoItemRenderer<CrowbarItem> {
 		Minecraft mc = Minecraft.getInstance();
 		String name = bone.getName();
 		boolean renderingArms = false;
-		if (name.equals("leftarm") || name.equals("")) {
+		if (name.equals("") || name.equals("RightArm")) {
 			bone.setHidden(true);
 			renderingArms = true;
 		} else {
@@ -91,11 +91,11 @@ public class CrowbarItemRenderer extends GeoItemRenderer<CrowbarItem> {
 			ResourceLocation loc = player.getSkinTextureLocation();
 			VertexConsumer armBuilder = this.currentBuffer.getBuffer(RenderType.entitySolid(loc));
 			VertexConsumer sleeveBuilder = this.currentBuffer.getBuffer(RenderType.entityTranslucent(loc));
-			if (name.equals("leftarm")) {
+			if (name.equals("")) {
 				stack.translate(-1.0f * SCALE_RECIPROCAL, 2.0f * SCALE_RECIPROCAL, 0.0f);
 				AnimUtils.renderPartOverBone(model.leftArm, bone, stack, armBuilder, packedLightIn, OverlayTexture.NO_OVERLAY, armsAlpha);
 				AnimUtils.renderPartOverBone(model.leftSleeve, bone, stack, sleeveBuilder, packedLightIn, OverlayTexture.NO_OVERLAY, armsAlpha);
-			} else if (name.equals("")) {
+			} else if (name.equals("RightArm")) {
 				stack.translate(1.0f * SCALE_RECIPROCAL, 2.0f * SCALE_RECIPROCAL, 0.0f);
 				AnimUtils.renderPartOverBone(model.rightArm, bone, stack, armBuilder, packedLightIn, OverlayTexture.NO_OVERLAY, armsAlpha);
 				AnimUtils.renderPartOverBone(model.rightSleeve, bone, stack, sleeveBuilder, packedLightIn, OverlayTexture.NO_OVERLAY, armsAlpha);

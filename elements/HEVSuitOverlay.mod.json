@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "overlay",
   "definition": {
     "priority": "HIGHEST",
@@ -14,7 +14,7 @@
           },
           "anchorPoint": "CENTER",
           "x": 205,
-          "y": 112
+          "y": 113
         }
       },
       {
@@ -27,7 +27,7 @@
           },
           "anchorPoint": "CENTER",
           "x": 205,
-          "y": 112
+          "y": 113
         }
       },
       {
@@ -40,7 +40,7 @@
           },
           "anchorPoint": "CENTER",
           "x": 205,
-          "y": 112
+          "y": 113
         }
       },
       {
@@ -53,7 +53,7 @@
           },
           "anchorPoint": "CENTER",
           "x": 205,
-          "y": 112
+          "y": 113
         }
       },
       {
@@ -66,7 +66,7 @@
           },
           "anchorPoint": "CENTER",
           "x": 205,
-          "y": 112
+          "y": 113
         }
       },
       {
@@ -79,7 +79,7 @@
           },
           "anchorPoint": "CENTER",
           "x": 205,
-          "y": 112
+          "y": 113
         }
       },
       {
@@ -92,7 +92,7 @@
           },
           "anchorPoint": "CENTER",
           "x": 205,
-          "y": 112
+          "y": 113
         }
       },
       {
@@ -105,7 +105,7 @@
           },
           "anchorPoint": "CENTER",
           "x": 205,
-          "y": 112
+          "y": 113
         }
       },
       {
@@ -118,7 +118,7 @@
           },
           "anchorPoint": "CENTER",
           "x": 205,
-          "y": 112
+          "y": 113
         }
       },
       {
@@ -131,7 +131,7 @@
           },
           "anchorPoint": "CENTER",
           "x": 205,
-          "y": 112
+          "y": 113
         }
       },
       {
@@ -143,7 +143,7 @@
             "name": "AmmoDisplayLogic"
           },
           "anchorPoint": "BOTTOM_RIGHT",
-          "x": 370,
+          "x": 379,
           "y": 216
         }
       },
@@ -163,7 +163,7 @@
             "name": "AmmoDisplayLogic"
           },
           "anchorPoint": "BOTTOM_RIGHT",
-          "x": 386,
+          "x": 392,
           "y": 224
         }
       },
@@ -176,7 +176,7 @@
             "name": "AmmoDisplayLogic"
           },
           "anchorPoint": "BOTTOM_RIGHT",
-          "x": 372,
+          "x": 380,
           "y": 227
         }
       },
@@ -223,7 +223,7 @@
           "image": "health_overlay.png",
           "use1Xscale": true,
           "anchorPoint": "BOTTOM_LEFT",
-          "x": 46,
+          "x": 47,
           "y": 216
         }
       },
@@ -252,6 +252,45 @@
           "anchorPoint": "BOTTOM_LEFT",
           "x": 60,
           "y": 224
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "crosshair_hev_suit.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "CrosshairHEVSuitDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 113
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gravity_gun_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "GravityGunCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 113
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "crossbow_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "CrossbowCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 113
         }
       }
     ],

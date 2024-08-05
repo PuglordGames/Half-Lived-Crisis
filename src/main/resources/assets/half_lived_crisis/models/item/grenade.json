@@ -1,0 +1,6 @@
+{
+  "parent": "half_lived_crisis:displaysettings/grenade.item",
+  "textures": {
+    "layer0": "half_lived_crisis:item/grenade"
+  }
+}

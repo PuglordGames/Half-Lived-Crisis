@@ -63,22 +63,6 @@
       }
     ]
   },
-  "gauss_shoot": {
-    "sounds": [
-      {
-        "name": "half_lived_crisis:gauss_shoot_1",
-        "stream": false
-      },
-      {
-        "name": "half_lived_crisis:gauss_shoot_2",
-        "stream": false
-      },
-      {
-        "name": "half_lived_crisis:gauss_shoot_3",
-        "stream": false
-      }
-    ]
-  },
   "transcendent": {
     "sounds": [
       {
@@ -179,6 +163,46 @@
     "sounds": [
       {
         "name": "half_lived_crisis:pulse_rifle_reload",
+        "stream": false
+      }
+    ]
+  },
+  "crossbow_shoot": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:crossbow_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "gravity_gun_pick_up": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:grabity_gun_pick_up",
+        "stream": false
+      }
+    ]
+  },
+  "gravity_gun_put_down": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:gravity_gun_put_down",
+        "stream": false
+      }
+    ]
+  },
+  "gravity_gun_shoot": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:gravity_gun_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "gauss_shoot": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:gauss_shoot",
         "stream": false
       }
     ]

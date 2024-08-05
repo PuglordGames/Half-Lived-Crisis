@@ -22,16 +22,20 @@ public class HalfLivedCrisisModTabs {
 				tabData.accept(HalfLivedCrisisModItems.PISTOL.get());
 				tabData.accept(HalfLivedCrisisModItems.SMG.get());
 				tabData.accept(HalfLivedCrisisModItems.MAGNUM.get());
-				tabData.accept(HalfLivedCrisisModItems.GAUSS_GUN.get());
 				tabData.accept(HalfLivedCrisisModBlocks.PISTOL_AMMO.get().asItem());
 				tabData.accept(HalfLivedCrisisModBlocks.SMG_AMMO.get().asItem());
 				tabData.accept(HalfLivedCrisisModBlocks.MAGNUM_AMMO.get().asItem());
 				tabData.accept(HalfLivedCrisisModBlocks.SMG_GRENADE.get().asItem());
+				tabData.accept(HalfLivedCrisisModItems.GAUSS_GUN.get());
 				tabData.accept(HalfLivedCrisisModBlocks.GAUSS_AMMO.get().asItem());
 				tabData.accept(HalfLivedCrisisModItems.SHOTGUN.get());
 				tabData.accept(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get().asItem());
 				tabData.accept(HalfLivedCrisisModItems.AR_2.get());
 				tabData.accept(HalfLivedCrisisModBlocks.PULSE_RIFLE_AMMO.get().asItem());
+				tabData.accept(HalfLivedCrisisModItems.GRAVITY_GUN.get());
+				tabData.accept(HalfLivedCrisisModItems.CROSSBOW.get());
+				tabData.accept(HalfLivedCrisisModBlocks.CROSSBOW_BOLTS.get().asItem());
+				tabData.accept(HalfLivedCrisisModItems.GRENADE.get());
 			})
 
 					.build());
@@ -48,10 +52,10 @@ public class HalfLivedCrisisModTabs {
 	public static final RegistryObject<CreativeModeTab> XEN_BLOCKS_AND_CREATURES = REGISTRY.register("xen_blocks_and_creatures",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.half_lived_crisis.xen_blocks_and_creatures")).icon(() -> new ItemStack(HalfLivedCrisisModBlocks.XENSTONE.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(HalfLivedCrisisModBlocks.XENSTONE.get().asItem());
-				tabData.accept(HalfLivedCrisisModBlocks.XEN_PILLAR.get().asItem());
 				tabData.accept(HalfLivedCrisisModBlocks.XENMOSS.get().asItem());
-				tabData.accept(HalfLivedCrisisModBlocks.XEN_CRYSTAL.get().asItem());
 				tabData.accept(HalfLivedCrisisModBlocks.XEN_PORTAL.get().asItem());
+				tabData.accept(HalfLivedCrisisModBlocks.XEN_CRYSTAL.get().asItem());
+				tabData.accept(HalfLivedCrisisModBlocks.XEN_PILLAR.get().asItem());
 				tabData.accept(HalfLivedCrisisModBlocks.XEN_SPORE.get().asItem());
 				tabData.accept(HalfLivedCrisisModBlocks.LIGHT_STALK.get().asItem());
 				tabData.accept(HalfLivedCrisisModBlocks.LIGHT_STALK_HIDDEN.get().asItem());

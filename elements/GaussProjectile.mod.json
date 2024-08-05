@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "projectile",
   "definition": {
     "projectileItem": {
@@ -14,6 +14,9 @@
     "damage": 0.7,
     "knockback": 5,
     "entityModel": "Default",
-    "customModelTexture": "gauss_projectile.png"
+    "customModelTexture": "gauss_projectile.png",
+    "onHitsBlock": {
+      "name": "GaussProjectileProjectileHitsBlock"
+    }
   }
 }

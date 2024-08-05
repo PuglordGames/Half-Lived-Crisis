@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "animateditem",
   "definition": {
     "renderType": 0,
@@ -39,6 +39,9 @@
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "SMGRightclicked"
+    },
+    "onItemInUseTick": {
+      "name": "SMGItemInHandTick"
     },
     "isFood": false,
     "nutritionalValue": 4,

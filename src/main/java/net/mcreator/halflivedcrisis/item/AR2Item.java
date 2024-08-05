@@ -20,12 +20,14 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.HumanoidArm;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.model.HumanoidModel;
 
 import net.mcreator.halflivedcrisis.procedures.AR2RightclickedProcedure;
+import net.mcreator.halflivedcrisis.procedures.AR2ItemInHandTickProcedure;
 import net.mcreator.halflivedcrisis.item.renderer.AR2ItemRenderer;
 
 import java.util.function.Consumer;
@@ -86,18 +88,24 @@ public class AR2Item extends Item implements GeoItem {
 		return PlayState.STOP;
 	}
 
+	String prevAnim = "empty";
+
 	private PlayState procedurePredicate(AnimationState event) {
 		if (this.transformType != null ? this.transformType.firstPerson() : false) {
-			if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
+			if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED || (!this.animationprocedure.equals(prevAnim) && !this.animationprocedure.equals("empty"))) {
+				if (!this.animationprocedure.equals(prevAnim))
+					event.getController().forceAnimationReset();
 				event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
 				if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
 					this.animationprocedure = "empty";
 					event.getController().forceAnimationReset();
 				}
 			} else if (this.animationprocedure.equals("empty")) {
+				prevAnim = "empty";
 				return PlayState.STOP;
 			}
 		}
+		prevAnim = this.animationprocedure;
 		return PlayState.CONTINUE;
 	}
 
@@ -122,7 +130,14 @@ public class AR2Item extends Item implements GeoItem {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		AR2RightclickedProcedure.execute(world, x, y, z, entity);
+		AR2RightclickedProcedure.execute(entity);
 		return ar;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			AR2ItemInHandTickProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 }

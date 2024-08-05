@@ -26,7 +26,7 @@
 					]
 				},
 				{
-					"name": "LeftArm",
+					"name": "RightArm",
 					"parent": "bone",
 					"pivot": [0, 1, 16.25],
 					"rotation": [90, 0, 0],
@@ -44,7 +44,7 @@
 					]
 				},
 				{
-					"name": "RightArm",
+					"name": "LeftArm",
 					"parent": "bone1",
 					"pivot": [5.86003, 0.30086, 3.90535],
 					"rotation": [80, 20, -17.5],

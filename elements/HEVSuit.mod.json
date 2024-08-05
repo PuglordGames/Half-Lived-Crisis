@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "armor",
   "definition": {
     "enableHelmet": false,
@@ -13,9 +13,11 @@
     "onBodyTick": {
       "name": "HEVSuitChestplateTickEvent"
     },
-    "creativeTab": {
-      "value": "CUSTOM:HEVSuitRelated"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:HEVSuitRelated"
+      }
+    ],
     "armorTextureFile": "hev_suit_",
     "helmetName": "HEV Suit Helmet",
     "bodyName": "H.E.V. Suit Chestplate",

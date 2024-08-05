@@ -55,7 +55,7 @@ public class MagnumRightclickedProcedure {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof MagnumItem)
 				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "shoot");
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 14);
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 18);
 			{
 				double _setval = (entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).magnum_ammo - 1;
 				entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -64,11 +64,11 @@ public class MagnumRightclickedProcedure {
 				});
 			}
 			for (int index0 = 0; index0 < 14; index0++) {
-				HalfLivedCrisisMod.queueServerWork(1, () -> {
+				HalfLivedCrisisMod.queueServerWork(3, () -> {
 					{
 						Entity _ent = entity;
 						_ent.setYRot(entity.getYRot());
-						_ent.setXRot((float) (entity.getXRot() - 1));
+						_ent.setXRot((float) (entity.getXRot() - 14));
 						_ent.setYBodyRot(_ent.getYRot());
 						_ent.setYHeadRot(_ent.getYRot());
 						_ent.yRotO = _ent.getYRot();

@@ -38,7 +38,7 @@ public class GaussImpactProjectileParticle extends TextureSheetParticle {
 		this.setSize(0.2f, 0.2f);
 		this.quadSize *= 3f;
 		this.lifetime = 30;
-		this.gravity = 0f;
+		this.gravity = 1f;
 		this.hasPhysics = true;
 		this.xd = vx * 1;
 		this.yd = vy * 1;

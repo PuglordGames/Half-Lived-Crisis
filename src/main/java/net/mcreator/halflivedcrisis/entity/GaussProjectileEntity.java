@@ -7,6 +7,7 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -20,6 +21,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.halflivedcrisis.procedures.GaussProjectileProjectileHitsBlockProcedure;
 import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
@@ -65,6 +67,12 @@ public class GaussProjectileEntity extends AbstractArrow implements ItemSupplier
 	}
 
 	@Override
+	public void onHitBlock(BlockHitResult blockHitResult) {
+		super.onHitBlock(blockHitResult);
+		GaussProjectileProjectileHitsBlockProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+	}
+
+	@Override
 	public void tick() {
 		super.tick();
 		if (this.inGround)
@@ -73,6 +81,10 @@ public class GaussProjectileEntity extends AbstractArrow implements ItemSupplier
 
 	public static GaussProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 30f, 0.7, 5);
+	}
+
+	public static GaussProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 30f, 0.7, 5);
 	}
 
 	public static GaussProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

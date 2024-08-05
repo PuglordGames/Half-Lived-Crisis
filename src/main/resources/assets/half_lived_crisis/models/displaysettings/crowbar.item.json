@@ -9,39 +9,49 @@
     "thirdperson_righthand": {
       "translation": [
         0,
-        -3,
+        -1,
         1
       ]
     },
     "thirdperson_lefthand": {
       "translation": [
         0,
-        -3,
+        -1,
         1
       ]
     },
     "firstperson_righthand": {
       "rotation": [
         -11,
-        0,
-        -16
+        -0.19,
+        -15.02
       ],
       "translation": [
         0.5,
-        -1.25,
-        0
+        -2,
+        -1.5
+      ],
+      "scale": [
+        0.736328125,
+        0.736328125,
+        0.736328125
       ]
     },
     "firstperson_lefthand": {
       "rotation": [
         -11,
-        0,
-        -16
+        -0.19,
+        -15.02
       ],
       "translation": [
         0.5,
-        -1.25,
-        0
+        -2,
+        -1.5
+      ],
+      "scale": [
+        0.736328125,
+        0.736328125,
+        0.736328125
       ]
     },
     "gui": {

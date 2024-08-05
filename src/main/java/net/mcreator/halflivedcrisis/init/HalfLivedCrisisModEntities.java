@@ -16,12 +16,15 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.halflivedcrisis.entity.WoodCrateEntity;
 import net.mcreator.halflivedcrisis.entity.ShotgunProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.SMGProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.SMGGrenadeProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.PistolProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.MagnumProjectileEntity;
+import net.mcreator.halflivedcrisis.entity.GrenadeProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.GaussProjectileEntity;
+import net.mcreator.halflivedcrisis.entity.CrossbowProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.AR2ProjectileEntity;
 import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
@@ -42,6 +45,14 @@ public class HalfLivedCrisisModEntities {
 			.setCustomClientFactory(ShotgunProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<AR2ProjectileEntity>> AR_2_PROJECTILE = register("ar_2_projectile",
 			EntityType.Builder.<AR2ProjectileEntity>of(AR2ProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(AR2ProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CrossbowProjectileEntity>> CROSSBOW_PROJECTILE = register("crossbow_projectile", EntityType.Builder.<CrossbowProjectileEntity>of(CrossbowProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(CrossbowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<GrenadeProjectileEntity>> GRENADE_PROJECTILE = register("grenade_projectile", EntityType.Builder.<GrenadeProjectileEntity>of(GrenadeProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(GrenadeProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<WoodCrateEntity>> WOOD_CRATE = register("wood_crate",
+			EntityType.Builder.<WoodCrateEntity>of(WoodCrateEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WoodCrateEntity::new)
+
+					.sized(1f, 1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -50,10 +61,12 @@ public class HalfLivedCrisisModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
+			WoodCrateEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
+		event.put(WOOD_CRATE.get(), WoodCrateEntity.createAttributes().build());
 	}
 }

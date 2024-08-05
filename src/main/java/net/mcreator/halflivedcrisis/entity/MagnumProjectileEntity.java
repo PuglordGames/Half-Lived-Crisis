@@ -83,6 +83,10 @@ public class MagnumProjectileEntity extends AbstractArrow implements ItemSupplie
 		return shoot(world, entity, source, 30f, 1.3, 0);
 	}
 
+	public static MagnumProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 30f, 1.3, 0);
+	}
+
 	public static MagnumProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		MagnumProjectileEntity entityarrow = new MagnumProjectileEntity(HalfLivedCrisisModEntities.MAGNUM_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

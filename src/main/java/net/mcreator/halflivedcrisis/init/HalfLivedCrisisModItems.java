@@ -18,8 +18,11 @@ import net.mcreator.halflivedcrisis.item.PistolItem;
 import net.mcreator.halflivedcrisis.item.MagnumItem;
 import net.mcreator.halflivedcrisis.item.LongJumpModuleItem;
 import net.mcreator.halflivedcrisis.item.HEVSuitItem;
+import net.mcreator.halflivedcrisis.item.GrenadeItem;
+import net.mcreator.halflivedcrisis.item.GravityGunItem;
 import net.mcreator.halflivedcrisis.item.GaussGunItem;
 import net.mcreator.halflivedcrisis.item.CrowbarItem;
+import net.mcreator.halflivedcrisis.item.CrossbowItem;
 import net.mcreator.halflivedcrisis.item.AR2Item;
 import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
@@ -57,6 +60,10 @@ public class HalfLivedCrisisModItems {
 	public static final RegistryObject<Item> PULSE_RIFLE_AMMO = block(HalfLivedCrisisModBlocks.PULSE_RIFLE_AMMO);
 	public static final RegistryObject<Item> SUIT_BATTERY = block(HalfLivedCrisisModBlocks.SUIT_BATTERY);
 	public static final RegistryObject<Item> MEDKIT = block(HalfLivedCrisisModBlocks.MEDKIT);
+	public static final RegistryObject<Item> GRAVITY_GUN = REGISTRY.register("gravity_gun", () -> new GravityGunItem());
+	public static final RegistryObject<Item> CROSSBOW = REGISTRY.register("crossbow", () -> new CrossbowItem());
+	public static final RegistryObject<Item> CROSSBOW_BOLTS = block(HalfLivedCrisisModBlocks.CROSSBOW_BOLTS);
+	public static final RegistryObject<Item> GRENADE = REGISTRY.register("grenade", () -> new GrenadeItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "animateditem",
   "definition": {
     "renderType": 0,
@@ -39,6 +39,9 @@
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "AR2Rightclicked"
+    },
+    "onItemInUseTick": {
+      "name": "AR2ItemInHandTick"
     },
     "isFood": false,
     "nutritionalValue": 4,

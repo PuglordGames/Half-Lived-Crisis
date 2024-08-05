@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "animateditem",
   "definition": {
     "renderType": 0,
@@ -8,8 +8,8 @@
     "idle": "idle",
     "rarity": "COMMON",
     "displaySettings": "crowbar.item.json",
-    "leftArm": "leftarm",
-    "rightArm": "",
+    "leftArm": "",
+    "rightArm": "RightArm",
     "perspective": "All Perspectives",
     "creativeTab": {
       "value": "CUSTOM:WeaponsAndAmmunition"

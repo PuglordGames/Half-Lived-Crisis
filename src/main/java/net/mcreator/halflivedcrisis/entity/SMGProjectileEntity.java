@@ -83,6 +83,10 @@ public class SMGProjectileEntity extends AbstractArrow implements ItemSupplier {
 		return shoot(world, entity, source, 30f, 0.1, 0);
 	}
 
+	public static SMGProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 30f, 0.1, 0);
+	}
+
 	public static SMGProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		SMGProjectileEntity entityarrow = new SMGProjectileEntity(HalfLivedCrisisModEntities.SMG_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

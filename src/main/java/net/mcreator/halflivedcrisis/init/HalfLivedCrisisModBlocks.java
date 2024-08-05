@@ -32,6 +32,7 @@ import net.mcreator.halflivedcrisis.block.MagnumAmmoBlock;
 import net.mcreator.halflivedcrisis.block.LightStalkHiddenBlock;
 import net.mcreator.halflivedcrisis.block.LightStalkBlock;
 import net.mcreator.halflivedcrisis.block.GaussAmmoBlock;
+import net.mcreator.halflivedcrisis.block.CrossbowBoltsBlock;
 import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
 public class HalfLivedCrisisModBlocks {
@@ -58,6 +59,7 @@ public class HalfLivedCrisisModBlocks {
 	public static final RegistryObject<Block> PULSE_RIFLE_AMMO = REGISTRY.register("pulse_rifle_ammo", () -> new PulseRifleAmmoBlock());
 	public static final RegistryObject<Block> SUIT_BATTERY = REGISTRY.register("suit_battery", () -> new SuitBatteryBlock());
 	public static final RegistryObject<Block> MEDKIT = REGISTRY.register("medkit", () -> new MedkitBlock());
+	public static final RegistryObject<Block> CROSSBOW_BOLTS = REGISTRY.register("crossbow_bolts", () -> new CrossbowBoltsBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

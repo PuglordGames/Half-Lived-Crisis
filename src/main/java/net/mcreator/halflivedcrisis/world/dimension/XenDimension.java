@@ -21,7 +21,7 @@ import net.mcreator.halflivedcrisis.procedures.XenPlayerEntersDimensionProcedure
 @Mod.EventBusSubscriber
 public class XenDimension {
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-	public static class DimensionSpecialEffectsHandler {
+	public static class XenSpecialEffectsHandler {
 		@SubscribeEvent
 		@OnlyIn(Dist.CLIENT)
 		public static void registerDimensionSpecialEffects(RegisterDimensionSpecialEffectsEvent event) {
