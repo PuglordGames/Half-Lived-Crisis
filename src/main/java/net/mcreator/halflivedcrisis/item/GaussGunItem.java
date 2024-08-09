@@ -86,18 +86,24 @@ public class GaussGunItem extends Item implements GeoItem {
 		return PlayState.STOP;
 	}
 
+	String prevAnim = "empty";
+
 	private PlayState procedurePredicate(AnimationState event) {
 		if (this.transformType != null ? this.transformType.firstPerson() : false) {
-			if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
+			if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED || (!this.animationprocedure.equals(prevAnim) && !this.animationprocedure.equals("empty"))) {
+				if (!this.animationprocedure.equals(prevAnim))
+					event.getController().forceAnimationReset();
 				event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
 				if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
 					this.animationprocedure = "empty";
 					event.getController().forceAnimationReset();
 				}
 			} else if (this.animationprocedure.equals("empty")) {
+				prevAnim = "empty";
 				return PlayState.STOP;
 			}
 		}
+		prevAnim = this.animationprocedure;
 		return PlayState.CONTINUE;
 	}
 

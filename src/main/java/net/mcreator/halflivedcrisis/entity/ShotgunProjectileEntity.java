@@ -83,6 +83,10 @@ public class ShotgunProjectileEntity extends AbstractArrow implements ItemSuppli
 		return shoot(world, entity, source, 30f, 0.3, 5);
 	}
 
+	public static ShotgunProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 30f, 0.3, 5);
+	}
+
 	public static ShotgunProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		ShotgunProjectileEntity entityarrow = new ShotgunProjectileEntity(HalfLivedCrisisModEntities.SHOTGUN_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

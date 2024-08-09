@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "animateditem",
   "definition": {
     "renderType": 0,
@@ -14,6 +14,7 @@
     "creativeTab": {
       "value": "CUSTOM:WeaponsAndAmmunition"
     },
+    "creativeTabs": [],
     "firstPersonArms": true,
     "stackSize": 1,
     "enchantability": 0,

@@ -3,7 +3,6 @@
     {
       "name": "HEVSuit",
       "type": "armor",
-      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hev_suit",
@@ -18,7 +17,6 @@
     {
       "name": "Crowbar",
       "type": "animateditem",
-      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crowbar",
@@ -34,7 +32,6 @@
     {
       "name": "Pistol",
       "type": "animateditem",
-      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pistol",
@@ -50,7 +47,6 @@
     {
       "name": "PistolProjectile",
       "type": "projectile",
-      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pistol_projectile",
@@ -64,7 +60,6 @@
     {
       "name": "PistolRightclicked",
       "type": "procedure",
-      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pistol_rightclicked",
@@ -103,7 +98,6 @@
     {
       "name": "SMG",
       "type": "animateditem",
-      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smg",
@@ -119,7 +113,6 @@
     {
       "name": "SMGProjectile",
       "type": "projectile",
-      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smg_projectile",
@@ -133,7 +126,6 @@
     {
       "name": "SMGRightclicked",
       "type": "procedure",
-      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smg_rightclicked",
@@ -172,7 +164,6 @@
     {
       "name": "Magnum",
       "type": "animateditem",
-      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magnum",
@@ -188,7 +179,6 @@
     {
       "name": "MagnumProjectile",
       "type": "projectile",
-      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magnum_projectile",
@@ -202,7 +192,6 @@
     {
       "name": "MagnumRightclicked",
       "type": "procedure",
-      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magnum_rightclicked",
@@ -241,7 +230,6 @@
     {
       "name": "PistolAmmo",
       "type": "block",
-      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pistol_ammo",
@@ -258,7 +246,6 @@
     {
       "name": "PistolAmmoOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pistol_ammo_on_block_right_clicked",
@@ -293,7 +280,6 @@
     {
       "name": "PistolAmmoEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pistol_ammo_entity_collides_in_the_block",
@@ -328,7 +314,6 @@
     {
       "name": "Reload",
       "type": "keybind",
-      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reload",
@@ -341,7 +326,6 @@
     {
       "name": "ReloadOnKeyPressed",
       "type": "procedure",
-      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reload_on_key_pressed",
@@ -376,7 +360,6 @@
     {
       "name": "SMGammo",
       "type": "block",
-      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smg_ammo",
@@ -393,7 +376,6 @@
     {
       "name": "SMGammoEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sm_gammo_entity_collides_in_the_block",
@@ -428,7 +410,6 @@
     {
       "name": "SMGammoOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sm_gammo_on_block_right_clicked",
@@ -463,7 +444,6 @@
     {
       "name": "MagnumAmmo",
       "type": "block",
-      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magnum_ammo",
@@ -480,7 +460,6 @@
     {
       "name": "MagnumAmmoOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magnum_ammo_on_block_right_clicked",
@@ -515,7 +494,6 @@
     {
       "name": "MagnumAmmoEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magnum_ammo_entity_collides_in_the_block",
@@ -550,7 +528,6 @@
     {
       "name": "SMGGrenadeProjectileHitsBlock",
       "type": "procedure",
-      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smg_grenade_projectile_hits_block",
@@ -581,7 +558,6 @@
     {
       "name": "SMGGrenadeProjectile",
       "type": "projectile",
-      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smg_grenade_projectile",
@@ -595,7 +571,6 @@
     {
       "name": "SMGGrenade",
       "type": "block",
-      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smg_grenade",
@@ -612,7 +587,6 @@
     {
       "name": "SMGGrenadeEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smg_grenade_entity_collides_in_the_block",
@@ -647,7 +621,6 @@
     {
       "name": "SMGGrenadeOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smg_grenade_on_block_right_clicked",
@@ -682,7 +655,6 @@
     {
       "name": "BulletBreakGlass",
       "type": "procedure",
-      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bullet_break_glass",
@@ -713,7 +685,6 @@
     {
       "name": "GaussGun",
       "type": "animateditem",
-      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gauss_gun",
@@ -729,7 +700,6 @@
     {
       "name": "GaussProjectile",
       "type": "projectile",
-      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gauss_projectile",
@@ -742,7 +712,6 @@
     {
       "name": "GaussImpactProjectile",
       "type": "particle",
-      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gauss_impact_projectile",
@@ -756,7 +725,6 @@
     {
       "name": "GaussProjectileProjectileHitsBlock",
       "type": "procedure",
-      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gauss_projectile_projectile_hits_block",
@@ -787,7 +755,6 @@
     {
       "name": "GaussGunRightclicked",
       "type": "procedure",
-      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gauss_gun_rightclicked",
@@ -826,7 +793,6 @@
     {
       "name": "GaussAmmo",
       "type": "block",
-      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gauss_ammo",
@@ -843,7 +809,6 @@
     {
       "name": "GaussAmmoOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gauss_ammo_on_block_right_clicked",
@@ -878,7 +843,6 @@
     {
       "name": "GaussAmmoEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gauss_ammo_entity_collides_in_the_block",
@@ -913,7 +877,6 @@
     {
       "name": "Xenstone",
       "type": "block",
-      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xenstone",
@@ -930,7 +893,6 @@
     {
       "name": "XenPlains",
       "type": "biome",
-      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_plains",
@@ -943,7 +905,6 @@
     {
       "name": "XenDimensionSetup",
       "type": "procedure",
-      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_dimension_setup",
@@ -957,7 +918,6 @@
     {
       "name": "XenCustomSkybox",
       "type": "procedure",
-      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_custom_skybox",
@@ -971,7 +931,6 @@
     {
       "name": "Xen",
       "type": "dimension",
-      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen",
@@ -986,7 +945,6 @@
     {
       "name": "Xenmoss",
       "type": "plant",
-      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xenmoss",
@@ -1006,7 +964,6 @@
     {
       "name": "XenPlayerEntersDimension",
       "type": "procedure",
-      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_player_enters_dimension",
@@ -1029,7 +986,6 @@
     {
       "name": "NihilanthLairParticle",
       "type": "particle",
-      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nihilanth_lair_particle",
@@ -1043,7 +999,6 @@
     {
       "name": "NihilanthLairBlockAdded",
       "type": "procedure",
-      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nihilanth_lair_block_added",
@@ -1074,7 +1029,6 @@
     {
       "name": "NihilanthLairParticleAdditionalParticleExpiryCondition",
       "type": "procedure",
-      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nihilanth_lair_particle_additional_particle_expiry_condition",
@@ -1106,7 +1060,6 @@
     {
       "name": "XenPortal",
       "type": "block",
-      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_portal",
@@ -1123,7 +1076,6 @@
     {
       "name": "XenPortalParticleAdditionalParticleExpiryCondition",
       "type": "procedure",
-      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_portal_particle_additional_particle_expiry_condition",
@@ -1155,7 +1107,6 @@
     {
       "name": "XenCrystal",
       "type": "block",
-      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_crystal",
@@ -1172,7 +1123,6 @@
     {
       "name": "WeaponsAndAmmunition",
       "type": "tab",
-      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "registry_name": "weapons_and_ammunition",
@@ -1183,7 +1133,6 @@
     {
       "name": "LongJumpModule",
       "type": "item",
-      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "registry_name": "long_jump_module",
@@ -1197,7 +1146,6 @@
     {
       "name": "HEVSuitRelated",
       "type": "tab",
-      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hev_suit_related",
@@ -1208,7 +1156,6 @@
     {
       "name": "XenSporeFeature",
       "type": "feature",
-      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_spore_feature",
@@ -1224,7 +1171,6 @@
     {
       "name": "XenPortalEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_portal_entity_collides_in_the_block",
@@ -1243,7 +1189,6 @@
     {
       "name": "NihilanthsLairBlockAdded",
       "type": "procedure",
-      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nihilanths_lair_block_added",
@@ -1274,7 +1219,6 @@
     {
       "name": "LightStalkOnTickUpdate",
       "type": "procedure",
-      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_stalk_on_tick_update",
@@ -1305,7 +1249,6 @@
     {
       "name": "LightStalkEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_stalk_entity_collides_in_the_block",
@@ -1336,7 +1279,6 @@
     {
       "name": "HEVSuitChestplateTickEvent",
       "type": "procedure",
-      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hev_suit_chestplate_tick_event",
@@ -1371,7 +1313,6 @@
     {
       "name": "HEVSuitVariableSet",
       "type": "procedure",
-      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hev_suit_variable_set",
@@ -1390,7 +1331,6 @@
     {
       "name": "LightStalkFeature",
       "type": "feature",
-      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_stalk_feature",
@@ -1405,7 +1345,6 @@
     {
       "name": "XenBlocksAndCreatures",
       "type": "tab",
-      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_blocks_and_creatures",
@@ -1416,7 +1355,6 @@
     {
       "name": "XenPillar",
       "type": "block",
-      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_pillar",
@@ -1433,7 +1371,6 @@
     {
       "name": "XenIslandLarge",
       "type": "feature",
-      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_island_large",
@@ -1449,7 +1386,6 @@
     {
       "name": "XenIslandMedium",
       "type": "feature",
-      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_island_medium",
@@ -1465,7 +1401,6 @@
     {
       "name": "XenIslandSmall",
       "type": "feature",
-      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_island_small",
@@ -1481,7 +1416,6 @@
     {
       "name": "XenPillarFeature",
       "type": "feature",
-      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_pillar_feature",
@@ -1497,7 +1431,6 @@
     {
       "name": "XenSpore",
       "type": "block",
-      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_spore",
@@ -1514,7 +1447,6 @@
     {
       "name": "XenSporeTop",
       "type": "block",
-      "sortid": 73,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_spore_top",
@@ -1531,7 +1463,6 @@
     {
       "name": "XenSporeBlockAdded",
       "type": "procedure",
-      "sortid": 74,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_spore_block_added",
@@ -1562,7 +1493,6 @@
     {
       "name": "LightStalk",
       "type": "block",
-      "sortid": 75,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_stalk",
@@ -1579,7 +1509,6 @@
     {
       "name": "LightStalkHidden",
       "type": "block",
-      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_stalk_hidden",
@@ -1596,7 +1525,6 @@
     {
       "name": "XenSporeBlockDestroyedByPlayer",
       "type": "procedure",
-      "sortid": 77,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_spore_block_destroyed_by_player",
@@ -1627,7 +1555,6 @@
     {
       "name": "XenSporeTopBlockDestroyedByPlayer",
       "type": "procedure",
-      "sortid": 78,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_spore_top_block_destroyed_by_player",
@@ -1658,7 +1585,6 @@
     {
       "name": "XenPillarMediumFeature",
       "type": "feature",
-      "sortid": 79,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_pillar_medium_feature",
@@ -1674,7 +1600,6 @@
     {
       "name": "XenPillarLargeFeature",
       "type": "feature",
-      "sortid": 80,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_pillar_large_feature",
@@ -1690,7 +1615,6 @@
     {
       "name": "NihilanthsLairCore",
       "type": "block",
-      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nihilanths_lair_core",
@@ -1707,7 +1631,6 @@
     {
       "name": "NihilanthsLairOuterRing",
       "type": "block",
-      "sortid": 82,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nihilanths_lair_outer_ring",
@@ -1724,7 +1647,6 @@
     {
       "name": "NihilanthsLairOuterRingCorner",
       "type": "block",
-      "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nihilanths_lair_outer_ring_corner",
@@ -1741,7 +1663,6 @@
     {
       "name": "NihilanthsLairOuterRingVertical",
       "type": "block",
-      "sortid": 84,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nihilanths_lair_outer_ring_vertical",
@@ -1758,7 +1679,6 @@
     {
       "name": "XenIslandVerybig",
       "type": "feature",
-      "sortid": 85,
       "compiles": true,
       "locked_code": false,
       "registry_name": "xen_island_verybig",
@@ -1774,7 +1694,6 @@
     {
       "name": "JumpKeybind",
       "type": "keybind",
-      "sortid": 86,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jump_keybind",
@@ -1787,7 +1706,6 @@
     {
       "name": "JumpKeybindOnKeyPressed",
       "type": "procedure",
-      "sortid": 87,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jump_keybind_on_key_pressed",
@@ -1822,7 +1740,6 @@
     {
       "name": "RestoreJump",
       "type": "procedure",
-      "sortid": 88,
       "compiles": true,
       "locked_code": false,
       "registry_name": "restore_jump",
@@ -1841,7 +1758,6 @@
     {
       "name": "LongJumpModuleRightclicked",
       "type": "procedure",
-      "sortid": 89,
       "compiles": true,
       "locked_code": false,
       "registry_name": "long_jump_module_rightclicked",
@@ -1860,7 +1776,6 @@
     {
       "name": "Shotgun",
       "type": "animateditem",
-      "sortid": 90,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shotgun",
@@ -1876,7 +1791,6 @@
     {
       "name": "ShotgunProjectile",
       "type": "projectile",
-      "sortid": 91,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shotgun_projectile",
@@ -1890,7 +1804,6 @@
     {
       "name": "ShotgunRightclicked",
       "type": "procedure",
-      "sortid": 92,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shotgun_rightclicked",
@@ -1929,7 +1842,6 @@
     {
       "name": "ShotgunAmmo",
       "type": "block",
-      "sortid": 93,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shotgun_ammo",
@@ -1946,7 +1858,6 @@
     {
       "name": "ShotgunAmmoOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 94,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shotgun_ammo_on_block_right_clicked",
@@ -1981,7 +1892,6 @@
     {
       "name": "ShotgunAmmoEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shotgun_ammo_entity_collides_in_the_block",
@@ -2016,7 +1926,6 @@
     {
       "name": "AR2",
       "type": "animateditem",
-      "sortid": 96,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ar_2",
@@ -2032,7 +1941,6 @@
     {
       "name": "AR2Projectile",
       "type": "projectile",
-      "sortid": 97,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ar_2_projectile",
@@ -2046,7 +1954,6 @@
     {
       "name": "AR2Rightclicked",
       "type": "procedure",
-      "sortid": 98,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ar_2_rightclicked",
@@ -2081,7 +1988,6 @@
     {
       "name": "PulseRifleAmmo",
       "type": "block",
-      "sortid": 99,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pulse_rifle_ammo",
@@ -2098,7 +2004,6 @@
     {
       "name": "PulseRifleAmmoOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pulse_rifle_ammo_on_block_right_clicked",
@@ -2133,7 +2038,6 @@
     {
       "name": "PulseRifleAmmoEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 101,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pulse_rifle_ammo_entity_collides_in_the_block",
@@ -2168,7 +2072,6 @@
     {
       "name": "HEVSuitOverlay",
       "type": "overlay",
-      "sortid": 102,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hev_suit_overlay",
@@ -2181,7 +2084,6 @@
     {
       "name": "CrowbarCrosshairDisplay",
       "type": "procedure",
-      "sortid": 103,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crowbar_crosshair_display",
@@ -2201,7 +2103,6 @@
     {
       "name": "PistolCrosshairDisplay",
       "type": "procedure",
-      "sortid": 104,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pistol_crosshair_display",
@@ -2221,7 +2122,6 @@
     {
       "name": "SMGCrosshairDisplay",
       "type": "procedure",
-      "sortid": 105,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smg_crosshair_display",
@@ -2241,7 +2141,6 @@
     {
       "name": "GrenadeCrosshairDisplay",
       "type": "procedure",
-      "sortid": 106,
       "compiles": true,
       "locked_code": false,
       "registry_name": "grenade_crosshair_display",
@@ -2261,7 +2160,6 @@
     {
       "name": "MagnumCrosshairDisplay",
       "type": "procedure",
-      "sortid": 107,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magnum_crosshair_display",
@@ -2281,7 +2179,6 @@
     {
       "name": "GaussGunCrosshairDisplay",
       "type": "procedure",
-      "sortid": 108,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gauss_gun_crosshair_display",
@@ -2301,7 +2198,6 @@
     {
       "name": "ShotgunCrosshairDisplay",
       "type": "procedure",
-      "sortid": 109,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shotgun_crosshair_display",
@@ -2321,7 +2217,6 @@
     {
       "name": "ShotgunDoubleShotCrosshairDisplay",
       "type": "procedure",
-      "sortid": 110,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shotgun_double_shot_crosshair_display",
@@ -2341,7 +2236,6 @@
     {
       "name": "PulseRifleCrosshairDisplay",
       "type": "procedure",
-      "sortid": 111,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pulse_rifle_crosshair_display",
@@ -2361,7 +2255,6 @@
     {
       "name": "AR2EnergyBallCrosshairDisplay",
       "type": "procedure",
-      "sortid": 112,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ar_2_energy_ball_crosshair_display",
@@ -2381,7 +2274,6 @@
     {
       "name": "HEVSuitOverlayDisplayOverlayIngame",
       "type": "procedure",
-      "sortid": 113,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hev_suit_overlay_display_overlay_ingame",
@@ -2401,7 +2293,6 @@
     {
       "name": "AmmoDisplay",
       "type": "procedure",
-      "sortid": 114,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ammo_display",
@@ -2421,7 +2312,6 @@
     {
       "name": "AmmoDisplaySetNumber",
       "type": "procedure",
-      "sortid": 115,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ammo_display_set_number",
@@ -2440,7 +2330,6 @@
     {
       "name": "AmmoDisplayLogic",
       "type": "procedure",
-      "sortid": 116,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ammo_display_logic",
@@ -2460,7 +2349,6 @@
     {
       "name": "HealthDisplay",
       "type": "procedure",
-      "sortid": 117,
       "compiles": true,
       "locked_code": false,
       "registry_name": "health_display",
@@ -2480,7 +2368,6 @@
     {
       "name": "HealthDisplaySetNumber",
       "type": "procedure",
-      "sortid": 118,
       "compiles": true,
       "locked_code": false,
       "registry_name": "health_display_set_number",
@@ -2499,7 +2386,6 @@
     {
       "name": "HealthNumberSet",
       "type": "procedure",
-      "sortid": 119,
       "compiles": true,
       "locked_code": false,
       "registry_name": "health_number_set",
@@ -2522,7 +2408,6 @@
     {
       "name": "SuitBatteryDisplay",
       "type": "procedure",
-      "sortid": 120,
       "compiles": true,
       "locked_code": false,
       "registry_name": "suit_battery_display",
@@ -2542,7 +2427,6 @@
     {
       "name": "SuitBatteryDisplaySetNumber",
       "type": "procedure",
-      "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "registry_name": "suit_battery_display_set_number",
@@ -2561,7 +2445,6 @@
     {
       "name": "SuitBattery",
       "type": "block",
-      "sortid": 122,
       "compiles": true,
       "locked_code": false,
       "registry_name": "suit_battery",
@@ -2578,7 +2461,6 @@
     {
       "name": "Medkit",
       "type": "block",
-      "sortid": 123,
       "compiles": true,
       "locked_code": false,
       "registry_name": "medkit",
@@ -2595,7 +2477,6 @@
     {
       "name": "MedkitOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 124,
       "compiles": true,
       "locked_code": false,
       "registry_name": "medkit_on_block_right_clicked",
@@ -2630,7 +2511,6 @@
     {
       "name": "MedkitEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 125,
       "compiles": true,
       "locked_code": false,
       "registry_name": "medkit_entity_collides_in_the_block",
@@ -2665,7 +2545,6 @@
     {
       "name": "SuitBatteryOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 126,
       "compiles": true,
       "locked_code": false,
       "registry_name": "suit_battery_on_block_right_clicked",
@@ -2700,7 +2579,6 @@
     {
       "name": "SuitBatteryEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 127,
       "compiles": true,
       "locked_code": false,
       "registry_name": "suit_battery_entity_collides_in_the_block",
@@ -3044,10 +2922,10 @@
       "CUSTOM:AR2"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.AIR",
-      "~CUSTOM:Xenstone"
+      "~Blocks.AIR"
     ]
   },
+  "tab_element_order": {},
   "language_map": {
     "en_us": {
       "gui.half_lived_crisis.hev_suit_overlay.label_suit": "100",
@@ -3141,5 +3019,5 @@
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.halflivedcrisis"
   },
-  "mcreatorVersion": 202400118518
+  "mcreatorVersion": 202400232117
 }
