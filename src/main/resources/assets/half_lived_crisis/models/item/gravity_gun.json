@@ -1,0 +1,6 @@
+{
+  "parent": "half_lived_crisis:displaysettings/gravity_gun.item",
+  "textures": {
+    "layer0": "half_lived_crisis:item/gravity_gun"
+  }
+}

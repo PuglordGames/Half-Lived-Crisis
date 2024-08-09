@@ -1,0 +1,89 @@
+{
+  "_fv": 66,
+  "_type": "animateditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "gravity_gun",
+    "name": "Gravity Gun",
+    "idle": "idle",
+    "rarity": "COMMON",
+    "displaySettings": "gravity_gun.item.json",
+    "leftArm": "LeftArm",
+    "rightArm": "RightArm",
+    "perspective": "All Perspectives",
+    "creativeTab": {
+      "value": "CUSTOM:WeaponsAndAmmunition"
+    },
+    "firstPersonArms": true,
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "enableArmPose": true,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onItemInUseTick": {
+      "name": "GravityGunItemInHandTick"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "none",
+    "normal": "gravity_gun.geo.json",
+    "armPoseList": [
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "X",
+        "rotation": -1.3,
+        "swings": true,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "Y",
+        "rotation": 0.0,
+        "swings": true,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "LEFT",
+        "angle": "Y",
+        "rotation": 0.5,
+        "swings": true,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "LEFT",
+        "angle": "X",
+        "rotation": -1.3,
+        "swings": true,
+        "followsHead": true
+      }
+    ],
+    "disableSwing": false
+  }
+}

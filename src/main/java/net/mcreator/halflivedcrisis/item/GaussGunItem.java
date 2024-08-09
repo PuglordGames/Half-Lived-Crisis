@@ -20,11 +20,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.HumanoidArm;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.model.HumanoidModel;
 
+import net.mcreator.halflivedcrisis.procedures.TauChargingProcedure;
 import net.mcreator.halflivedcrisis.procedures.GaussGunRightclickedProcedure;
 import net.mcreator.halflivedcrisis.item.renderer.GaussGunItemRenderer;
 
@@ -130,5 +132,12 @@ public class GaussGunItem extends Item implements GeoItem {
 
 		GaussGunRightclickedProcedure.execute(world, x, y, z, entity, itemstack);
 		return ar;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			TauChargingProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, itemstack);
 	}
 }

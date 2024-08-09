@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "LSHIFT",
+    "keyBindingName": "Tau Charge",
+    "keyBindingCategoryKey": "gameplay",
+    "onKeyPressed": {
+      "name": "TauChargeOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "TauChargeOnKeyReleased"
+    }
+  }
+}

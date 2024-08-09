@@ -3,15 +3,33 @@
 	"animations": {
 		"idle": {
 			"loop": true,
-			"animation_length": 0.04,
+			"animation_length": 2.16,
 			"bones": {
-				"leftarm": {
+				"RightArm": {
 					"position": {
 						"0.0": {
-							"vector": [0, 0, 0]
+							"vector": [0, 0, 0],
+							"easing": "linear"
 						},
 						"0.04": {
-							"vector": [0, 0, 0]
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						}
+					}
+				},
+				"bone": {
+					"rotation": {
+						"0.0": {
+							"vector": [1, 0, 0],
+							"easing": "linear"
+						},
+						"1.08": {
+							"vector": [-1, 0, 0],
+							"easing": "linear"
+						},
+						"2.16": {
+							"vector": [1, 0, 0],
+							"easing": "linear"
 						}
 					}
 				}

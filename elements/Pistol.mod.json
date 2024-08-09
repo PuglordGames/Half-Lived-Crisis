@@ -8,7 +8,7 @@
     "idle": "idle",
     "rarity": "COMMON",
     "displaySettings": "pistol.item.json",
-    "leftArm": "leftarm",
+    "leftArm": "LeftArm",
     "rightArm": "RightArm",
     "perspective": "First Person",
     "creativeTab": {

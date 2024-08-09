@@ -8,8 +8,8 @@
     "idle": "idle",
     "rarity": "COMMON",
     "displaySettings": "crowbar.item.json",
-    "leftArm": "leftarm",
-    "rightArm": "",
+    "leftArm": "",
+    "rightArm": "RightArm",
     "perspective": "All Perspectives",
     "creativeTab": {
       "value": "CUSTOM:WeaponsAndAmmunition"

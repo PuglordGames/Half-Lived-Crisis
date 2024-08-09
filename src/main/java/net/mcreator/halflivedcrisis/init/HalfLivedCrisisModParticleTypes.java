@@ -15,6 +15,6 @@ import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
 public class HalfLivedCrisisModParticleTypes {
 	public static final DeferredRegister<ParticleType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, HalfLivedCrisisMod.MODID);
-	public static final RegistryObject<SimpleParticleType> GAUSS_IMPACT_PROJECTILE = REGISTRY.register("gauss_impact_projectile", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> GAUSS_IMPACT_PROJECTILE = REGISTRY.register("gauss_impact_projectile", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> NIHILANTH_LAIR_PARTICLE = REGISTRY.register("nihilanth_lair_particle", () -> new SimpleParticleType(true));
 }

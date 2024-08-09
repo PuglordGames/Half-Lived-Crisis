@@ -1,0 +1,19 @@
+{
+  "_fv": 66,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.AIR"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 30.0,
+    "damage": 3.3,
+    "knockback": 5,
+    "entityModel": "ModelCustomModel",
+    "customModelTexture": "crossbow.png"
+  }
+}

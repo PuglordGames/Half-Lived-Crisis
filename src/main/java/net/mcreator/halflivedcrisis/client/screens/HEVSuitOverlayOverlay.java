@@ -25,8 +25,11 @@ import net.mcreator.halflivedcrisis.procedures.MagnumCrosshairDisplayProcedure;
 import net.mcreator.halflivedcrisis.procedures.HealthDisplayProcedure;
 import net.mcreator.halflivedcrisis.procedures.HEVSuitOverlayDisplayOverlayIngameProcedure;
 import net.mcreator.halflivedcrisis.procedures.GrenadeCrosshairDisplayProcedure;
+import net.mcreator.halflivedcrisis.procedures.GravityGunCrosshairDisplayProcedure;
 import net.mcreator.halflivedcrisis.procedures.GaussGunCrosshairDisplayProcedure;
 import net.mcreator.halflivedcrisis.procedures.CrowbarCrosshairDisplayProcedure;
+import net.mcreator.halflivedcrisis.procedures.CrosshairHEVSuitDisplayProcedure;
+import net.mcreator.halflivedcrisis.procedures.CrossbowCrosshairDisplayProcedure;
 import net.mcreator.halflivedcrisis.procedures.AmmoDisplayProcedure;
 import net.mcreator.halflivedcrisis.procedures.AmmoDisplayLogicProcedure;
 import net.mcreator.halflivedcrisis.procedures.AR2EnergyBallCrosshairDisplayProcedure;
@@ -60,53 +63,62 @@ public class HEVSuitOverlayOverlay {
 		if (HEVSuitOverlayDisplayOverlayIngameProcedure.execute(entity)) {
 			event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/hev_suit_overlay.png"), 0, 0, 0, 0, w, h, w, h);
 			if (CrowbarCrosshairDisplayProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/crowbar_crosshair.png"), w / 2 + -8, h / 2 + -8, 0, 0, 15, 15, 15, 15);
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/crowbar_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
 			}
 			if (PistolCrosshairDisplayProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/pistol_crosshair.png"), w / 2 + -8, h / 2 + -8, 0, 0, 15, 15, 15, 15);
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/pistol_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
 			}
 			if (SMGCrosshairDisplayProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/smg_crosshair.png"), w / 2 + -8, h / 2 + -8, 0, 0, 15, 15, 15, 15);
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/smg_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
 			}
 			if (GrenadeCrosshairDisplayProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/grenade_crosshair.png"), w / 2 + -8, h / 2 + -8, 0, 0, 15, 15, 15, 15);
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/grenade_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
 			}
 			if (MagnumCrosshairDisplayProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/magnum_crosshair.png"), w / 2 + -8, h / 2 + -8, 0, 0, 15, 15, 15, 15);
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/magnum_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
 			}
 			if (GaussGunCrosshairDisplayProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/gauss_gun_crosshair.png"), w / 2 + -8, h / 2 + -8, 0, 0, 15, 15, 15, 15);
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/gauss_gun_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
 			}
 			if (ShotgunCrosshairDisplayProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/shotgun_crosshair.png"), w / 2 + -8, h / 2 + -8, 0, 0, 15, 15, 15, 15);
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/shotgun_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
 			}
 			if (ShotgunDoubleShotCrosshairDisplayProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/shotgun_double_shot_crosshair.png"), w / 2 + -8, h / 2 + -8, 0, 0, 15, 15, 15, 15);
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/shotgun_double_shot_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
 			}
 			if (PulseRifleCrosshairDisplayProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/ar2_crosshair.png"), w / 2 + -8, h / 2 + -8, 0, 0, 15, 15, 15, 15);
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/ar2_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
 			}
 			if (AR2EnergyBallCrosshairDisplayProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/ar2_energy_ball_crosshair.png"), w / 2 + -8, h / 2 + -8, 0, 0, 15, 15, 15, 15);
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/ar2_energy_ball_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
 			}
 			if (AmmoDisplayLogicProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/health_overlay.png"), w - 57, h - 24, 0, 0, 32, 24, 32, 24);
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/health_overlay.png"), w - 48, h - 24, 0, 0, 37, 24, 37, 24);
 			}
 			if (AmmoDisplayLogicProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/smg_ammo.png"), w - 55, h - 13, 0, 0, 8, 3, 8, 3);
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/smg_ammo.png"), w - 47, h - 13, 0, 0, 8, 3, 8, 3);
 			}
-			event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/health_overlay.png"), 6, h - 24, 0, 0, 32, 24, 32, 24);
+			event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/health_overlay.png"), 6, h - 24, 0, 0, 37, 24, 37, 24);
 
 			event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/health.png"), 7, h - 24, 0, 0, 32, 24, 32, 24);
 
-			event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/health_overlay.png"), 46, h - 24, 0, 0, 32, 24, 32, 24);
+			event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/health_overlay.png"), 47, h - 24, 0, 0, 37, 24, 37, 24);
 
 			event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/suit.png"), 47, h - 24, 0, 0, 32, 24, 32, 24);
 
+			if (CrosshairHEVSuitDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/crosshair_hev_suit.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
+			}
+			if (GravityGunCrosshairDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/gravity_gun_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
+			}
+			if (CrossbowCrosshairDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/crossbow_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
+			}
 			if (AmmoDisplayLogicProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-						AmmoDisplayProcedure.execute(entity), w - 41, h - 16, -13312, false);
+						AmmoDisplayProcedure.execute(entity), w - 35, h - 16, -13312, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					HealthDisplayProcedure.execute(entity), 20, h - 16, -13312, false);

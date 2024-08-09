@@ -15,6 +15,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
+import net.mcreator.halflivedcrisis.network.TauChargeMessage;
 import net.mcreator.halflivedcrisis.network.ReloadMessage;
 import net.mcreator.halflivedcrisis.network.JumpKeybindMessage;
 import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
@@ -47,11 +48,31 @@ public class HalfLivedCrisisModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping TAU_CHARGE = new KeyMapping("key.half_lived_crisis.tau_charge", GLFW.GLFW_KEY_LEFT_SHIFT, "key.categories.gameplay") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				HalfLivedCrisisMod.PACKET_HANDLER.sendToServer(new TauChargeMessage(0, 0));
+				TauChargeMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+				TAU_CHARGE_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - TAU_CHARGE_LASTPRESS);
+				HalfLivedCrisisMod.PACKET_HANDLER.sendToServer(new TauChargeMessage(1, dt));
+				TauChargeMessage.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	private static long TAU_CHARGE_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(RELOAD);
 		event.register(JUMP_KEYBIND);
+		event.register(TAU_CHARGE);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -61,6 +82,7 @@ public class HalfLivedCrisisModKeyMappings {
 			if (Minecraft.getInstance().screen == null) {
 				RELOAD.consumeClick();
 				JUMP_KEYBIND.consumeClick();
+				TAU_CHARGE.consumeClick();
 			}
 		}
 	}

@@ -32,6 +32,10 @@ public class HalfLivedCrisisModTabs {
 				tabData.accept(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get().asItem());
 				tabData.accept(HalfLivedCrisisModItems.AR_2.get());
 				tabData.accept(HalfLivedCrisisModBlocks.PULSE_RIFLE_AMMO.get().asItem());
+				tabData.accept(HalfLivedCrisisModItems.CROSSBOW.get());
+				tabData.accept(HalfLivedCrisisModItems.GRENADE.get());
+				tabData.accept(HalfLivedCrisisModBlocks.CROSSBOW_BOLTS.get().asItem());
+				tabData.accept(HalfLivedCrisisModItems.GRAVITY_GUN.get());
 			})
 
 					.build());

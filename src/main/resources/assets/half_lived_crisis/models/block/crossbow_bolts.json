@@ -1,0 +1,9 @@
+{
+  "parent": "half_lived_crisis:custom/crossbow_bolts",
+  "textures": {
+    "all": "half_lived_crisis:block/crossbow_bolts",
+    "particle": "half_lived_crisis:block/crossbow_bolts",
+    "0": "half_lived_crisis:block/crossbow_bolts"
+  },
+  "render_type": "cutout_mipped"
+}

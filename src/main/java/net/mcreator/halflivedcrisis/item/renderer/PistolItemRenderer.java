@@ -71,7 +71,7 @@ public class PistolItemRenderer extends GeoItemRenderer<PistolItem> {
 		Minecraft mc = Minecraft.getInstance();
 		String name = bone.getName();
 		boolean renderingArms = false;
-		if (name.equals("leftarm") || name.equals("RightArm")) {
+		if (name.equals("LeftArm") || name.equals("RightArm")) {
 			bone.setHidden(true);
 			renderingArms = true;
 		} else {
@@ -91,7 +91,7 @@ public class PistolItemRenderer extends GeoItemRenderer<PistolItem> {
 			ResourceLocation loc = player.getSkinTextureLocation();
 			VertexConsumer armBuilder = this.currentBuffer.getBuffer(RenderType.entitySolid(loc));
 			VertexConsumer sleeveBuilder = this.currentBuffer.getBuffer(RenderType.entityTranslucent(loc));
-			if (name.equals("leftarm")) {
+			if (name.equals("LeftArm")) {
 				stack.translate(-1.0f * SCALE_RECIPROCAL, 2.0f * SCALE_RECIPROCAL, 0.0f);
 				AnimUtils.renderPartOverBone(model.leftArm, bone, stack, armBuilder, packedLightIn, OverlayTexture.NO_OVERLAY, armsAlpha);
 				AnimUtils.renderPartOverBone(model.leftSleeve, bone, stack, sleeveBuilder, packedLightIn, OverlayTexture.NO_OVERLAY, armsAlpha);

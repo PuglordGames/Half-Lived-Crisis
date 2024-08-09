@@ -41,6 +41,9 @@
     "onRightClickedInAir": {
       "name": "GaussGunRightclicked"
     },
+    "onItemInUseTick": {
+      "name": "TauCharging"
+    },
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

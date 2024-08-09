@@ -1,10 +1,6 @@
 package net.mcreator.halflivedcrisis.procedures;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModItems;
+import net.minecraftforge.eventbus.api.Event;
 
 public class GrenadeCrosshairDisplayProcedure {
 	public static boolean execute(Entity entity) {
