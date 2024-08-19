@@ -1,19 +1,6 @@
 package net.mcreator.halflivedcrisis.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
-
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.halflivedcrisis.network.HalfLivedCrisisModVariables;
-import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
-
-import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
 public class HealthNumberSetProcedure {
@@ -68,10 +55,6 @@ public class HealthNumberSetProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-				}
-				if ((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).health > 0) {
-					if (entity instanceof LivingEntity _entity)
-						_entity.setHealth(entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
 				}
 			});
 		}

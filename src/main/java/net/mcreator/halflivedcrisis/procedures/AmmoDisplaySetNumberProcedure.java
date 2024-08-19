@@ -1,18 +1,6 @@
 package net.mcreator.halflivedcrisis.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.halflivedcrisis.network.HalfLivedCrisisModVariables;
-import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModItems;
-
-import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
 public class AmmoDisplaySetNumberProcedure {
@@ -59,7 +47,7 @@ public class AmmoDisplaySetNumberProcedure {
 		}
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == HalfLivedCrisisModItems.GAUSS_GUN.get()) {
 			{
-				String _setval = new java.text.DecimalFormat("##").format((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).gauss_ammo);
+				String _setval = new java.text.DecimalFormat("##.##").format((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).gauss_ammo);
 				entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.ammo_display = _setval;
 					capability.syncPlayerVariables(entity);
@@ -78,15 +66,6 @@ public class AmmoDisplaySetNumberProcedure {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == HalfLivedCrisisModItems.AR_2.get()) {
 			{
 				String _setval = new java.text.DecimalFormat("##.##").format((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).pusle_rifle_ammo);
-				entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.ammo_display = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-		}
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == HalfLivedCrisisModItems.CROSSBOW.get()) {
-			{
-				String _setval = new java.text.DecimalFormat("##.##").format((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).crossbow_ammo);
 				entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.ammo_display = _setval;
 					capability.syncPlayerVariables(entity);

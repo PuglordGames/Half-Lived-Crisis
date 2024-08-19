@@ -1,22 +1,11 @@
 package net.mcreator.halflivedcrisis.client.renderer;
 
-import net.minecraft.util.Mth;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.MultiBufferSource;
-
-import net.mcreator.halflivedcrisis.entity.CrossbowProjectileEntity;
-import net.mcreator.halflivedcrisis.client.model.ModelCustomModel;
-
 import com.mojang.math.Axis;
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
 
 public class CrossbowProjectileRenderer extends EntityRenderer<CrossbowProjectileEntity> {
+
 	private static final ResourceLocation texture = new ResourceLocation("half_lived_crisis:textures/entities/crossbow.png");
+
 	private final ModelCustomModel model;
 
 	public CrossbowProjectileRenderer(EntityRendererProvider.Context context) {
@@ -32,6 +21,7 @@ public class CrossbowProjectileRenderer extends EntityRenderer<CrossbowProjectil
 		poseStack.mulPose(Axis.ZP.rotationDegrees(90 + Mth.lerp(partialTicks, entityIn.xRotO, entityIn.getXRot())));
 		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 		poseStack.popPose();
+
 		super.render(entityIn, entityYaw, partialTicks, poseStack, bufferIn, packedLightIn);
 	}
 
@@ -39,4 +29,5 @@ public class CrossbowProjectileRenderer extends EntityRenderer<CrossbowProjectil
 	public ResourceLocation getTextureLocation(CrossbowProjectileEntity entity) {
 		return texture;
 	}
+
 }
