@@ -334,7 +334,7 @@ public class ReloadOnKeyPressedProcedure {
 				{
 					double _setval = 125;
 					entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.pusle_rifle_ammo = _setval;
+						capability.gauss_ammo = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
