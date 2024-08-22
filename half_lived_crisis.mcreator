@@ -3776,7 +3776,8 @@
       "CUSTOM:AR2"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.AIR"
+      "~Blocks.AIR",
+      "~CUSTOM:Xenstone"
     ]
   },
   "tab_element_order": {},
@@ -3887,5 +3888,5 @@
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.halflivedcrisis"
   },
-  "mcreatorVersion": 202400232117
+  "mcreatorVersion": 202400118518
 }

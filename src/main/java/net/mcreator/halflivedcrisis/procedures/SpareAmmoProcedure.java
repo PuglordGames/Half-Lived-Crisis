@@ -1,8 +1,6 @@
 package net.mcreator.halflivedcrisis.procedures;
 
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.halflivedcrisis.network.HalfLivedCrisisModVariables;
+import net.minecraftforge.eventbus.api.Event;
 
 public class SpareAmmoProcedure {
 	public static String execute(Entity entity) {
