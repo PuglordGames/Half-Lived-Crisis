@@ -27,6 +27,7 @@ import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.model.HumanoidModel;
 
 import net.mcreator.halflivedcrisis.procedures.SMGRightclickedProcedure;
+import net.mcreator.halflivedcrisis.procedures.SMGPlayerFinishesUsingItemProcedure;
 import net.mcreator.halflivedcrisis.procedures.SMGItemInHandTickProcedure;
 import net.mcreator.halflivedcrisis.item.renderer.SMGItemRenderer;
 
@@ -123,6 +124,11 @@ public class SMGItem extends Item implements GeoItem {
 	}
 
 	@Override
+	public int getUseDuration(ItemStack itemstack) {
+		return 1;
+	}
+
+	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		ItemStack itemstack = ar.getObject();
@@ -135,9 +141,25 @@ public class SMGItem extends Item implements GeoItem {
 	}
 
 	@Override
+	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
+		ItemStack retval = super.finishUsingItem(itemstack, world, entity);
+		double x = entity.getX();
+		double y = entity.getY();
+		double z = entity.getZ();
+
+		SMGPlayerFinishesUsingItemProcedure.execute(entity);
+		return retval;
+	}
+
+	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
 			SMGItemInHandTickProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+	}
+
+	@Override
+	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
+		SMGPlayerFinishesUsingItemProcedure.execute(entity);
 	}
 }

@@ -1,5 +1,11 @@
 package net.mcreator.halflivedcrisis.item.model;
 
+import software.bernie.geckolib.model.GeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+
+import net.mcreator.halflivedcrisis.item.CrossbowItem;
+
 public class CrossbowItemModel extends GeoModel<CrossbowItem> {
 	@Override
 	public ResourceLocation getAnimationResource(CrossbowItem animatable) {

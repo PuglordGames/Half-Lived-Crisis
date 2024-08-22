@@ -11,14 +11,15 @@
     "leftArm": "LeftArm",
     "rightArm": "RightArm",
     "perspective": "First Person",
-    "creativeTab": {
-      "value": "CUSTOM:WeaponsAndAmmunition"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:WeaponsAndAmmunition"
+      }
+    ],
     "firstPersonArms": true,
     "stackSize": 1,
     "enchantability": 0,
-    "useDuration": 0,
+    "useDuration": 1,
     "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {
@@ -43,6 +44,12 @@
     },
     "onItemInUseTick": {
       "name": "SMGItemInHandTick"
+    },
+    "onStoppedUsing": {
+      "name": "SMGPlayerFinishesUsingItem"
+    },
+    "onFinishUsingItem": {
+      "name": "SMGPlayerFinishesUsingItem"
     },
     "isFood": false,
     "nutritionalValue": 4,

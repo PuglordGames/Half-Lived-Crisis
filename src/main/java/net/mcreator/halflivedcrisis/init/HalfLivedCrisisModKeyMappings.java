@@ -66,6 +66,7 @@ public class HalfLivedCrisisModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping SMG_SHOOT = new KeyMapping("key.half_lived_crisis.smg_shoot", GLFW.GLFW_KEY_RIGHT_SUPER, "key.categories.gameplay");
 	private static long TAU_CHARGE_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -73,6 +74,7 @@ public class HalfLivedCrisisModKeyMappings {
 		event.register(RELOAD);
 		event.register(JUMP_KEYBIND);
 		event.register(TAU_CHARGE);
+		event.register(SMG_SHOOT);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})

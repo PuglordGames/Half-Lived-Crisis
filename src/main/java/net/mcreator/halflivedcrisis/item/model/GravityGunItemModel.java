@@ -1,5 +1,11 @@
 package net.mcreator.halflivedcrisis.item.model;
 
+import software.bernie.geckolib.model.GeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+
+import net.mcreator.halflivedcrisis.item.GravityGunItem;
+
 public class GravityGunItemModel extends GeoModel<GravityGunItem> {
 	@Override
 	public ResourceLocation getAnimationResource(GravityGunItem animatable) {

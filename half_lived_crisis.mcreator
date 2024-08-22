@@ -2659,7 +2659,12 @@
         "files": [
           "src/main/java/net/mcreator/halflivedcrisis/procedures/SpareAmmoProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       }
     },
     {
@@ -3140,6 +3145,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -3354,6 +3363,36 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "SMGPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smg_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/SMGPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SMGShoot",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smg_shoot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/network/SMGShootMessage.java"
         ]
       }
     }
@@ -3737,20 +3776,20 @@
       "CUSTOM:AR2"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.AIR",
-      "~CUSTOM:Xenstone"
+      "~Blocks.AIR"
     ]
   },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "block.half_lived_crisis.suit_battery": "Suit Battery",
       "gui.half_lived_crisis.hev_suit_overlay.label_suit": "100",
+      "block.half_lived_crisis.suit_battery": "Suit Battery",
       "subtitles.smg_reload": "",
       "block.half_lived_crisis.xen_crystal": "Xen Crystal",
       "subtitles.shotgun_reload_0": "",
       "subtitles.gravity_gun_undetect": "",
       "subtitles.gravity_gun_put_down": "",
+      "item.half_lived_crisis.crossbow": "Crossbow",
       "item.half_lived_crisis.magnum": ".357 Magnum",
       "subtitles.gravity_gun_pick_up": "",
       "subtitles.shotgun_double_shoot": "",
@@ -3774,12 +3813,14 @@
       "item.half_lived_crisis.shotgun": "Shotgun",
       "block.half_lived_crisis.light_stalk_hidden": "Light Stalk",
       "subtitles.shotgun_reload_06": "",
+      "item.half_lived_crisis.gravity_gun": "Gravity Gun",
       "block.half_lived_crisis.magnum_ammo": ".357 Magnum Ammo",
       "biome.half_lived_crisis.xen_plains": "Xen Plains",
       "item_group.half_lived_crisis.xen_blocks_and_creatures": "Xen Blocks And Creatures",
       "block.half_lived_crisis.smg_grenade": "SMG Grenade",
       "subtitles.pistol_shoot": "",
       "subtitles.shotgun_reload": "",
+      "key.half_lived_crisis.smg_shoot": "SMG Shoot",
       "block.half_lived_crisis.gauss_ammo": "Gauss Ammo",
       "subtitles.shotgun_shoot": "",
       "item.half_lived_crisis.pistol": "9mm Pistol",
@@ -3787,6 +3828,7 @@
       "subtitles.shotgun_double_shot": "",
       "subtitles.gauss_shoot": "",
       "item.half_lived_crisis.ar_2": "AR2",
+      "item.half_lived_crisis.grenade": "Grenade",
       "block.half_lived_crisis.xenstone": "Xenstone",
       "subtitles.hev_startup": "",
       "subtitles.magnum_reload": "",
@@ -3804,7 +3846,9 @@
       "block.half_lived_crisis.light_stalk": "Light Stalk",
       "block.half_lived_crisis.medkit": "Medkit",
       "block.half_lived_crisis.xenmoss": "Xenmoss",
+      "block.half_lived_crisis.crossbow_bolts": "Crossbow Bolts",
       "subtitles.magnum_shoot": "",
+      "key.half_lived_crisis.tau_charge": "Tau Charge",
       "block.half_lived_crisis.shotgun_ammo": "Shotgun Ammo",
       "gui.half_lived_crisis.hev_suit_overlay.label_taucharge": "TauCharge",
       "block.half_lived_crisis.xen_spore": "Xen Spore",
@@ -3813,6 +3857,7 @@
       "subtitles.pistol_reload": "",
       "item.half_lived_crisis.crowbar": "Crowbar",
       "block.half_lived_crisis.nihilanths_lair_outer_ring_corner": "Nihilanths Lair Outer Ring Corner",
+      "entity.half_lived_crisis.wood_crate": "Wood Crate",
       "item.half_lived_crisis.smg": "SMG",
       "block.half_lived_crisis.xen_pillar": "Xen Pillar",
       "block.half_lived_crisis.pulse_rifle_ammo": "Pulse Rifle Ammo",
@@ -3842,5 +3887,5 @@
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.halflivedcrisis"
   },
-  "mcreatorVersion": 202400118518
+  "mcreatorVersion": 202400232117
 }

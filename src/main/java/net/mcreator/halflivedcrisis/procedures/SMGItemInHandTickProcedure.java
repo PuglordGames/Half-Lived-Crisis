@@ -1,12 +1,28 @@
 package net.mcreator.halflivedcrisis.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.halflivedcrisis.network.HalfLivedCrisisModVariables;
+import net.mcreator.halflivedcrisis.item.SMGItem;
+import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModEntities;
+import net.mcreator.halflivedcrisis.entity.SMGProjectileEntity;
 
 public class SMGItemInHandTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		while (entity.getPersistentData().getBoolean("smg_fired") == true) {
+		if (entity.getPersistentData().getBoolean("smg_fired") == true) {
 			if ((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).smg_ammo != 0) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
@@ -43,10 +59,6 @@ public class SMGItemInHandTickProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				entity.getPersistentData().putBoolean("smg_fired", false);
-			} else {
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("Not enough ammo."), true);
 			}
 		}
 	}
