@@ -1,13 +1,33 @@
 
 package net.mcreator.halflivedcrisis.item;
 
-import net.minecraft.client.renderer.block.model.ItemTransforms;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-
-import javax.annotation.Nullable;
-
-import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.util.GeckoLibUtil;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.GeoItem;
+
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.HumanoidArm;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.client.model.HumanoidModel;
+
+import net.mcreator.halflivedcrisis.procedures.GravityGunItemInHandTickProcedure;
+import net.mcreator.halflivedcrisis.item.renderer.GravityGunItemRenderer;
+
+import java.util.function.Consumer;
 
 public class GravityGunItem extends Item implements GeoItem {
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -48,7 +68,6 @@ public class GravityGunItem extends Item implements GeoItem {
 				}
 				return HumanoidModel.ArmPose.EMPTY;
 			}
-
 		});
 	}
 
@@ -106,5 +125,4 @@ public class GravityGunItem extends Item implements GeoItem {
 		if (selected)
 			GravityGunItemInHandTickProcedure.execute(world, entity, itemstack);
 	}
-
 }

@@ -130,7 +130,7 @@ public class AR2Item extends Item implements GeoItem {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		AR2RightclickedProcedure.execute(entity);
+		AR2RightclickedProcedure.execute(world, x, y, z, entity);
 		return ar;
 	}
 
