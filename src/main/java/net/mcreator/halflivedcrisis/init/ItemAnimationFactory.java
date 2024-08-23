@@ -13,6 +13,7 @@ import net.minecraft.client.Minecraft;
 import net.mcreator.halflivedcrisis.item.ShotgunItem;
 import net.mcreator.halflivedcrisis.item.SMGItem;
 import net.mcreator.halflivedcrisis.item.PistolItem;
+import net.mcreator.halflivedcrisis.item.OICWItem;
 import net.mcreator.halflivedcrisis.item.MagnumItem;
 import net.mcreator.halflivedcrisis.item.GrenadeItem;
 import net.mcreator.halflivedcrisis.item.GravityGunItem;
@@ -183,26 +184,6 @@ public class ItemAnimationFactory {
 					}
 				}
 			}
-			if (mainhandItem.getItem() instanceof GravityGunItem animatable) {
-				animation = mainhandItem.getOrCreateTag().getString("geckoAnim");
-				if (!animation.isEmpty()) {
-					event.player.getMainHandItem().getOrCreateTag().putString("geckoAnim", "");
-					if (event.player.level().isClientSide()) {
-						((GravityGunItem) event.player.getMainHandItem().getItem()).animationprocedure = animation;
-						disableUseAnim("right");
-					}
-				}
-			}
-			if (offhandItem.getItem() instanceof GravityGunItem animatable) {
-				animation = offhandItem.getOrCreateTag().getString("geckoAnim");
-				if (!animation.isEmpty()) {
-					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
-					if (event.player.level().isClientSide()) {
-						((GravityGunItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
-						disableUseAnim("left");
-					}
-				}
-			}
 			if (mainhandItem.getItem() instanceof CrossbowItem animatable) {
 				animation = mainhandItem.getOrCreateTag().getString("geckoAnim");
 				if (!animation.isEmpty()) {
@@ -239,6 +220,46 @@ public class ItemAnimationFactory {
 					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
 					if (event.player.level().isClientSide()) {
 						((GrenadeItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
+						disableUseAnim("left");
+					}
+				}
+			}
+			if (mainhandItem.getItem() instanceof GravityGunItem animatable) {
+				animation = mainhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getMainHandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((GravityGunItem) event.player.getMainHandItem().getItem()).animationprocedure = animation;
+						disableUseAnim("right");
+					}
+				}
+			}
+			if (offhandItem.getItem() instanceof GravityGunItem animatable) {
+				animation = offhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((GravityGunItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
+						disableUseAnim("left");
+					}
+				}
+			}
+			if (mainhandItem.getItem() instanceof OICWItem animatable) {
+				animation = mainhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getMainHandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((OICWItem) event.player.getMainHandItem().getItem()).animationprocedure = animation;
+						disableUseAnim("right");
+					}
+				}
+			}
+			if (offhandItem.getItem() instanceof OICWItem animatable) {
+				animation = offhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((OICWItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
 						disableUseAnim("left");
 					}
 				}
