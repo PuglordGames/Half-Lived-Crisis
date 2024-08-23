@@ -292,6 +292,52 @@
           "x": 205,
           "y": 113
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "oicw_crosshair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "OICWCrosshairDisplay"
+          },
+          "anchorPoint": "CENTER",
+          "x": 205,
+          "y": 113
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "health_overlay.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "OICWCrosshairDisplay"
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 379,
+          "y": 191
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_oicw_grenades",
+          "text": {
+            "fixedValue": "OICW_Alt_Fire_Mode",
+            "name": "OICWAltFireTextSet"
+          },
+          "color": {
+            "value": -13312,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "OICWCrosshairDisplay"
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 380,
+          "y": 198
+        }
       }
     ],
     "baseTexture": "hev_suit_overlay.png",

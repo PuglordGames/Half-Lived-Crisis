@@ -11,9 +11,11 @@
     "leftArm": "",
     "rightArm": "RightArm",
     "perspective": "First Person",
-    "creativeTab": {
-      "value": "CUSTOM:WeaponsAndAmmunition"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:WeaponsAndAmmunition"
+      }
+    ],
     "firstPersonArms": true,
     "stackSize": 64,
     "enchantability": 0,

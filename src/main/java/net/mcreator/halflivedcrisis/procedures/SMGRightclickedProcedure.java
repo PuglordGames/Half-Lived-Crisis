@@ -104,9 +104,6 @@ public class SMGRightclickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-			} else {
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("Not enough ammo."), true);
 			}
 		}
 	}
