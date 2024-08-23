@@ -63,22 +63,6 @@
       }
     ]
   },
-  "gauss_shoot": {
-    "sounds": [
-      {
-        "name": "half_lived_crisis:gauss_shoot_1",
-        "stream": false
-      },
-      {
-        "name": "half_lived_crisis:gauss_shoot_2",
-        "stream": false
-      },
-      {
-        "name": "half_lived_crisis:gauss_shoot_3",
-        "stream": false
-      }
-    ]
-  },
   "transcendent": {
     "sounds": [
       {
@@ -211,6 +195,14 @@
     "sounds": [
       {
         "name": "half_lived_crisis:gravity_gun_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "gauss_shoot": {
+    "sounds": [
+      {
+        "name": "half_lived_crisis:gauss_shoot",
         "stream": false
       }
     ]

@@ -87,11 +87,8 @@ public class HalfLivedCrisisModVariables {
 				clone.health_display = original.health_display;
 				clone.suit_battery = original.suit_battery;
 				clone.suit_battery_display = original.suit_battery_display;
-				clone.spare_ammo = original.spare_ammo;
 				clone.crossbow_ammo = original.crossbow_ammo;
-				clone.oicw_ammo = original.oicw_ammo;
-				clone.oicw_grenades = original.oicw_grenades;
-				clone.oicw_alt_fire_mode = original.oicw_alt_fire_mode;
+				clone.spare_ammo = original.spare_ammo;
 			}
 		}
 
@@ -119,9 +116,9 @@ public class HalfLivedCrisisModVariables {
 
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "half_lived_crisis_worldvars";
+		public double prop_pos_x = 0;
 		public double prop_pos_y = 0;
 		public double prop_pos_z = 0;
-		public double prop_pos_x = 0;
 		public double player_rotation = 0;
 
 		public static WorldVariables load(CompoundTag tag) {
@@ -131,17 +128,17 @@ public class HalfLivedCrisisModVariables {
 		}
 
 		public void read(CompoundTag nbt) {
+			prop_pos_x = nbt.getDouble("prop_pos_x");
 			prop_pos_y = nbt.getDouble("prop_pos_y");
 			prop_pos_z = nbt.getDouble("prop_pos_z");
-			prop_pos_x = nbt.getDouble("prop_pos_x");
 			player_rotation = nbt.getDouble("player_rotation");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
+			nbt.putDouble("prop_pos_x", prop_pos_x);
 			nbt.putDouble("prop_pos_y", prop_pos_y);
 			nbt.putDouble("prop_pos_z", prop_pos_z);
-			nbt.putDouble("prop_pos_x", prop_pos_x);
 			nbt.putDouble("player_rotation", player_rotation);
 			return nbt;
 		}
@@ -283,11 +280,8 @@ public class HalfLivedCrisisModVariables {
 		public String health_display = "\"\"";
 		public double suit_battery = 100.0;
 		public String suit_battery_display = "\"\"";
-		public String spare_ammo = "\"\"";
 		public double crossbow_ammo = 0;
-		public double oicw_ammo = 0;
-		public double oicw_grenades = 0;
-		public String oicw_alt_fire_mode = "Grenade";
+		public String spare_ammo = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -310,11 +304,8 @@ public class HalfLivedCrisisModVariables {
 			nbt.putString("health_display", health_display);
 			nbt.putDouble("suit_battery", suit_battery);
 			nbt.putString("suit_battery_display", suit_battery_display);
-			nbt.putString("spare_ammo", spare_ammo);
 			nbt.putDouble("crossbow_ammo", crossbow_ammo);
-			nbt.putDouble("oicw_ammo", oicw_ammo);
-			nbt.putDouble("oicw_grenades", oicw_grenades);
-			nbt.putString("oicw_alt_fire_mode", oicw_alt_fire_mode);
+			nbt.putString("spare_ammo", spare_ammo);
 			return nbt;
 		}
 
@@ -334,11 +325,8 @@ public class HalfLivedCrisisModVariables {
 			health_display = nbt.getString("health_display");
 			suit_battery = nbt.getDouble("suit_battery");
 			suit_battery_display = nbt.getString("suit_battery_display");
-			spare_ammo = nbt.getString("spare_ammo");
 			crossbow_ammo = nbt.getDouble("crossbow_ammo");
-			oicw_ammo = nbt.getDouble("oicw_ammo");
-			oicw_grenades = nbt.getDouble("oicw_grenades");
-			oicw_alt_fire_mode = nbt.getString("oicw_alt_fire_mode");
+			spare_ammo = nbt.getString("spare_ammo");
 		}
 	}
 
@@ -377,11 +365,8 @@ public class HalfLivedCrisisModVariables {
 					variables.health_display = message.data.health_display;
 					variables.suit_battery = message.data.suit_battery;
 					variables.suit_battery_display = message.data.suit_battery_display;
-					variables.spare_ammo = message.data.spare_ammo;
 					variables.crossbow_ammo = message.data.crossbow_ammo;
-					variables.oicw_ammo = message.data.oicw_ammo;
-					variables.oicw_grenades = message.data.oicw_grenades;
-					variables.oicw_alt_fire_mode = message.data.oicw_alt_fire_mode;
+					variables.spare_ammo = message.data.spare_ammo;
 				}
 			});
 			context.setPacketHandled(true);

@@ -16,12 +16,12 @@ import net.mcreator.halflivedcrisis.network.HalfLivedCrisisModVariables;
 import net.mcreator.halflivedcrisis.item.ShotgunItem;
 import net.mcreator.halflivedcrisis.item.SMGItem;
 import net.mcreator.halflivedcrisis.item.PistolItem;
-import net.mcreator.halflivedcrisis.item.OICWItem;
 import net.mcreator.halflivedcrisis.item.MagnumItem;
 import net.mcreator.halflivedcrisis.item.GaussGunItem;
 import net.mcreator.halflivedcrisis.item.AR2Item;
 import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModItems;
 import net.mcreator.halflivedcrisis.init.HalfLivedCrisisModBlocks;
+import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
 public class ReloadOnKeyPressedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -30,13 +30,6 @@ public class ReloadOnKeyPressedProcedure {
 		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.PISTOL_AMMO.get())) : false)
 				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == HalfLivedCrisisModItems.PISTOL.get()) {
 			if ((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).pistol_ammo != 18) {
-				{
-					double _setval = 18;
-					entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.pistol_ammo = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof PistolItem)
 					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload");
 				if (entity instanceof Player _player) {
@@ -51,19 +44,19 @@ public class ReloadOnKeyPressedProcedure {
 					}
 				}
 				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 17);
+					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 25);
+				{
+					double _setval = 18;
+					entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.pistol_ammo = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SMG_AMMO.get())) : false)
 				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == HalfLivedCrisisModItems.SMG.get()) {
 			if ((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).smg_ammo != 45) {
-				{
-					double _setval = 45;
-					entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.smg_ammo = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof SMGItem)
 					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload");
 				if (entity instanceof Player _player) {
@@ -78,25 +71,27 @@ public class ReloadOnKeyPressedProcedure {
 					}
 				}
 				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 24);
+					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 29);
+				{
+					double _setval = 45;
+					entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.smg_ammo = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.MAGNUM_AMMO.get())) : false)
 				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == HalfLivedCrisisModItems.MAGNUM.get()) {
 			if ((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).magnum_ammo != 6) {
-				{
-					double _setval = 6;
-					entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.magnum_ammo = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof MagnumItem)
 					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload");
 				if (entity instanceof Player _player) {
 					ItemStack _stktoremove = new ItemStack(HalfLivedCrisisModBlocks.MAGNUM_AMMO.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
+				if (entity instanceof Player _player)
+					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 72);
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:magnum_reload")), SoundSource.NEUTRAL, 1, 1);
@@ -104,28 +99,13 @@ public class ReloadOnKeyPressedProcedure {
 						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:magnum_reload")), SoundSource.NEUTRAL, 1, 1, false);
 					}
 				}
-				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 52);
-			}
-		}
-		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.GAUSS_AMMO.get())) : false)
-				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == HalfLivedCrisisModItems.GAUSS_GUN.get()) {
-			if ((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).gauss_ammo != 125) {
 				{
-					double _setval = 125;
+					double _setval = 6;
 					entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.gauss_ammo = _setval;
+						capability.magnum_ammo = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof GaussGunItem)
-					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload");
-				if (entity instanceof Player _player) {
-					ItemStack _stktoremove = new ItemStack(HalfLivedCrisisModBlocks.GAUSS_AMMO.get());
-					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-				}
-				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 52);
 			}
 		}
 		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false)
@@ -135,7 +115,7 @@ public class ReloadOnKeyPressedProcedure {
 					ItemStack _stktoremove = new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false) {
+				HalfLivedCrisisMod.queueServerWork(8, () -> {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_06")), SoundSource.NEUTRAL, 1, 1);
@@ -143,11 +123,13 @@ public class ReloadOnKeyPressedProcedure {
 							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_06")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
-				}
+				});
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof ShotgunItem)
 					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload6");
 				for (int index0 = 0; index0 < 6; index0++) {
 					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false) {
+						if (entity instanceof Player _player)
+							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 56);
 						{
 							double _setval = (entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).shotgun_ammo + 1;
 							entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -155,8 +137,6 @@ public class ReloadOnKeyPressedProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						if (entity instanceof Player _player)
-							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 56);
 					}
 				}
 			}
@@ -165,7 +145,7 @@ public class ReloadOnKeyPressedProcedure {
 					ItemStack _stktoremove = new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false) {
+				HalfLivedCrisisMod.queueServerWork(8, () -> {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_05")), SoundSource.NEUTRAL, 1, 1);
@@ -173,11 +153,13 @@ public class ReloadOnKeyPressedProcedure {
 							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_05")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
-				}
+				});
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof ShotgunItem)
-					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload5");
+					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload6");
 				for (int index1 = 0; index1 < 5; index1++) {
 					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false) {
+						if (entity instanceof Player _player)
+							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 48);
 						{
 							double _setval = (entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).shotgun_ammo + 1;
 							entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -185,8 +167,6 @@ public class ReloadOnKeyPressedProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						if (entity instanceof Player _player)
-							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 48);
 					}
 				}
 			}
@@ -195,28 +175,28 @@ public class ReloadOnKeyPressedProcedure {
 					ItemStack _stktoremove = new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false) {
+				HalfLivedCrisisMod.queueServerWork(8, () -> {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_04")), SoundSource.NEUTRAL, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_05")), SoundSource.NEUTRAL, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_04")), SoundSource.NEUTRAL, 1, 1, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_05")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
-				}
+				});
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof ShotgunItem)
-					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload4");
+					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload6");
 				for (int index2 = 0; index2 < 4; index2++) {
 					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false) {
+						if (entity instanceof Player _player)
+							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
 						{
-							double _setval = 6;
+							double _setval = (entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).shotgun_ammo + 1;
 							entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.shotgun_ammo = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						if (entity instanceof Player _player)
-							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
 					}
 				}
 			}
@@ -225,7 +205,7 @@ public class ReloadOnKeyPressedProcedure {
 					ItemStack _stktoremove = new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false) {
+				HalfLivedCrisisMod.queueServerWork(8, () -> {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_03")), SoundSource.NEUTRAL, 1, 1);
@@ -233,11 +213,13 @@ public class ReloadOnKeyPressedProcedure {
 							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_03")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
-				}
+				});
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof ShotgunItem)
-					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload3");
+					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload6");
 				for (int index3 = 0; index3 < 3; index3++) {
 					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false) {
+						if (entity instanceof Player _player)
+							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
 						{
 							double _setval = (entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).shotgun_ammo + 1;
 							entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -245,8 +227,6 @@ public class ReloadOnKeyPressedProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						if (entity instanceof Player _player)
-							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 32);
 					}
 				}
 			}
@@ -255,7 +235,7 @@ public class ReloadOnKeyPressedProcedure {
 					ItemStack _stktoremove = new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false) {
+				HalfLivedCrisisMod.queueServerWork(8, () -> {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_02")), SoundSource.NEUTRAL, 1, 1);
@@ -263,11 +243,13 @@ public class ReloadOnKeyPressedProcedure {
 							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_02")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
-				}
+				});
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof ShotgunItem)
-					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload2");
+					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload6");
 				for (int index4 = 0; index4 < 2; index4++) {
 					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false) {
+						if (entity instanceof Player _player)
+							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
 						{
 							double _setval = (entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).shotgun_ammo + 1;
 							entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -275,8 +257,6 @@ public class ReloadOnKeyPressedProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						if (entity instanceof Player _player)
-							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 24);
 					}
 				}
 			}
@@ -285,7 +265,7 @@ public class ReloadOnKeyPressedProcedure {
 					ItemStack _stktoremove = new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false) {
+				HalfLivedCrisisMod.queueServerWork(8, () -> {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_01")), SoundSource.NEUTRAL, 1, 1);
@@ -293,11 +273,13 @@ public class ReloadOnKeyPressedProcedure {
 							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:shotgun_reload_01")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
-				}
+				});
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof ShotgunItem)
-					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload1");
+					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload6");
 				for (int index5 = 0; index5 < 1; index5++) {
 					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SHOTGUN_AMMO.get())) : false) {
+						if (entity instanceof Player _player)
+							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
 						{
 							double _setval = (entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).shotgun_ammo + 1;
 							entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -305,8 +287,6 @@ public class ReloadOnKeyPressedProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						if (entity instanceof Player _player)
-							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 16);
 					}
 				}
 			}
@@ -314,13 +294,6 @@ public class ReloadOnKeyPressedProcedure {
 		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.PULSE_RIFLE_AMMO.get())) : false)
 				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == HalfLivedCrisisModItems.AR_2.get()) {
 			if ((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).pusle_rifle_ammo != 30) {
-				{
-					double _setval = 30;
-					entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.pusle_rifle_ammo = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AR2Item)
 					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload");
 				if (entity instanceof Player _player) {
@@ -335,63 +308,35 @@ public class ReloadOnKeyPressedProcedure {
 					}
 				}
 				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 15);
-			}
-		}
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == HalfLivedCrisisModItems.OICW.get()) {
-			if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SMG_AMMO.get())) : false) && !entity.isShiftKeyDown()) {
-				if ((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).oicw_ammo != 30) {
+					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 29);
+				HalfLivedCrisisMod.queueServerWork(29, () -> {
 					{
 						double _setval = 30;
 						entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.oicw_ammo = _setval;
+							capability.pusle_rifle_ammo = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof OICWItem)
-						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload");
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(HalfLivedCrisisModBlocks.SMG_AMMO.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:smg_reload")), SoundSource.NEUTRAL, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:smg_reload")), SoundSource.NEUTRAL, 1, 1, false);
-						}
-					}
-					if (entity instanceof Player _player)
-						_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 20);
+				});
+			}
+		}
+		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.GAUSS_AMMO.get())) : false)
+				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == HalfLivedCrisisModItems.GAUSS_GUN.get()) {
+			if ((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).gauss_ammo != 125) {
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof GaussGunItem)
+					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "reload");
+				if (entity instanceof Player _player) {
+					ItemStack _stktoremove = new ItemStack(HalfLivedCrisisModBlocks.PULSE_RIFLE_AMMO.get());
+					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
-			} else if (entity.isShiftKeyDown()) {
-				if ((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).oicw_grenades != 5) {
-					for (int index6 = 0; index6 < (int) (5 - (entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).oicw_grenades); index6++) {
-						if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(HalfLivedCrisisModBlocks.SMG_GRENADE.get())) : false) {
-							if (entity instanceof Player _player) {
-								ItemStack _stktoremove = new ItemStack(HalfLivedCrisisModBlocks.SMG_GRENADE.get());
-								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-							}
-						}
-					}
-					{
-						double _setval = 5;
-						entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.oicw_grenades = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof OICWItem)
-						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "grenade_reload");
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:smg_reload")), SoundSource.NEUTRAL, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("half_lived_crisis:smg_reload")), SoundSource.NEUTRAL, 1, 1, false);
-						}
-					}
-					if (entity instanceof Player _player)
-						_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 28);
+				if (entity instanceof Player _player)
+					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 57);
+				{
+					double _setval = 125;
+					entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.gauss_ammo = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
 		}

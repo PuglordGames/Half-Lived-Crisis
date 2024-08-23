@@ -21,7 +21,6 @@ import net.mcreator.halflivedcrisis.entity.ShotgunProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.SMGProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.SMGGrenadeProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.PistolProjectileEntity;
-import net.mcreator.halflivedcrisis.entity.OICWProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.MagnumProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.GrenadeProjectileEntity;
 import net.mcreator.halflivedcrisis.entity.GaussProjectileEntity;
@@ -54,8 +53,6 @@ public class HalfLivedCrisisModEntities {
 			EntityType.Builder.<WoodCrateEntity>of(WoodCrateEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WoodCrateEntity::new)
 
 					.sized(1f, 1f));
-	public static final RegistryObject<EntityType<OICWProjectileEntity>> OICW_PROJECTILE = register("oicw_projectile",
-			EntityType.Builder.<OICWProjectileEntity>of(OICWProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(OICWProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

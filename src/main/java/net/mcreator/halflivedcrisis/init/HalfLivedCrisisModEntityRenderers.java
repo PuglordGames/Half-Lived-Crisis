@@ -16,7 +16,6 @@ import net.mcreator.halflivedcrisis.client.renderer.ShotgunProjectileRenderer;
 import net.mcreator.halflivedcrisis.client.renderer.SMGProjectileRenderer;
 import net.mcreator.halflivedcrisis.client.renderer.SMGGrenadeProjectileRenderer;
 import net.mcreator.halflivedcrisis.client.renderer.PistolProjectileRenderer;
-import net.mcreator.halflivedcrisis.client.renderer.OICWProjectileRenderer;
 import net.mcreator.halflivedcrisis.client.renderer.MagnumProjectileRenderer;
 import net.mcreator.halflivedcrisis.client.renderer.GrenadeProjectileRenderer;
 import net.mcreator.halflivedcrisis.client.renderer.CrossbowProjectileRenderer;
@@ -36,6 +35,5 @@ public class HalfLivedCrisisModEntityRenderers {
 		event.registerEntityRenderer(HalfLivedCrisisModEntities.CROSSBOW_PROJECTILE.get(), CrossbowProjectileRenderer::new);
 		event.registerEntityRenderer(HalfLivedCrisisModEntities.GRENADE_PROJECTILE.get(), GrenadeProjectileRenderer::new);
 		event.registerEntityRenderer(HalfLivedCrisisModEntities.WOOD_CRATE.get(), WoodCrateRenderer::new);
-		event.registerEntityRenderer(HalfLivedCrisisModEntities.OICW_PROJECTILE.get(), OICWProjectileRenderer::new);
 	}
 }
