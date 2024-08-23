@@ -2,7 +2,7 @@
   "_fv": 66,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "RWIN",
+    "triggerKey": "MINUS",
     "keyBindingName": "SMG Shoot",
     "keyBindingCategoryKey": "gameplay"
   }

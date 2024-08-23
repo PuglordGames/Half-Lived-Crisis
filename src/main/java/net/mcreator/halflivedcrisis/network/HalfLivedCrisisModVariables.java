@@ -89,6 +89,9 @@ public class HalfLivedCrisisModVariables {
 				clone.suit_battery_display = original.suit_battery_display;
 				clone.spare_ammo = original.spare_ammo;
 				clone.crossbow_ammo = original.crossbow_ammo;
+				clone.oicw_ammo = original.oicw_ammo;
+				clone.oicw_grenades = original.oicw_grenades;
+				clone.oicw_alt_fire_mode = original.oicw_alt_fire_mode;
 			}
 		}
 
@@ -282,6 +285,9 @@ public class HalfLivedCrisisModVariables {
 		public String suit_battery_display = "\"\"";
 		public String spare_ammo = "\"\"";
 		public double crossbow_ammo = 0;
+		public double oicw_ammo = 0;
+		public double oicw_grenades = 0;
+		public String oicw_alt_fire_mode = "Grenade";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -306,6 +312,9 @@ public class HalfLivedCrisisModVariables {
 			nbt.putString("suit_battery_display", suit_battery_display);
 			nbt.putString("spare_ammo", spare_ammo);
 			nbt.putDouble("crossbow_ammo", crossbow_ammo);
+			nbt.putDouble("oicw_ammo", oicw_ammo);
+			nbt.putDouble("oicw_grenades", oicw_grenades);
+			nbt.putString("oicw_alt_fire_mode", oicw_alt_fire_mode);
 			return nbt;
 		}
 
@@ -327,6 +336,9 @@ public class HalfLivedCrisisModVariables {
 			suit_battery_display = nbt.getString("suit_battery_display");
 			spare_ammo = nbt.getString("spare_ammo");
 			crossbow_ammo = nbt.getDouble("crossbow_ammo");
+			oicw_ammo = nbt.getDouble("oicw_ammo");
+			oicw_grenades = nbt.getDouble("oicw_grenades");
+			oicw_alt_fire_mode = nbt.getString("oicw_alt_fire_mode");
 		}
 	}
 
@@ -367,6 +379,9 @@ public class HalfLivedCrisisModVariables {
 					variables.suit_battery_display = message.data.suit_battery_display;
 					variables.spare_ammo = message.data.spare_ammo;
 					variables.crossbow_ammo = message.data.crossbow_ammo;
+					variables.oicw_ammo = message.data.oicw_ammo;
+					variables.oicw_grenades = message.data.oicw_grenades;
+					variables.oicw_alt_fire_mode = message.data.oicw_alt_fire_mode;
 				}
 			});
 			context.setPacketHandled(true);

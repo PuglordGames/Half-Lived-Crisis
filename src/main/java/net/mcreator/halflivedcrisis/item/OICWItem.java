@@ -20,22 +20,24 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.HumanoidArm;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.model.HumanoidModel;
 
-import net.mcreator.halflivedcrisis.procedures.SMGRightclickedProcedure;
-import net.mcreator.halflivedcrisis.item.renderer.SMGItemRenderer;
+import net.mcreator.halflivedcrisis.procedures.OICWRightclickedProcedure;
+import net.mcreator.halflivedcrisis.procedures.OICWItemInHandTickProcedure;
+import net.mcreator.halflivedcrisis.item.renderer.OICWItemRenderer;
 
 import java.util.function.Consumer;
 
-public class SMGItem extends Item implements GeoItem {
+public class OICWItem extends Item implements GeoItem {
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	public String animationprocedure = "empty";
 	public static ItemDisplayContext transformType;
 
-	public SMGItem() {
+	public OICWItem() {
 		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
 	}
 
@@ -43,14 +45,14 @@ public class SMGItem extends Item implements GeoItem {
 	public void initializeClient(Consumer<IClientItemExtensions> consumer) {
 		super.initializeClient(consumer);
 		consumer.accept(new IClientItemExtensions() {
-			private final BlockEntityWithoutLevelRenderer renderer = new SMGItemRenderer();
+			private final BlockEntityWithoutLevelRenderer renderer = new OICWItemRenderer();
 
 			@Override
 			public BlockEntityWithoutLevelRenderer getCustomRenderer() {
 				return renderer;
 			}
 
-			private static final HumanoidModel.ArmPose SMGPose = HumanoidModel.ArmPose.create("SMG", false, (model, entity, arm) -> {
+			private static final HumanoidModel.ArmPose OICWPose = HumanoidModel.ArmPose.create("OICW", false, (model, entity, arm) -> {
 				if (arm == HumanoidArm.LEFT) {
 				} else {
 					model.rightArm.xRot = model.rightArm.xRot + -1.3F + model.head.xRot;
@@ -64,7 +66,7 @@ public class SMGItem extends Item implements GeoItem {
 			public HumanoidModel.ArmPose getArmPose(LivingEntity entityLiving, InteractionHand hand, ItemStack itemStack) {
 				if (!itemStack.isEmpty()) {
 					if (entityLiving.getUsedItemHand() == hand) {
-						return SMGPose;
+						return OICWPose;
 					}
 				}
 				return HumanoidModel.ArmPose.EMPTY;
@@ -133,7 +135,14 @@ public class SMGItem extends Item implements GeoItem {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SMGRightclickedProcedure.execute(world, x, y, z, entity, itemstack);
+		OICWRightclickedProcedure.execute(world, x, y, z, entity, itemstack);
 		return ar;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			OICWItemInHandTickProcedure.execute(entity);
 	}
 }

@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "RCONTROL",
+    "keyBindingName": "Change OICW Alt Fire",
+    "keyBindingCategoryKey": "gameplay",
+    "onKeyPressed": {
+      "name": "ChangeOICWAltFireOnKeyPressed"
+    }
+  }
+}

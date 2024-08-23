@@ -3395,6 +3395,158 @@
           "src/main/java/net/mcreator/halflivedcrisis/network/SMGShootMessage.java"
         ]
       }
+    },
+    {
+      "name": "OICW",
+      "type": "animateditem",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oicw",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/item/model/OICWItemModel.java",
+          "src/main/resources/assets/half_lived_crisis/models/item/oicw.json",
+          "src/main/java/net/mcreator/halflivedcrisis/item/renderer/OICWItemRenderer.java",
+          "src/main/java/net/mcreator/halflivedcrisis/item/OICWItem.java"
+        ]
+      }
+    },
+    {
+      "name": "OICWProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oicw_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/entity/OICWProjectileEntity.java",
+          "src/main/java/net/mcreator/halflivedcrisis/client/renderer/OICWProjectileRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "OICWRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oicw_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/OICWRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OICWCrosshairDisplay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oicw_crosshair_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/OICWCrosshairDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ChangeOICWAltFire",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "change_oicw_alt_fire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/network/ChangeOICWAltFireMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "ChangeOICWAltFireOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "change_oicw_alt_fire_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/ChangeOICWAltFireOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OICWAltFireTextSet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oicw_alt_fire_text_set",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/OICWAltFireTextSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OICWItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oicw_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/halflivedcrisis/procedures/OICWItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -3517,6 +3669,24 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
+    },
+    {
+      "name": "oicw_ammo",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "oicw_grenades",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "oicw_alt_fire_mode",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "Grenade"
     }
   ],
   "sound_elements": [
@@ -3773,11 +3943,23 @@
       "CUSTOM:Magnum",
       "CUSTOM:GaussGun",
       "CUSTOM:Shotgun",
-      "CUSTOM:AR2"
+      "CUSTOM:AR2",
+      "CUSTOM:OICW"
+    ],
+    "ITEMS:half_lived_crisis:weapons": [
+      "CUSTOM:Crowbar",
+      "CUSTOM:Pistol",
+      "CUSTOM:SMG",
+      "CUSTOM:Magnum",
+      "CUSTOM:GaussGun",
+      "CUSTOM:Shotgun",
+      "CUSTOM:AR2",
+      "CUSTOM:Grenade",
+      "CUSTOM:GravityGun",
+      "CUSTOM:OICW"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.AIR",
-      "~CUSTOM:Xenstone"
+      "~Blocks.AIR"
     ]
   },
   "tab_element_order": {},
@@ -3810,6 +3992,7 @@
       "subtitles.shotgun_reload_04": "",
       "block.half_lived_crisis.pistol_ammo": "Pistol Ammo",
       "subtitles.shotgun_reload_03": "",
+      "key.half_lived_crisis.change_oicw_alt_fire": "Change OICW Alt Fire",
       "subtitles.shotgun_reload_02": "",
       "item.half_lived_crisis.shotgun": "Shotgun",
       "block.half_lived_crisis.light_stalk_hidden": "Light Stalk",
@@ -3831,6 +4014,7 @@
       "item.half_lived_crisis.ar_2": "AR2",
       "item.half_lived_crisis.grenade": "Grenade",
       "block.half_lived_crisis.xenstone": "Xenstone",
+      "gui.half_lived_crisis.hev_suit_overlay.label_oicw_grenades": "OICW_Alt_Fire_Mode",
       "subtitles.hev_startup": "",
       "subtitles.magnum_reload": "",
       "subtitles.pulse_rifle_reload": "",
@@ -3856,6 +4040,7 @@
       "item_group.half_lived_crisis.hev_suit_related": "H.E.V. Suit Related",
       "key.half_lived_crisis.jump_keybind": "Jump Keybind",
       "subtitles.pistol_reload": "",
+      "item.half_lived_crisis.oicw": "OICW",
       "item.half_lived_crisis.crowbar": "Crowbar",
       "block.half_lived_crisis.nihilanths_lair_outer_ring_corner": "Nihilanths Lair Outer Ring Corner",
       "entity.half_lived_crisis.wood_crate": "Wood Crate",
@@ -3888,5 +4073,5 @@
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.halflivedcrisis"
   },
-  "mcreatorVersion": 202400118518
+  "mcreatorVersion": 202400232117
 }

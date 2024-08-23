@@ -36,6 +36,7 @@ public class HalfLivedCrisisModTabs {
 				tabData.accept(HalfLivedCrisisModItems.GRENADE.get());
 				tabData.accept(HalfLivedCrisisModBlocks.CROSSBOW_BOLTS.get().asItem());
 				tabData.accept(HalfLivedCrisisModItems.GRAVITY_GUN.get());
+				tabData.accept(HalfLivedCrisisModItems.OICW.get());
 			})
 
 					.build());

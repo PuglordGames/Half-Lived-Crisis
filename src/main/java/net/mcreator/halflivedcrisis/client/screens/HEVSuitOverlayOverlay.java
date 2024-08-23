@@ -21,6 +21,8 @@ import net.mcreator.halflivedcrisis.procedures.ShotgunCrosshairDisplayProcedure;
 import net.mcreator.halflivedcrisis.procedures.SMGCrosshairDisplayProcedure;
 import net.mcreator.halflivedcrisis.procedures.PulseRifleCrosshairDisplayProcedure;
 import net.mcreator.halflivedcrisis.procedures.PistolCrosshairDisplayProcedure;
+import net.mcreator.halflivedcrisis.procedures.OICWCrosshairDisplayProcedure;
+import net.mcreator.halflivedcrisis.procedures.OICWAltFireTextSetProcedure;
 import net.mcreator.halflivedcrisis.procedures.MagnumCrosshairDisplayProcedure;
 import net.mcreator.halflivedcrisis.procedures.HealthDisplayProcedure;
 import net.mcreator.halflivedcrisis.procedures.HEVSuitOverlayDisplayOverlayIngameProcedure;
@@ -115,6 +117,12 @@ public class HEVSuitOverlayOverlay {
 			if (CrossbowCrosshairDisplayProcedure.execute(entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/crossbow_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
 			}
+			if (OICWCrosshairDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/oicw_crosshair.png"), w / 2 + -8, h / 2 + -7, 0, 0, 15, 15, 15, 15);
+			}
+			if (OICWCrosshairDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("half_lived_crisis:textures/screens/health_overlay.png"), w - 48, h - 49, 0, 0, 37, 24, 37, 24);
+			}
 			if (AmmoDisplayLogicProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
@@ -125,6 +133,10 @@ public class HEVSuitOverlayOverlay {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					SuitBatteryDisplayProcedure.execute(entity), 60, h - 16, -13312, false);
+			if (OICWCrosshairDisplayProcedure.execute(entity))
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+						OICWAltFireTextSetProcedure.execute(entity), w - 47, h - 42, -13312, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();

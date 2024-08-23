@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.halflivedcrisis.item.ShotgunItem;
 import net.mcreator.halflivedcrisis.item.SMGItem;
 import net.mcreator.halflivedcrisis.item.PistolItem;
+import net.mcreator.halflivedcrisis.item.OICWItem;
 import net.mcreator.halflivedcrisis.item.MagnumItem;
 import net.mcreator.halflivedcrisis.item.LongJumpModuleItem;
 import net.mcreator.halflivedcrisis.item.HEVSuitItem;
@@ -64,6 +65,7 @@ public class HalfLivedCrisisModItems {
 	public static final RegistryObject<Item> GRENADE = REGISTRY.register("grenade", () -> new GrenadeItem());
 	public static final RegistryObject<Item> CROSSBOW_BOLTS = block(HalfLivedCrisisModBlocks.CROSSBOW_BOLTS);
 	public static final RegistryObject<Item> GRAVITY_GUN = REGISTRY.register("gravity_gun", () -> new GravityGunItem());
+	public static final RegistryObject<Item> OICW = REGISTRY.register("oicw", () -> new OICWItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

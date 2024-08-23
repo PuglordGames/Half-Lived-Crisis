@@ -18,6 +18,7 @@ import net.minecraft.client.KeyMapping;
 import net.mcreator.halflivedcrisis.network.TauChargeMessage;
 import net.mcreator.halflivedcrisis.network.ReloadMessage;
 import net.mcreator.halflivedcrisis.network.JumpKeybindMessage;
+import net.mcreator.halflivedcrisis.network.ChangeOICWAltFireMessage;
 import net.mcreator.halflivedcrisis.HalfLivedCrisisMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -66,7 +67,20 @@ public class HalfLivedCrisisModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping SMG_SHOOT = new KeyMapping("key.half_lived_crisis.smg_shoot", GLFW.GLFW_KEY_RIGHT_SUPER, "key.categories.gameplay");
+	public static final KeyMapping SMG_SHOOT = new KeyMapping("key.half_lived_crisis.smg_shoot", GLFW.GLFW_KEY_MINUS, "key.categories.gameplay");
+	public static final KeyMapping CHANGE_OICW_ALT_FIRE = new KeyMapping("key.half_lived_crisis.change_oicw_alt_fire", GLFW.GLFW_KEY_RIGHT_CONTROL, "key.categories.gameplay") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				HalfLivedCrisisMod.PACKET_HANDLER.sendToServer(new ChangeOICWAltFireMessage(0, 0));
+				ChangeOICWAltFireMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long TAU_CHARGE_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -75,6 +89,7 @@ public class HalfLivedCrisisModKeyMappings {
 		event.register(JUMP_KEYBIND);
 		event.register(TAU_CHARGE);
 		event.register(SMG_SHOOT);
+		event.register(CHANGE_OICW_ALT_FIRE);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -85,6 +100,7 @@ public class HalfLivedCrisisModKeyMappings {
 				RELOAD.consumeClick();
 				JUMP_KEYBIND.consumeClick();
 				TAU_CHARGE.consumeClick();
+				CHANGE_OICW_ALT_FIRE.consumeClick();
 			}
 		}
 	}

@@ -84,5 +84,14 @@ public class AmmoDisplaySetNumberProcedure {
 				});
 			}
 		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == HalfLivedCrisisModItems.OICW.get()) {
+			{
+				String _setval = new java.text.DecimalFormat("##.##").format((entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HalfLivedCrisisModVariables.PlayerVariables())).oicw_ammo);
+				entity.getCapability(HalfLivedCrisisModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ammo_display = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
 	}
 }

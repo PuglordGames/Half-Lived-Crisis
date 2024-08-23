@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:air",
-    "half_lived_crisis:xenstone"
+    "minecraft:air"
   ]
 }
